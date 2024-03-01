@@ -1,0 +1,15 @@
+﻿<MudCard>
+    <MudCardContent>
+        <MudCardMedia Image="@Winner?.Deck.Icon?.ToString()"></MudCardMedia>
+        <MudText>Played on: @Game.PlayTime</MudText>
+        <MudText>Players: @Game.Seats.Count()</MudText>
+    </MudCardContent>
+</MudCard>
+
+@code {
+    [Parameter]
+    [EditorRequired]
+    public Data.Game Game { get; set; }
+
+    public Data.PlayerSeat? Winner { get => Game.Seats.FirstOrDefault(seat => seat.Result == Data.GameResult.Win); }
+}

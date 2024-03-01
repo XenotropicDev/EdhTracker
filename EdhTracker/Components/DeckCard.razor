@@ -1,0 +1,14 @@
+﻿<MudCard>
+    <MudCardContent>
+        <MudCardMedia Image="@Deck.Icon?.AbsolutePath"></MudCardMedia>
+        <MudText>@Deck.Commander</MudText>
+        <MudText>@Deck.Player.Name</MudText>
+        <MudText>@Deck.Archetype</MudText>
+    </MudCardContent>
+</MudCard>
+
+@code {
+    [Parameter]
+    [EditorRequired]
+    public Data.Deck Deck { get; set; }
+}

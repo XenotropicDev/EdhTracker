@@ -1,0 +1,9 @@
+﻿@page "/Game/{GameId:guid}"
+@inject EdhTracker.Data.DataContext context
+
+<PageTitle>Pod</PageTitle>
+
+<MudText Typo="Typo.h3" GutterBottom="true">Game @Game.PlayTime</MudText>
+
+<MudButton Color="Color.Primary" Variant="Variant.Filled" OnClick="OpenAddGameDialog">Add Game</MudButton>
+

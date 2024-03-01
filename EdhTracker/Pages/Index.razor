@@ -1,0 +1,42 @@
+﻿@page "/"
+@using EdhTracker.Components
+@using EdhTracker.Data
+@using Microsoft.EntityFrameworkCore
+@inject IDbContextFactory<DataContext> ContextFactory
+@inject IDialogService DialogService
+@inject NavigationManager Navigation
+
+<PageTitle>Index</PageTitle>
+<MudText>Select a Pod</MudText>
+<MudSelect @bind-Value="@pod">
+    @foreach(var item in Context.Pods) 
+    {
+        <MudSelectItem Value="@item"></MudSelectItem>
+    }
+</MudSelect>
+<MudButton OnClick="ShowPod">Show Pod</MudButton>
+
+<MudButton OnClick="CreateGroup">Add a new play group</MudButton>
+
+@code {
+    DataContext Context;
+
+    PlayGroup pod;
+
+    protected override Task OnInitializedAsync()
+    {
+        Context = ContextFactory.CreateDbContext();
+
+        return base.OnInitializedAsync();
+    }
+
+    public void CreateGroup()
+    {
+        DialogService.Show<AddPlayGroupDialog>("Create Play Group", new DialogOptions { CloseOnEscapeKey = true });
+    }
+
+    public void ShowPod()
+    {
+        Navigation.NavigateTo($"/Group/{pod.Id}");
+    }
+}
