@@ -2,6 +2,7 @@
 @using EdhTracker.Components
 @using EdhTracker.Data
 @using Microsoft.EntityFrameworkCore
+@using System.Collections.ObjectModel
 @inject IDbContextFactory<DataContext> ContextFactory
 @inject IDialogService DialogService
 @inject NavigationManager Navigation
@@ -9,30 +10,54 @@
 <PageTitle>Index</PageTitle>
 <MudText>Select a Pod</MudText>
 <MudSelect @bind-Value="@pod">
-    @foreach(var item in Context.Pods) 
+    @foreach (var item in playGroups)
     {
         <MudSelectItem Value="@item"></MudSelectItem>
     }
 </MudSelect>
 <MudButton OnClick="ShowPod">Show Pod</MudButton>
 
-<MudButton OnClick="CreateGroup">Add a new play group</MudButton>
+<MudButton OnClick="ShowGroupCreate">Add a new play group</MudButton>
+
+@if (isCreateShown)
+{
+    <MudTextField Value="NewGroupName" Label="Group Name" @bind-Text=NewGroupName></MudTextField>
+    <MudButton OnClick="AddGroup">Add</MudButton>
+}
 
 @code {
     DataContext Context;
 
     PlayGroup pod;
 
+    ObservableCollection<PlayGroup> playGroups;
+
+    string NewGroupName = string.Empty;
+
+    bool isCreateShown = false;
+
     protected override Task OnInitializedAsync()
     {
         Context = ContextFactory.CreateDbContext();
 
+        playGroups = new ObservableCollection<PlayGroup>(Context.Pods);
+
         return base.OnInitializedAsync();
     }
 
-    public void CreateGroup()
+    public void ShowGroupCreate()
     {
-        DialogService.Show<AddPlayGroupDialog>("Create Play Group", new DialogOptions { CloseOnEscapeKey = true });
+        isCreateShown = true;
+        NewGroupName = string.Empty;
+    }
+
+    public async Task AddGroup()
+    {
+        pod = new PlayGroup { Name = NewGroupName };
+        Context.Pods.Add(pod);
+        await Context.SaveChangesAsync();
+
+        ShowPod();
     }
 
     public void ShowPod()
