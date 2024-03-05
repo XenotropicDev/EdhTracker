@@ -1,5 +1,7 @@
 ﻿@page "/Group/{podId:guid}"
 @using EdhTracker.Components
+@using EdhTracker.Data
+@using Microsoft.EntityFrameworkCore
 @inject EdhTracker.Data.DataContext context
 
 <PageTitle>Play Group</PageTitle>
@@ -7,9 +9,64 @@
 <MudText Typo="Typo.h3" GutterBottom="true">@Pod.Name</MudText>
 
 <MudButton Color="Color.Primary" Variant="Variant.Filled" OnClick="OpenAddGameDialog">Add Game</MudButton>
+@if (isAddGameShown)
+{
+    <MudItem sm="7" xs="12">
+        <MudPaper Class="pa-4">
+            <MudForm>
+                <MudCheckBox T="bool">Winner</MudCheckBox>
+                <MudTextField @bind-Text=Deck1 Value="Deck1" Required="true"></MudTextField>
+                <MudCheckBox T="bool">Winner</MudCheckBox>
+                <MudTextField @bind-Text=Deck2 Value="Deck2" Required="true"></MudTextField>
+                <MudCheckBox T="bool">Winner</MudCheckBox>
+                <MudTextField @bind-Text=Deck3 Value="Deck3" Required="true"></MudTextField>
+                <MudCheckBox T="bool">Winner</MudCheckBox>
+                <MudTextField @bind-Text=Deck4 Value="Deck4" Required="true"></MudTextField>
+                <MudButton Color="Color.Primary" Variant="Variant.Filled" OnClick="AddGame">Add</MudButton>
+            </MudForm>
+        </MudPaper>
+    </MudItem>
+}
 
 @foreach (var game in Pod.GameHistory.TakeLast(10))
 {
     <PlayedGameCard Game="game"></PlayedGameCard>
 }
 
+@code 
+{
+    bool isAddGameShown = false;
+    string Deck1 = string.Empty;
+    string Deck2 = string.Empty;
+    string Deck3 = string.Empty;
+    string Deck4 = string.Empty;
+
+    public async Task AddGame()
+    {
+        var game = new Game();
+        game.PlayTime = DateTime.UtcNow;
+    }
+
+    protected override async Task OnInitializedAsync()
+    {
+        DataContext = await DataContextFactory.CreateDbContextAsync();
+    }
+
+    private DataContext DataContext;
+
+    [Parameter]
+    public Guid PodId { get; set; }
+
+    [Inject]
+    public IDbContextFactory<DataContext> DataContextFactory { get; set; }
+
+    [Inject]
+    public IDialogService DialogService { get; set; }
+
+    public PlayGroup Pod { get => DataContext.Pods.Find(PodId)!; }
+
+    public void OpenAddGameDialog()
+    {
+        isAddGameShown = true;
+    }
+}
