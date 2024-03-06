@@ -41,11 +41,16 @@ app.Run();
 static void SetupDb()
 {
     var tempContext = new DataContext();
+    //tempContext.Database.EnsureDeleted();
     tempContext.Database.EnsureCreated();
 
-    if (!tempContext.Pods.Any())
+    if (!tempContext.PlayGroups.Any())
     {
-        tempContext.Pods.Add(new PlayGroup() { Name = "Test Group" });
+        var group = new PlayGroup() { Name = "Test Group", Id = Guid.Parse("da65fcf4-4b9c-4f0f-ae08-a5e25ddc42bd") };
+
+        group.Players.Add(new Player() { Name = "Dom" });
+
+        tempContext.PlayGroups.Add(group);
         tempContext.SaveChanges();
     }
 }

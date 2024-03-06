@@ -1,0 +1,1718 @@
+openapi: 3.0.1
+info:
+  title: Scryfall API
+  version: v1
+servers:
+- url: https://api.scryfall.com/
+paths:
+  /sets:
+    get:
+      operationId: Sets_GetAll
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/set_list'
+          description: Success
+        default:
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/error'
+          description: Error
+      tags:
+      - Sets
+  /sets/{code}:
+    get:
+      operationId: Sets_GetByCode
+      parameters:
+      - in: path
+        name: code
+        required: true
+        schema:
+          type: string
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/set'
+          description: Success
+        default:
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/error'
+          description: Error
+      tags:
+      - Sets
+  /cards/search:
+    get:
+      operationId: Cards_Search
+      parameters:
+      - in: query
+        name: q
+        required: true
+        schema:
+          type: string
+      - in: query
+        name: unique
+        schema:
+          enum:
+          - cards
+          - art
+          - prints
+          type: string
+          x-ms-enum:
+            name: unique_strategy
+            modelAsString: false
+        x-ms-enum:
+          name: unique_strategy
+          modelAsString: false
+      - in: query
+        name: order
+        schema:
+          enum:
+          - name
+          - set
+          - released
+          - rarity
+          - color
+          - usd
+          - tix
+          - eur
+          - cmc
+          - power
+          - toughness
+          - edhrec
+          - artist
+          type: string
+          x-ms-enum:
+            name: sort_order
+            modelAsString: false
+        x-ms-enum:
+          name: sort_order
+          modelAsString: false
+      - in: query
+        name: dir
+        schema:
+          enum:
+          - auto
+          - asc
+          - desc
+          type: string
+          x-ms-enum:
+            name: sort_direction
+            modelAsString: false
+        x-ms-enum:
+          name: sort_direction
+          modelAsString: false
+      - in: query
+        name: include_extras
+        schema:
+          type: boolean
+      - in: query
+        name: page
+        schema:
+          format: int32
+          type: integer
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/card_list'
+          description: Success
+        default:
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/error'
+          description: Error
+      tags:
+      - Cards
+  /cards/named:
+    get:
+      operationId: Cards_GetNamed
+      parameters:
+      - in: query
+        name: exact
+        schema:
+          type: string
+      - in: query
+        name: fuzzy
+        schema:
+          type: string
+      - in: query
+        name: set
+        schema:
+          type: string
+      - in: query
+        name: format
+        schema:
+          type: string
+      - in: query
+        name: face
+        schema:
+          type: string
+      - in: query
+        name: version
+        schema:
+          type: string
+      - in: query
+        name: pretty
+        schema:
+          type: boolean
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/card'
+          description: Success
+        default:
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/error'
+          description: Error
+      tags:
+      - Cards
+  /cards/autocomplete:
+    get:
+      operationId: Cards_Autocomplete
+      parameters:
+      - in: query
+        name: q
+        required: true
+        schema:
+          type: string
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/catalog'
+          description: Success
+        default:
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/error'
+          description: Error
+      tags:
+      - Cards
+  /cards/random:
+    get:
+      operationId: Cards_GetRandom
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/card'
+          description: Success
+        default:
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/error'
+          description: Error
+      tags:
+      - Cards
+  /cards/multiverse/{id}:
+    get:
+      operationId: Cards_GetByMultiverseId
+      parameters:
+      - in: path
+        name: id
+        required: true
+        schema:
+          format: int32
+          type: integer
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/card'
+          description: Success
+        default:
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/error'
+          description: Error
+      tags:
+      - Cards
+  /cards/mtgo/{id}:
+    get:
+      operationId: Cards_GetByMtgoId
+      parameters:
+      - in: path
+        name: id
+        required: true
+        schema:
+          format: int32
+          type: integer
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/card'
+          description: Success
+        default:
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/error'
+          description: Error
+      tags:
+      - Cards
+  /cards/arena/{id}:
+    get:
+      operationId: Cards_GetByArenaId
+      parameters:
+      - in: path
+        name: id
+        required: true
+        schema:
+          format: int32
+          type: integer
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/card'
+          description: Success
+        default:
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/error'
+          description: Error
+      tags:
+      - Cards
+  /cards/{code}/{number}:
+    get:
+      operationId: Cards_GetByCodeByNumber
+      parameters:
+      - in: path
+        name: code
+        required: true
+        schema:
+          type: string
+      - in: path
+        name: number
+        required: true
+        schema:
+          format: int32
+          type: integer
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/card'
+          description: Success
+        default:
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/error'
+          description: Error
+      tags:
+      - Cards
+  /cards/{id}:
+    get:
+      operationId: Cards_GetById
+      parameters:
+      - in: path
+        name: id
+        required: true
+        schema:
+          format: uuid
+          type: string
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/card'
+          description: Success
+        default:
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/error'
+          description: Error
+      tags:
+      - Cards
+  /cards/multiverse/{id}/rulings:
+    get:
+      operationId: Rulings_GetByMultiverseId
+      parameters:
+      - in: path
+        name: id
+        required: true
+        schema:
+          format: int32
+          type: integer
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ruling_list'
+          description: Success
+        default:
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/error'
+          description: Error
+      tags:
+      - Rulings
+  /cards/mtgo/{id}/rulings:
+    get:
+      operationId: Rulings_GetByMtgoId
+      parameters:
+      - in: path
+        name: id
+        required: true
+        schema:
+          format: int32
+          type: integer
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ruling_list'
+          description: Success
+        default:
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/error'
+          description: Error
+      tags:
+      - Rulings
+  /cards/{code}/{number}/rulings:
+    get:
+      operationId: Rulings_GetByCodeByNumberId
+      parameters:
+      - in: path
+        name: code
+        required: true
+        schema:
+          type: string
+      - in: path
+        name: number
+        required: true
+        schema:
+          type: integer
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ruling_list'
+          description: Success
+        default:
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/error'
+          description: Error
+      tags:
+      - Rulings
+  /cards/{id}/rulings:
+    get:
+      operationId: Rulings_GetById
+      parameters:
+      - in: path
+        name: id
+        required: true
+        schema:
+          format: uuid
+          type: string
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ruling_list'
+          description: Success
+        default:
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/error'
+          description: Error
+      tags:
+      - Rulings
+  /symbology:
+    get:
+      operationId: Symbology_GetAll
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/card_symbol_list'
+          description: Success
+        default:
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/error'
+          description: Error
+      tags:
+      - Symbology
+  /symbology/parse-mana:
+    get:
+      operationId: Symbology_ParseMana
+      parameters:
+      - in: query
+        name: cost
+        required: true
+        schema:
+          type: string
+      responses:
+        "201":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/mana_cost'
+          description: Success
+        default:
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/error'
+          description: Error
+      tags:
+      - Symbology
+  /catalog/card-names:
+    get:
+      operationId: Catalog_GetCardNames
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/catalog'
+          description: Success
+        default:
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/error'
+          description: Error
+      tags:
+      - Catalog
+  /catalog/word-bank:
+    get:
+      operationId: Catalog_GetWordBank
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/catalog'
+          description: Success
+        default:
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/error'
+          description: Error
+      tags:
+      - Catalog
+  /catalog/creature-types:
+    get:
+      operationId: Catalog_GetCreatureTypes
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/catalog'
+          description: Success
+        default:
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/error'
+          description: Error
+      tags:
+      - Catalog
+  /catalog/planeswalker-types:
+    get:
+      operationId: Catalog_GetPlaneswalkerTypes
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/catalog'
+          description: Success
+        default:
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/error'
+          description: Error
+      tags:
+      - Catalog
+  /catalog/land-types:
+    get:
+      operationId: Catalog_GetLandTypes
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/catalog'
+          description: Success
+        default:
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/error'
+          description: Error
+      tags:
+      - Catalog
+  /catalog/artifact-types:
+    get:
+      operationId: Catalog_GetArtifactTypes
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/catalog'
+          description: Success
+        default:
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/error'
+          description: Error
+      tags:
+      - Catalog
+  /catalog/enchantment-types:
+    get:
+      operationId: Catalog_GetEnchantmentTypes
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/catalog'
+          description: Success
+        default:
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/error'
+          description: Error
+      tags:
+      - Catalog
+  /catalog/spell-types:
+    get:
+      operationId: Catalog_GetSpellTypes
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/catalog'
+          description: Success
+        default:
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/error'
+          description: Error
+      tags:
+      - Catalog
+  /catalog/powers:
+    get:
+      operationId: Catalog_GetPowers
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/catalog'
+          description: Success
+        default:
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/error'
+          description: Error
+      tags:
+      - Catalog
+  /catalog/thoughnesses:
+    get:
+      operationId: Catalog_GetToughnesses
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/catalog'
+          description: Success
+        default:
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/error'
+          description: Error
+      tags:
+      - Catalog
+  /catalog/loyalties:
+    get:
+      operationId: Catalog_GetLoyalties
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/catalog'
+          description: Success
+        default:
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/error'
+          description: Error
+      tags:
+      - Catalog
+  /catalog/watermarks:
+    get:
+      operationId: Catalog_GetWatermarks
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/catalog'
+          description: Success
+        default:
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/error'
+          description: Error
+      tags:
+      - Catalog
+components:
+  schemas:
+    card:
+      example:
+        oracle_text: oracle_text
+        prints_search_uri: https://openapi-generator.tech
+        set_search_uri: set_search_uri
+        flavor_text: flavor_text
+        hand_modifier: hand_modifier
+        set_name: set_name
+        scryfall_uri: https://openapi-generator.tech
+        edhrec_rank: 7
+        mana_cost: mana_cost
+        id: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
+        story_spotlight_uri: https://openapi-generator.tech
+        toughness: toughness
+        purchase_uris:
+          key: purchase_uris
+        scryfall_set_uri: https://openapi-generator.tech
+        timeshifted: true
+        watermark: watermark
+        loyalty: loyalty
+        type_line: type_line
+        color_identity:
+        - null
+        - null
+        related_uris:
+          key: related_uris
+        legalities:
+          standard: null
+          frontier: null
+          legacy: null
+          commander: null
+          modern: null
+          pauper: null
+          future: null
+          vintage: null
+          duel: null
+          "1v1": null
+          brawl: null
+          penny: null
+        border_color: black
+        mtgo_foil_id: 5
+        reserved: true
+        card_faces:
+        - oracle_text: oracle_text
+          mana_cost: mana_cost
+          loyalty: loyalty
+          name: name
+          type_line: type_line
+          color_indicator:
+          - null
+          - null
+          image_uris:
+            small: https://openapi-generator.tech
+            normal: https://openapi-generator.tech
+            large: https://openapi-generator.tech
+            png: https://openapi-generator.tech
+            border_crop: https://openapi-generator.tech
+            art_crop: https://openapi-generator.tech
+          power: power
+          toughness: toughness
+          colors:
+          - null
+          - null
+          flavor_text: flavor_text
+          illustration_id: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
+        - oracle_text: oracle_text
+          mana_cost: mana_cost
+          loyalty: loyalty
+          name: name
+          type_line: type_line
+          color_indicator:
+          - null
+          - null
+          image_uris:
+            small: https://openapi-generator.tech
+            normal: https://openapi-generator.tech
+            large: https://openapi-generator.tech
+            png: https://openapi-generator.tech
+            border_crop: https://openapi-generator.tech
+            art_crop: https://openapi-generator.tech
+          power: power
+          toughness: toughness
+          colors:
+          - null
+          - null
+          flavor_text: flavor_text
+          illustration_id: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
+        name: name
+        cmc: 2.3021358869347655
+        futureshifted: true
+        arena_id: 5
+        rarity: common
+        frame: frame
+        all_parts:
+        - name: name
+          id: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
+          uri: https://openapi-generator.tech
+        - name: name
+          id: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
+          uri: https://openapi-generator.tech
+        oracle_id: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
+        artist: artist
+        color_indicator:
+        - null
+        - null
+        life_modifier: life_modifier
+        colors:
+        - null
+        - null
+        illustration_id: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
+        mtgo_id: 1
+        rulings_uri: https://openapi-generator.tech
+        collector_number: collector_number
+        power: power
+        highres_image: true
+        digital: true
+        set: set
+        reprint: true
+        full_art: true
+        image_uris:
+          small: https://openapi-generator.tech
+          normal: https://openapi-generator.tech
+          large: https://openapi-generator.tech
+          png: https://openapi-generator.tech
+          border_crop: https://openapi-generator.tech
+          art_crop: https://openapi-generator.tech
+        uri: https://openapi-generator.tech
+        layout: normal
+        multiverse_ids:
+        - 6
+        - 6
+        colorshifted: true
+        story_spotlight_number: 9
+      properties:
+        id:
+          format: uuid
+          type: string
+        oracle_id:
+          format: uuid
+          type: string
+        multiverse_ids:
+          items:
+            type: integer
+          type: array
+        mtgo_id:
+          type: integer
+        arena_id:
+          type: integer
+        mtgo_foil_id:
+          type: integer
+        uri:
+          format: uri
+          type: string
+        scryfall_uri:
+          format: uri
+          type: string
+        prints_search_uri:
+          format: uri
+          type: string
+        rulings_uri:
+          format: uri
+          type: string
+        name:
+          type: string
+        layout:
+          enum:
+          - normal
+          - split
+          - flip
+          - transform
+          - meld
+          - leveler
+          - saga
+          - planar
+          - scheme
+          - vanguard
+          - token
+          - double_faced_token
+          - emblem
+          - augment
+          - host
+          type: string
+          x-ms-enum:
+            name: layouts
+            modelAsString: false
+        cmc:
+          format: double
+          type: number
+        type_line:
+          type: string
+        oracle_text:
+          type: string
+        mana_cost:
+          type: string
+        power:
+          type: string
+        toughness:
+          type: string
+        loyalty:
+          type: string
+        life_modifier:
+          type: string
+        hand_modifier:
+          type: string
+        colors:
+          items:
+            $ref: '#/components/schemas/colors'
+          type: array
+        color_indicator:
+          items:
+            $ref: '#/components/schemas/colors'
+          type: array
+        color_identity:
+          items:
+            $ref: '#/components/schemas/colors'
+          type: array
+        all_parts:
+          items:
+            $ref: '#/components/schemas/related_cards'
+          type: array
+        card_faces:
+          items:
+            $ref: '#/components/schemas/card_face'
+          type: array
+        legalities:
+          $ref: '#/components/schemas/legality'
+        reserved:
+          type: boolean
+        edhrec_rank:
+          format: int32
+          type: integer
+        set:
+          type: string
+        set_name:
+          type: string
+        collector_number:
+          type: string
+        set_search_uri:
+          type: string
+        scryfall_set_uri:
+          format: uri
+          type: string
+        image_uris:
+          $ref: '#/components/schemas/image_uri'
+        highres_image:
+          type: boolean
+        reprint:
+          type: boolean
+        digital:
+          type: boolean
+        rarity:
+          enum:
+          - common
+          - uncommon
+          - rare
+          - mythic
+          type: string
+          x-ms-enum:
+            name: rarity
+            modelAsString: false
+        flavor_text:
+          type: string
+        artist:
+          type: string
+        illustration_id:
+          format: uuid
+          type: string
+        frame:
+          type: string
+        full_art:
+          type: boolean
+        watermark:
+          type: string
+        border_color:
+          enum:
+          - black
+          - borderless
+          - gold
+          - silver
+          - white
+          type: string
+          x-ms-enum:
+            name: border_colors
+            modelAsString: false
+        story_spotlight_number:
+          type: integer
+        story_spotlight_uri:
+          format: uri
+          type: string
+        timeshifted:
+          type: boolean
+        colorshifted:
+          type: boolean
+        futureshifted:
+          type: boolean
+        purchase_uris:
+          additionalProperties:
+            type: string
+          type: object
+        related_uris:
+          additionalProperties:
+            type: string
+          type: object
+      type: object
+    card_face:
+      example:
+        oracle_text: oracle_text
+        mana_cost: mana_cost
+        loyalty: loyalty
+        name: name
+        type_line: type_line
+        color_indicator:
+        - null
+        - null
+        image_uris:
+          small: https://openapi-generator.tech
+          normal: https://openapi-generator.tech
+          large: https://openapi-generator.tech
+          png: https://openapi-generator.tech
+          border_crop: https://openapi-generator.tech
+          art_crop: https://openapi-generator.tech
+        power: power
+        toughness: toughness
+        colors:
+        - null
+        - null
+        flavor_text: flavor_text
+        illustration_id: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
+      properties:
+        name:
+          type: string
+        type_line:
+          type: string
+        oracle_text:
+          type: string
+        mana_cost:
+          type: string
+        colors:
+          items:
+            $ref: '#/components/schemas/colors'
+          type: array
+        color_indicator:
+          items:
+            $ref: '#/components/schemas/colors'
+          type: array
+        power:
+          type: string
+        toughness:
+          type: string
+        loyalty:
+          type: string
+        flavor_text:
+          type: string
+        illustration_id:
+          format: uuid
+          type: string
+        image_uris:
+          $ref: '#/components/schemas/image_uri'
+      type: object
+    colors:
+      enum:
+      - W
+      - U
+      - B
+      - R
+      - G
+      type: string
+      x-ms-enum:
+        name: colors
+        modelAsString: false
+    legality:
+      example:
+        standard: null
+        frontier: null
+        legacy: null
+        commander: null
+        modern: null
+        pauper: null
+        future: null
+        vintage: null
+        duel: null
+        "1v1": null
+        brawl: null
+        penny: null
+      properties:
+        standard:
+          $ref: '#/components/schemas/legal_status'
+        future:
+          $ref: '#/components/schemas/legal_status'
+        frontier:
+          $ref: '#/components/schemas/legal_status'
+        modern:
+          $ref: '#/components/schemas/legal_status'
+        legacy:
+          $ref: '#/components/schemas/legal_status'
+        pauper:
+          $ref: '#/components/schemas/legal_status'
+        vintage:
+          $ref: '#/components/schemas/legal_status'
+        penny:
+          $ref: '#/components/schemas/legal_status'
+        commander:
+          $ref: '#/components/schemas/legal_status'
+        "1v1":
+          $ref: '#/components/schemas/legal_status'
+        duel:
+          $ref: '#/components/schemas/legal_status'
+        brawl:
+          $ref: '#/components/schemas/legal_status'
+      type: object
+    legal_status:
+      enum:
+      - legal
+      - not_legal
+      - restricted
+      - banned
+      type: string
+      x-ms-enum:
+        name: legal_status
+        modelAsString: false
+    image_uri:
+      example:
+        small: https://openapi-generator.tech
+        normal: https://openapi-generator.tech
+        large: https://openapi-generator.tech
+        png: https://openapi-generator.tech
+        border_crop: https://openapi-generator.tech
+        art_crop: https://openapi-generator.tech
+      properties:
+        small:
+          format: uri
+          type: string
+        normal:
+          format: uri
+          type: string
+        large:
+          format: uri
+          type: string
+        png:
+          format: uri
+          type: string
+        art_crop:
+          format: uri
+          type: string
+        border_crop:
+          format: uri
+          type: string
+      type: object
+    related_cards:
+      example:
+        name: name
+        id: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
+        uri: https://openapi-generator.tech
+      properties:
+        id:
+          format: uuid
+          type: string
+        name:
+          type: string
+        uri:
+          format: uri
+          type: string
+      type: object
+    catalog:
+      example:
+        data:
+        - data
+        - data
+        total_items: 0
+      properties:
+        total_items:
+          format: int32
+          type: integer
+        data:
+          items:
+            type: string
+          type: array
+      type: object
+    set:
+      example:
+        digital: true
+        code: code
+        set_type: core
+        released_at: 2000-01-23
+        card_count: 0
+        icon_svg_uri: https://openapi-generator.tech
+        name: name
+        block_code: block_code
+        search_uri: https://openapi-generator.tech
+        block: block
+        foil: true
+        mtgo_code: mtgo_code
+        parent_set_code: parent_set_code
+      properties:
+        code:
+          type: string
+        mtgo_code:
+          type: string
+        name:
+          type: string
+        set_type:
+          enum:
+          - core
+          - expansion
+          - masters
+          - masterpiece
+          - from_the_vault
+          - spellbook
+          - premium_deck
+          - duel_deck
+          - commander
+          - planechase
+          - conspiracy
+          - archenemy
+          - vanguard
+          - funny
+          - starter
+          - box
+          - promo
+          - token
+          - memorabilia
+          - treasure_chest
+          type: string
+          x-ms-enum:
+            name: set_types
+            modelAsString: false
+        released_at:
+          format: date
+          type: string
+        block_code:
+          type: string
+        block:
+          type: string
+        parent_set_code:
+          type: string
+        card_count:
+          type: integer
+        digital:
+          type: boolean
+        foil:
+          type: boolean
+        icon_svg_uri:
+          format: uri
+          type: string
+        search_uri:
+          format: uri
+          type: string
+      type: object
+    ruling:
+      example:
+        comment: comment
+        source: source
+        published_at: 2000-01-23
+      properties:
+        source:
+          type: string
+        published_at:
+          format: date
+          type: string
+        comment:
+          type: string
+      type: object
+    card_symbol:
+      example:
+        represents_mana: true
+        symbol: symbol
+        loose_variant: loose_variant
+        appears_in_mana_costs: true
+        english: english
+        cmc: 0.8008281904610115
+        transposable: true
+        funny: true
+        colors: null
+      properties:
+        symbol:
+          type: string
+        loose_variant:
+          type: string
+        english:
+          type: string
+        transposable:
+          type: boolean
+        represents_mana:
+          type: boolean
+        cmc:
+          format: double
+          type: number
+        appears_in_mana_costs:
+          type: boolean
+        funny:
+          type: boolean
+        colors:
+          $ref: '#/components/schemas/colors'
+      type: object
+    mana_cost:
+      example:
+        colorless: true
+        multicolored: true
+        cost: cost
+        monocolored: true
+        cmc: 0.8008281904610115
+        colors: null
+      properties:
+        cost:
+          type: string
+        cmc:
+          format: double
+          type: number
+        colors:
+          $ref: '#/components/schemas/colors'
+        colorless:
+          type: boolean
+        monocolored:
+          type: boolean
+        multicolored:
+          type: boolean
+      type: object
+    card_list:
+      example:
+        next_page: https://openapi-generator.tech
+        total_cards: 0
+        data:
+        - oracle_text: oracle_text
+          prints_search_uri: https://openapi-generator.tech
+          set_search_uri: set_search_uri
+          flavor_text: flavor_text
+          hand_modifier: hand_modifier
+          set_name: set_name
+          scryfall_uri: https://openapi-generator.tech
+          edhrec_rank: 7
+          mana_cost: mana_cost
+          id: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
+          story_spotlight_uri: https://openapi-generator.tech
+          toughness: toughness
+          purchase_uris:
+            key: purchase_uris
+          scryfall_set_uri: https://openapi-generator.tech
+          timeshifted: true
+          watermark: watermark
+          loyalty: loyalty
+          type_line: type_line
+          color_identity:
+          - null
+          - null
+          related_uris:
+            key: related_uris
+          legalities:
+            standard: null
+            frontier: null
+            legacy: null
+            commander: null
+            modern: null
+            pauper: null
+            future: null
+            vintage: null
+            duel: null
+            "1v1": null
+            brawl: null
+            penny: null
+          border_color: black
+          mtgo_foil_id: 5
+          reserved: true
+          card_faces:
+          - oracle_text: oracle_text
+            mana_cost: mana_cost
+            loyalty: loyalty
+            name: name
+            type_line: type_line
+            color_indicator:
+            - null
+            - null
+            image_uris:
+              small: https://openapi-generator.tech
+              normal: https://openapi-generator.tech
+              large: https://openapi-generator.tech
+              png: https://openapi-generator.tech
+              border_crop: https://openapi-generator.tech
+              art_crop: https://openapi-generator.tech
+            power: power
+            toughness: toughness
+            colors:
+            - null
+            - null
+            flavor_text: flavor_text
+            illustration_id: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
+          - oracle_text: oracle_text
+            mana_cost: mana_cost
+            loyalty: loyalty
+            name: name
+            type_line: type_line
+            color_indicator:
+            - null
+            - null
+            image_uris:
+              small: https://openapi-generator.tech
+              normal: https://openapi-generator.tech
+              large: https://openapi-generator.tech
+              png: https://openapi-generator.tech
+              border_crop: https://openapi-generator.tech
+              art_crop: https://openapi-generator.tech
+            power: power
+            toughness: toughness
+            colors:
+            - null
+            - null
+            flavor_text: flavor_text
+            illustration_id: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
+          name: name
+          cmc: 2.3021358869347655
+          futureshifted: true
+          arena_id: 5
+          rarity: common
+          frame: frame
+          all_parts:
+          - name: name
+            id: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
+            uri: https://openapi-generator.tech
+          - name: name
+            id: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
+            uri: https://openapi-generator.tech
+          oracle_id: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
+          artist: artist
+          color_indicator:
+          - null
+          - null
+          life_modifier: life_modifier
+          colors:
+          - null
+          - null
+          illustration_id: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
+          mtgo_id: 1
+          rulings_uri: https://openapi-generator.tech
+          collector_number: collector_number
+          power: power
+          highres_image: true
+          digital: true
+          set: set
+          reprint: true
+          full_art: true
+          image_uris:
+            small: https://openapi-generator.tech
+            normal: https://openapi-generator.tech
+            large: https://openapi-generator.tech
+            png: https://openapi-generator.tech
+            border_crop: https://openapi-generator.tech
+            art_crop: https://openapi-generator.tech
+          uri: https://openapi-generator.tech
+          layout: normal
+          multiverse_ids:
+          - 6
+          - 6
+          colorshifted: true
+          story_spotlight_number: 9
+        - oracle_text: oracle_text
+          prints_search_uri: https://openapi-generator.tech
+          set_search_uri: set_search_uri
+          flavor_text: flavor_text
+          hand_modifier: hand_modifier
+          set_name: set_name
+          scryfall_uri: https://openapi-generator.tech
+          edhrec_rank: 7
+          mana_cost: mana_cost
+          id: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
+          story_spotlight_uri: https://openapi-generator.tech
+          toughness: toughness
+          purchase_uris:
+            key: purchase_uris
+          scryfall_set_uri: https://openapi-generator.tech
+          timeshifted: true
+          watermark: watermark
+          loyalty: loyalty
+          type_line: type_line
+          color_identity:
+          - null
+          - null
+          related_uris:
+            key: related_uris
+          legalities:
+            standard: null
+            frontier: null
+            legacy: null
+            commander: null
+            modern: null
+            pauper: null
+            future: null
+            vintage: null
+            duel: null
+            "1v1": null
+            brawl: null
+            penny: null
+          border_color: black
+          mtgo_foil_id: 5
+          reserved: true
+          card_faces:
+          - oracle_text: oracle_text
+            mana_cost: mana_cost
+            loyalty: loyalty
+            name: name
+            type_line: type_line
+            color_indicator:
+            - null
+            - null
+            image_uris:
+              small: https://openapi-generator.tech
+              normal: https://openapi-generator.tech
+              large: https://openapi-generator.tech
+              png: https://openapi-generator.tech
+              border_crop: https://openapi-generator.tech
+              art_crop: https://openapi-generator.tech
+            power: power
+            toughness: toughness
+            colors:
+            - null
+            - null
+            flavor_text: flavor_text
+            illustration_id: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
+          - oracle_text: oracle_text
+            mana_cost: mana_cost
+            loyalty: loyalty
+            name: name
+            type_line: type_line
+            color_indicator:
+            - null
+            - null
+            image_uris:
+              small: https://openapi-generator.tech
+              normal: https://openapi-generator.tech
+              large: https://openapi-generator.tech
+              png: https://openapi-generator.tech
+              border_crop: https://openapi-generator.tech
+              art_crop: https://openapi-generator.tech
+            power: power
+            toughness: toughness
+            colors:
+            - null
+            - null
+            flavor_text: flavor_text
+            illustration_id: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
+          name: name
+          cmc: 2.3021358869347655
+          futureshifted: true
+          arena_id: 5
+          rarity: common
+          frame: frame
+          all_parts:
+          - name: name
+            id: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
+            uri: https://openapi-generator.tech
+          - name: name
+            id: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
+            uri: https://openapi-generator.tech
+          oracle_id: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
+          artist: artist
+          color_indicator:
+          - null
+          - null
+          life_modifier: life_modifier
+          colors:
+          - null
+          - null
+          illustration_id: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
+          mtgo_id: 1
+          rulings_uri: https://openapi-generator.tech
+          collector_number: collector_number
+          power: power
+          highres_image: true
+          digital: true
+          set: set
+          reprint: true
+          full_art: true
+          image_uris:
+            small: https://openapi-generator.tech
+            normal: https://openapi-generator.tech
+            large: https://openapi-generator.tech
+            png: https://openapi-generator.tech
+            border_crop: https://openapi-generator.tech
+            art_crop: https://openapi-generator.tech
+          uri: https://openapi-generator.tech
+          layout: normal
+          multiverse_ids:
+          - 6
+          - 6
+          colorshifted: true
+          story_spotlight_number: 9
+        has_more: true
+      properties:
+        total_cards:
+          format: int32
+          type: integer
+        has_more:
+          type: boolean
+        next_page:
+          format: uri
+          type: string
+        data:
+          items:
+            $ref: '#/components/schemas/card'
+          type: array
+      type: object
+    set_list:
+      example:
+        data:
+        - digital: true
+          code: code
+          set_type: core
+          released_at: 2000-01-23
+          card_count: 0
+          icon_svg_uri: https://openapi-generator.tech
+          name: name
+          block_code: block_code
+          search_uri: https://openapi-generator.tech
+          block: block
+          foil: true
+          mtgo_code: mtgo_code
+          parent_set_code: parent_set_code
+        - digital: true
+          code: code
+          set_type: core
+          released_at: 2000-01-23
+          card_count: 0
+          icon_svg_uri: https://openapi-generator.tech
+          name: name
+          block_code: block_code
+          search_uri: https://openapi-generator.tech
+          block: block
+          foil: true
+          mtgo_code: mtgo_code
+          parent_set_code: parent_set_code
+      properties:
+        data:
+          items:
+            $ref: '#/components/schemas/set'
+          type: array
+      type: object
+    ruling_list:
+      example:
+        data:
+        - comment: comment
+          source: source
+          published_at: 2000-01-23
+        - comment: comment
+          source: source
+          published_at: 2000-01-23
+      properties:
+        data:
+          items:
+            $ref: '#/components/schemas/ruling'
+          type: array
+      type: object
+    card_symbol_list:
+      example:
+        data:
+        - represents_mana: true
+          symbol: symbol
+          loose_variant: loose_variant
+          appears_in_mana_costs: true
+          english: english
+          cmc: 0.8008281904610115
+          transposable: true
+          funny: true
+          colors: null
+        - represents_mana: true
+          symbol: symbol
+          loose_variant: loose_variant
+          appears_in_mana_costs: true
+          english: english
+          cmc: 0.8008281904610115
+          transposable: true
+          funny: true
+          colors: null
+      properties:
+        data:
+          items:
+            $ref: '#/components/schemas/card_symbol'
+          type: array
+      type: object
+    error:
+      example:
+        code: code
+        warnings:
+        - warnings
+        - warnings
+        details: details
+        type: type
+        status: 6
+      properties:
+        status:
+          type: integer
+        code:
+          type: string
+        details:
+          type: string
+        type:
+          type: string
+        warnings:
+          items:
+            type: string
+          type: array
+      type: object
+x-original-swagger-version: "2.0"
+

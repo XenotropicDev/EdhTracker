@@ -1,0 +1,135 @@
+﻿@page "/Group/{podId:guid}/Decks"
+@using EdhTracker.Components
+@using EdhTracker.Data
+@using Microsoft.EntityFrameworkCore
+@using Org.OpenAPITools.Api
+@using System.ComponentModel.DataAnnotations
+
+<PageTitle>@Pod.Name Decks</PageTitle>
+
+<MudText Typo="Typo.h3" GutterBottom="true">@Pod.Name Decks</MudText>
+
+<MudButton Color="Color.Primary" OnClick="() => isAddDeckShowing = true">Add Deck</MudButton>
+@if (isAddDeckShowing)
+{
+    <MudGrid>
+            <MudItem sm="2">
+                <MudImage Fluid="true" ObjectFit="ObjectFit.Cover" Src="@DeckToAdd?.Icon?.ToString()" Class="rounded-lg" Alt="@DeckToAdd.Commander.Name"></MudImage>
+            </MudItem>    
+
+            <MudItem sm="6" xs="12">
+                <MudPaper Class="pa-4">
+                <MudForm>
+                    @*https://localhost:44393/Group/da65fcf4-4b9c-4f0f-ae08-a5e25ddc42bd/Decks/*@
+                    <MudGrid>
+                        <MudItem sm="9" xs="12">
+                            <MudTextField T="string" @bind-Text=DeckToAdd.Commander.Name Label="Commander Name"></MudTextField>
+                        </MudItem>
+                        <MudItem xs="3">
+                            <MudButton OnClick="LoadFromScryfall" Color="Color.Info" Variant="Variant.Outlined" Size="Size.Small">Load From Scryfall</MudButton>
+                        </MudItem>
+                    </MudGrid>
+                    
+                    @* <MudSwitch @bind-Value="hasPartner">Has Partner</MudSwitch> *@
+                    @if (hasPartner)
+                    {
+                        <MudText>Sorry, not supported yet. Someone actually needing this will prompt me to add it, so bug me please.</MudText>
+                    }
+
+                    <MudSelect T="Player" @bind-Value=DeckToAdd.Player Label="Select a Player" Required="true" RequiredError="The deck must have a player">
+                        @foreach (var player in Pod.Players)
+                        {
+                            <MudSelectItem Value="player">@player.Name</MudSelectItem>
+                        }
+                    </MudSelect>
+
+
+                    <MudTextField T="Uri" @bind-Value=DeckToAdd.Icon Label="Deck Icon URL (optional)"></MudTextField>
+                    <MudTextField T="string" @bind-Text=DeckToAdd.ColorIdentity Label="Color Identity (optional)"
+                                  Validation="@(new RegularExpressionAttribute("[WUBRG]{0,5}") { ErrorMessage = "Must only use the letters W U B R and G."})">
+                    </MudTextField>
+
+                    <MudTextField T="string" @bind-Value=DeckToAdd.Archetype Label="Archetype (optional)"></MudTextField>
+                    <MudTextField T="Uri" @bind-Value=DeckToAdd.Decklist Label="Deck list URL (optional)"></MudTextField>
+
+                    <MudButton Class="mt-4" ButtonType="ButtonType.Submit" Variant="Variant.Filled" Color="Color.Primary" OnClick="AddDeck">Submit</MudButton>
+                </MudForm>
+            </MudPaper>
+            </MudItem>
+    </MudGrid>
+}
+
+<MudPaper Class="pa-4">
+    <MudGrid>
+        @foreach (var deck in Pod.Decks)
+        {
+            <MudItem xs="3">
+                <DeckCard Deck="deck"></DeckCard>
+            </MudItem>
+        }
+    </MudGrid>
+</MudPaper>
+
+
+@code
+{
+    private bool isAddDeckShowing = false;
+    private bool hasPartner = false;
+    private Deck DeckToAdd = new();
+
+    private string Archetype = string.Empty;
+
+    private CardsApi _cardsApi = new();
+
+    protected override async Task OnInitializedAsync()
+    {
+        DataContext = await DataContextFactory.CreateDbContextAsync();
+    }
+
+    private async Task LoadFromScryfall()
+    {
+        var card = await _cardsApi.GetNamedAsync(fuzzy: DeckToAdd.Commander.Name);
+
+        if (card != null)
+        {
+            DeckToAdd.Commander.Name = card.Name;
+
+            DeckToAdd.ColorIdentity = string.Join("", card.ColorIdentity.Select(c => c.ToString()));
+
+            var commander = new Commander();
+            commander.Name = card.Name;
+
+            commander.Commanders.Add(new() { Name = card.Name, Scryfall = new Uri(card.ScryfallUri) });
+
+            DeckToAdd.Commander = commander;
+
+            DeckToAdd.Icon = new Uri(card.ImageUris.ArtCrop ?? card.ImageUris.Png);
+        }
+    }
+
+    private DataContext DataContext;
+
+    [Parameter]
+    public Guid PodId { get; set; }
+
+    [Inject]
+    public IDbContextFactory<DataContext> DataContextFactory { get; set; }
+
+    public PlayGroup Pod { get => DataContext.PlayGroups.Include(p => p.Players).Include(p => p.Decks).First(p => p.Id == PodId); }
+
+    private async Task AddDeck()
+    {
+        try
+        {
+            Pod.Decks.Add(DeckToAdd);
+            await DataContext.SaveChangesAsync();
+
+            DeckToAdd = new Deck();
+            isAddDeckShowing = false;
+        }
+        catch (Exception ex)
+        {
+            throw;
+        }
+    }
+}

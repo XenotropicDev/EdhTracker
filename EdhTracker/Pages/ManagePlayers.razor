@@ -1,0 +1,67 @@
+﻿@page "/Group/{podId:guid}/Players"
+@using EdhTracker.Components
+@using EdhTracker.Data
+@using Microsoft.EntityFrameworkCore
+@using Org.OpenAPITools.Api
+@using System.ComponentModel.DataAnnotations
+
+<PageTitle>@Pod.Name Players</PageTitle>
+
+<MudText Typo="Typo.h3" GutterBottom="true">@Pod.Name Players</MudText>
+
+<MudPaper>
+    <MudDataGrid Items="DataContext.Players">
+        <Columns>
+            <PropertyColumn Property="x => x.Name" />
+            <TemplateColumn>
+                <CellTemplate>
+                    <MudIconButton Icon="@Icons.Material.Outlined.Edit" Size="@Size.Small" />
+                </CellTemplate>
+            </TemplateColumn>
+            <TemplateColumn>
+                <CellTemplate>
+                    <MudIconButton Icon="@Icons.Material.Outlined.Delete" Size="@Size.Small" />
+                </CellTemplate>
+            </TemplateColumn>
+        </Columns>
+    </MudDataGrid>
+</MudPaper>
+
+<MudPaper Class="pa-4">
+    <MudText>Add a new player</MudText>
+    <MudItem sm="9" xs="12" >
+        <MudTextField T="string" @bind-Text="@playerNameToAdd" Label="Player Name"></MudTextField>
+    </MudItem>
+    <MudItem sm="3" xs="12">
+        <MudFab OnClick="AddPlayer" Color="Color.Primary" StartIcon="@Icons.Material.Filled.Add"></MudFab>
+    </MudItem>
+</MudPaper>
+
+@code {
+    private string playerNameToAdd = string.Empty;
+
+    private DataContext DataContext;
+
+    [Parameter]
+    public Guid PodId { get; set; }
+
+    [Inject]
+    public IDbContextFactory<DataContext> DataContextFactory { get; set; }
+
+    public PlayGroup Pod { get => DataContext.PlayGroups.Find(PodId)!; }
+
+    protected override async Task OnInitializedAsync()
+    {
+        DataContext = await DataContextFactory.CreateDbContextAsync();
+    }
+
+    private async void AddPlayer()
+    {
+        var player = new Player { Name = playerNameToAdd };
+        Pod.Players.Add(player);
+
+        await DataContext.SaveChangesAsync();
+
+        playerNameToAdd = string.Empty;
+    }
+}

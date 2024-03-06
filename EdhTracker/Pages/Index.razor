@@ -40,7 +40,8 @@
     {
         Context = ContextFactory.CreateDbContext();
 
-        playGroups = new ObservableCollection<PlayGroup>(Context.Pods);
+        playGroups = new ObservableCollection<PlayGroup>(Context.PlayGroups);
+        pod = playGroups.First();
 
         return base.OnInitializedAsync();
     }
@@ -54,7 +55,7 @@
     public async Task AddGroup()
     {
         pod = new PlayGroup { Name = NewGroupName };
-        Context.Pods.Add(pod);
+        Context.PlayGroups.Add(pod);
         await Context.SaveChangesAsync();
 
         ShowPod();

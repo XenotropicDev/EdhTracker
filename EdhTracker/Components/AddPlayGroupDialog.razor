@@ -22,7 +22,7 @@
     async Task Submit()
     {
         var context  = await contextFactory.CreateDbContextAsync();
-        context.Pods.Add(new PlayGroup() { Name = GroupName });
+        context.PlayGroups.Add(new PlayGroup() { Name = GroupName });
         await context.SaveChangesAsync();
 
         MudDialog?.Close(DialogResult.Ok(true));
