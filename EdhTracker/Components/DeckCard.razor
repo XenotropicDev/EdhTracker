@@ -1,9 +1,21 @@
 ﻿<MudCard>
+    <MudCardMedia Image="@Deck.Icon?.AbsoluteUri"></MudCardMedia>
     <MudCardContent>
-        <MudCardMedia Image="@Deck.Icon?.AbsoluteUri"></MudCardMedia>
-        <MudText>@Deck.Commander.Name</MudText>
-        <MudText>@Deck.Player.Name</MudText>
+        <MudText Typo="Typo.h5">@Deck.Commander.Name</MudText>
+        <MudText>@(Deck.Player.Name)</MudText>
         <MudText>@Deck.Archetype</MudText>
+        <MudText>Play count: @(Deck.GamesPlayed?.Count ?? 0)</MudText>
+        @if (Deck.GamesPlayed?.Count > 0)
+        {
+            <MudText>Winrate: @((Deck.GamesPlayed.Where(g => g.Result == Data.GameResult.Win).Count() / Deck.GamesPlayed.Count).ToString("P"))</MudText>
+            <MudText>Last Played: @Deck.GamesPlayed.Last().Game.PlayTime.ToString("d")</MudText>
+        }
+
+        @foreach(var c in Deck.ColorIdentity ?? "")
+        {
+            if (Char.IsWhiteSpace(c)) continue;
+            <ManaIcon ManaColorString="@c"></ManaIcon>
+        }
     </MudCardContent>
 </MudCard>
 

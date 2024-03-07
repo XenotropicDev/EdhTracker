@@ -1,0 +1,1654 @@
+2024-03-06 12:50:30.328 -08:00 [ERR] testGame was null
+2024-03-06 12:50:30.355 -08:00 [ERR] testGame2 was null
+2024-03-06 12:50:30.453 -08:00 [INF] User profile is available. Using 'C:\Users\deliot\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-03-06 12:50:30.684 -08:00 [INF] Request starting HTTP/2 GET https://localhost:44393/ - null null
+2024-03-06 12:50:30.706 -08:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-03-06 12:50:30.708 -08:00 [INF] Hosting environment: Development
+2024-03-06 12:50:30.710 -08:00 [INF] Content root path: C:\Users\deliot\Source\Repos\EdhTracker\EdhTracker
+2024-03-06 12:50:30.782 -08:00 [INF] Executing endpoint '/_Host'
+2024-03-06 12:50:30.796 -08:00 [INF] Route matched with {page = "/_Host"}. Executing page /_Host
+2024-03-06 12:50:30.805 -08:00 [INF] Executing an implicit handler method - ModelState is "Valid"
+2024-03-06 12:50:30.806 -08:00 [INF] Executed an implicit handler method, returned result Microsoft.AspNetCore.Mvc.RazorPages.PageResult.
+2024-03-06 12:50:31.092 -08:00 [INF] Executed page /_Host in 292.8638ms
+2024-03-06 12:50:31.092 -08:00 [INF] Executed endpoint '/_Host'
+2024-03-06 12:50:31.170 -08:00 [INF] Request starting HTTP/2 GET https://localhost:44393/_framework/blazor.server.js - null null
+2024-03-06 12:50:31.201 -08:00 [INF] Request starting HTTP/2 GET https://localhost:44393/_framework/aspnetcore-browser-refresh.js - null null
+2024-03-06 12:50:31.203 -08:00 [INF] Request starting HTTP/2 GET https://localhost:44393/_vs/browserLink - null null
+2024-03-06 12:50:31.239 -08:00 [INF] Executing endpoint 'Blazor static files'
+2024-03-06 12:50:31.269 -08:00 [INF] Request finished HTTP/2 GET https://localhost:44393/_framework/aspnetcore-browser-refresh.js - 200 13756 application/javascript; charset=utf-8 50.2943ms
+2024-03-06 12:50:31.277 -08:00 [INF] The file /_framework/blazor.server.js was not modified
+2024-03-06 12:50:31.282 -08:00 [INF] Executed endpoint 'Blazor static files'
+2024-03-06 12:50:31.283 -08:00 [INF] Request finished HTTP/2 GET https://localhost:44393/_framework/blazor.server.js - 304 null text/javascript 112.9869ms
+2024-03-06 12:50:31.284 -08:00 [INF] Request finished HTTP/2 GET https://localhost:44393/ - 200 null text/html; charset=utf-8 605.6922ms
+2024-03-06 12:50:31.295 -08:00 [INF] Request starting HTTP/2 GET https://localhost:44393/_blazor/initializers - null null
+2024-03-06 12:50:31.296 -08:00 [INF] Executing endpoint 'Blazor initializers'
+2024-03-06 12:50:31.298 -08:00 [INF] Executed endpoint 'Blazor initializers'
+2024-03-06 12:50:31.298 -08:00 [INF] Request finished HTTP/2 GET https://localhost:44393/_blazor/initializers - 200 null application/json; charset=utf-8 3.3099ms
+2024-03-06 12:50:31.305 -08:00 [INF] Request finished HTTP/2 GET https://localhost:44393/_vs/browserLink - 200 null text/javascript; charset=UTF-8 102.8487ms
+2024-03-06 12:50:31.310 -08:00 [INF] Request starting HTTP/2 POST https://localhost:44393/_blazor/negotiate?negotiateVersion=1 - null 0
+2024-03-06 12:50:31.311 -08:00 [INF] Executing endpoint '/_blazor/negotiate'
+2024-03-06 12:50:31.317 -08:00 [INF] Executed endpoint '/_blazor/negotiate'
+2024-03-06 12:50:31.317 -08:00 [INF] Request finished HTTP/2 POST https://localhost:44393/_blazor/negotiate?negotiateVersion=1 - 200 316 application/json 6.8849ms
+2024-03-06 12:50:31.325 -08:00 [INF] Request starting HTTP/1.1 GET https://localhost:44393/_blazor?id=u3saTM76yF-m9TUEXAb_NQ - null null
+2024-03-06 12:50:31.326 -08:00 [INF] Executing endpoint '/_blazor'
+2024-03-06 12:50:56.438 -08:00 [INF] Request starting HTTP/2 GET https://localhost:44393/Group/da65fcf4-4b9c-4f0f-ae08-a5e25ddc42bd? - null null
+2024-03-06 12:50:56.443 -08:00 [INF] Executing endpoint '/_Host'
+2024-03-06 12:50:56.446 -08:00 [INF] Route matched with {page = "/_Host"}. Executing page /_Host
+2024-03-06 12:50:56.447 -08:00 [INF] Executing an implicit handler method - ModelState is "Valid"
+2024-03-06 12:50:56.447 -08:00 [INF] Executed an implicit handler method, returned result Microsoft.AspNetCore.Mvc.RazorPages.PageResult.
+2024-03-06 12:50:56.744 -08:00 [INF] Request starting HTTP/2 POST https://localhost:44393/_blazor/disconnect - multipart/form-data; boundary=----WebKitFormBoundary0l0SDpmHo9BdBJMF 359
+2024-03-06 12:50:56.745 -08:00 [INF] Executed page /_Host in 298.7688ms
+2024-03-06 12:50:56.746 -08:00 [INF] Executed endpoint '/_Host'
+2024-03-06 12:50:56.746 -08:00 [INF] Executing endpoint 'Blazor disconnect'
+2024-03-06 12:50:56.809 -08:00 [INF] Request starting HTTP/2 GET https://localhost:44393/_framework/blazor.server.js - null null
+2024-03-06 12:50:56.809 -08:00 [INF] Request starting HTTP/2 GET https://localhost:44393/_vs/browserLink - null null
+2024-03-06 12:50:56.827 -08:00 [INF] Executing endpoint 'Blazor static files'
+2024-03-06 12:50:56.839 -08:00 [INF] The file /_framework/blazor.server.js was not modified
+2024-03-06 12:50:56.839 -08:00 [INF] Executed endpoint 'Blazor static files'
+2024-03-06 12:53:43.433 -08:00 [ERR] testGame was null
+2024-03-06 12:53:43.451 -08:00 [ERR] testGame2 was null
+2024-03-06 12:53:43.546 -08:00 [INF] User profile is available. Using 'C:\Users\deliot\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-03-06 12:53:43.766 -08:00 [INF] Request starting HTTP/2 GET https://localhost:44393/ - null null
+2024-03-06 12:53:43.784 -08:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-03-06 12:53:43.786 -08:00 [INF] Hosting environment: Development
+2024-03-06 12:53:43.787 -08:00 [INF] Content root path: C:\Users\deliot\Source\Repos\EdhTracker\EdhTracker
+2024-03-06 12:53:43.857 -08:00 [INF] Executing endpoint '/_Host'
+2024-03-06 12:53:43.872 -08:00 [INF] Route matched with {page = "/_Host"}. Executing page /_Host
+2024-03-06 12:53:43.882 -08:00 [INF] Executing an implicit handler method - ModelState is "Valid"
+2024-03-06 12:53:43.883 -08:00 [INF] Executed an implicit handler method, returned result Microsoft.AspNetCore.Mvc.RazorPages.PageResult.
+2024-03-06 12:53:44.166 -08:00 [INF] Executed page /_Host in 290.9214ms
+2024-03-06 12:53:44.166 -08:00 [INF] Executed endpoint '/_Host'
+2024-03-06 12:53:44.240 -08:00 [INF] Request starting HTTP/2 GET https://localhost:44393/_framework/blazor.server.js - null null
+2024-03-06 12:53:44.266 -08:00 [INF] Request starting HTTP/2 GET https://localhost:44393/_framework/aspnetcore-browser-refresh.js - null null
+2024-03-06 12:53:44.272 -08:00 [INF] Request starting HTTP/2 GET https://localhost:44393/_vs/browserLink - null null
+2024-03-06 12:53:44.329 -08:00 [INF] Executing endpoint 'Blazor static files'
+2024-03-06 12:53:44.332 -08:00 [INF] Request finished HTTP/2 GET https://localhost:44393/_framework/aspnetcore-browser-refresh.js - 200 13756 application/javascript; charset=utf-8 72.0244ms
+2024-03-06 12:53:44.349 -08:00 [INF] Request finished HTTP/2 GET https://localhost:44393/ - 200 null text/html; charset=utf-8 588.1029ms
+2024-03-06 12:53:44.355 -08:00 [INF] Sending file. Request path: '/_framework/blazor.server.js'. Physical path: 'N/A'
+2024-03-06 12:53:44.355 -08:00 [INF] Executed endpoint 'Blazor static files'
+2024-03-06 12:53:44.360 -08:00 [INF] Request finished HTTP/2 GET https://localhost:44393/_framework/blazor.server.js - 200 151995 text/javascript 120.0136ms
+2024-03-06 12:53:44.364 -08:00 [INF] Request starting HTTP/2 GET https://localhost:44393/_blazor/initializers - null null
+2024-03-06 12:53:44.365 -08:00 [INF] Executing endpoint 'Blazor initializers'
+2024-03-06 12:53:44.367 -08:00 [INF] Executed endpoint 'Blazor initializers'
+2024-03-06 12:53:44.367 -08:00 [INF] Request finished HTTP/2 GET https://localhost:44393/_blazor/initializers - 200 null application/json; charset=utf-8 2.9585ms
+2024-03-06 12:53:44.370 -08:00 [INF] Request finished HTTP/2 GET https://localhost:44393/_vs/browserLink - 200 null text/javascript; charset=UTF-8 99.0486ms
+2024-03-06 12:53:44.381 -08:00 [INF] Request starting HTTP/2 POST https://localhost:44393/_blazor/negotiate?negotiateVersion=1 - null 0
+2024-03-06 12:53:44.382 -08:00 [INF] Executing endpoint '/_blazor/negotiate'
+2024-03-06 12:53:44.388 -08:00 [INF] Executed endpoint '/_blazor/negotiate'
+2024-03-06 12:53:44.388 -08:00 [INF] Request finished HTTP/2 POST https://localhost:44393/_blazor/negotiate?negotiateVersion=1 - 200 316 application/json 7.0314ms
+2024-03-06 12:53:44.397 -08:00 [INF] Request starting HTTP/1.1 GET https://localhost:44393/_blazor?id=TpMPGAPbHadpgIe8iq9mmA - null null
+2024-03-06 12:53:44.398 -08:00 [INF] Executing endpoint '/_blazor'
+2024-03-06 12:53:56.420 -08:00 [INF] Request starting HTTP/2 GET https://localhost:44393/Group/da65fcf4-4b9c-4f0f-ae08-a5e25ddc42bd? - null null
+2024-03-06 12:53:56.424 -08:00 [INF] Executing endpoint '/_Host'
+2024-03-06 12:53:56.427 -08:00 [INF] Route matched with {page = "/_Host"}. Executing page /_Host
+2024-03-06 12:53:56.428 -08:00 [INF] Executing an implicit handler method - ModelState is "Valid"
+2024-03-06 12:53:56.428 -08:00 [INF] Executed an implicit handler method, returned result Microsoft.AspNetCore.Mvc.RazorPages.PageResult.
+2024-03-06 12:53:56.441 -08:00 [INF] Executed page /_Host in 13.9756ms
+2024-03-06 12:53:56.441 -08:00 [INF] Executed endpoint '/_Host'
+2024-03-06 12:53:56.477 -08:00 [INF] Request starting HTTP/2 POST https://localhost:44393/_blazor/disconnect - multipart/form-data; boundary=----WebKitFormBoundarynz5GbmABgYOnVBbg 359
+2024-03-06 12:53:56.479 -08:00 [INF] Request starting HTTP/2 GET https://localhost:44393/_framework/blazor.server.js - null null
+2024-03-06 12:53:56.479 -08:00 [INF] Executing endpoint 'Blazor disconnect'
+2024-03-06 12:53:56.489 -08:00 [INF] Request starting HTTP/2 GET https://localhost:44393/_vs/browserLink - null null
+2024-03-06 12:53:56.489 -08:00 [INF] Request starting HTTP/2 GET https://localhost:44393/_framework/aspnetcore-browser-refresh.js - null null
+2024-03-06 12:53:56.489 -08:00 [INF] Executing endpoint 'Blazor static files'
+2024-03-06 12:53:56.514 -08:00 [INF] Request finished HTTP/2 GET https://localhost:44393/_framework/aspnetcore-browser-refresh.js - 200 13756 application/javascript; charset=utf-8 23.0957ms
+2024-03-06 12:53:56.535 -08:00 [INF] The file /_framework/blazor.server.js was not modified
+2024-03-06 12:53:56.543 -08:00 [INF] Executed endpoint 'Blazor static files'
+2024-03-06 12:53:56.545 -08:00 [INF] Request finished HTTP/2 GET https://localhost:44393/_framework/blazor.server.js - 304 null text/javascript 68.1975ms
+2024-03-06 12:53:56.550 -08:00 [INF] Request finished HTTP/2 GET https://localhost:44393/Group/da65fcf4-4b9c-4f0f-ae08-a5e25ddc42bd? - 200 null text/html; charset=utf-8 130.425ms
+2024-03-06 12:53:56.596 -08:00 [INF] Request starting HTTP/2 GET https://localhost:44393/_blazor/initializers - null null
+2024-03-06 12:53:56.597 -08:00 [INF] Executing endpoint 'Blazor initializers'
+2024-03-06 12:53:56.607 -08:00 [INF] Executed endpoint 'Blazor initializers'
+2024-03-06 12:53:56.607 -08:00 [INF] Request finished HTTP/2 GET https://localhost:44393/_blazor/initializers - 200 null application/json; charset=utf-8 11.5675ms
+2024-03-06 12:53:56.620 -08:00 [INF] Request starting HTTP/2 POST https://localhost:44393/_blazor/negotiate?negotiateVersion=1 - null 0
+2024-03-06 12:53:56.620 -08:00 [INF] Executing endpoint '/_blazor/negotiate'
+2024-03-06 12:53:56.631 -08:00 [INF] Executed endpoint '/_blazor/negotiate'
+2024-03-06 12:53:56.631 -08:00 [INF] Request finished HTTP/2 POST https://localhost:44393/_blazor/negotiate?negotiateVersion=1 - 200 316 application/json 11.3862ms
+2024-03-06 12:53:56.644 -08:00 [INF] Request starting HTTP/1.1 GET https://localhost:44393/_blazor?id=SfLk5JpO826ZxKwPlnRu_Q - null null
+2024-03-06 12:53:56.657 -08:00 [INF] Executing endpoint '/_blazor'
+2024-03-06 12:53:56.767 -08:00 [INF] Request finished HTTP/2 GET https://localhost:44393/_vs/browserLink - 200 null text/javascript; charset=UTF-8 268.1754ms
+2024-03-06 12:58:50.193 -08:00 [ERR] testGame was null
+2024-03-06 12:58:50.210 -08:00 [ERR] testGame2 was null
+2024-03-06 12:58:50.302 -08:00 [INF] User profile is available. Using 'C:\Users\deliot\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-03-06 12:58:50.514 -08:00 [INF] Request starting HTTP/2 GET https://localhost:44393/ - null null
+2024-03-06 12:58:50.537 -08:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-03-06 12:58:50.539 -08:00 [INF] Hosting environment: Development
+2024-03-06 12:58:50.540 -08:00 [INF] Content root path: C:\Users\deliot\Source\Repos\EdhTracker\EdhTracker
+2024-03-06 12:58:50.610 -08:00 [INF] Executing endpoint '/_Host'
+2024-03-06 12:58:50.623 -08:00 [INF] Route matched with {page = "/_Host"}. Executing page /_Host
+2024-03-06 12:58:50.631 -08:00 [INF] Executing an implicit handler method - ModelState is "Valid"
+2024-03-06 12:58:50.631 -08:00 [INF] Executed an implicit handler method, returned result Microsoft.AspNetCore.Mvc.RazorPages.PageResult.
+2024-03-06 12:58:50.908 -08:00 [INF] Executed page /_Host in 282.2316ms
+2024-03-06 12:58:50.908 -08:00 [INF] Executed endpoint '/_Host'
+2024-03-06 12:58:50.990 -08:00 [INF] Request starting HTTP/2 GET https://localhost:44393/_framework/blazor.server.js - null null
+2024-03-06 12:58:50.990 -08:00 [INF] Request starting HTTP/2 GET https://localhost:44393/_framework/aspnetcore-browser-refresh.js - null null
+2024-03-06 12:58:50.990 -08:00 [INF] Request starting HTTP/2 GET https://localhost:44393/_vs/browserLink - null null
+2024-03-06 12:58:51.125 -08:00 [INF] Executing endpoint 'Blazor static files'
+2024-03-06 12:58:51.125 -08:00 [INF] Request finished HTTP/2 GET https://localhost:44393/_framework/aspnetcore-browser-refresh.js - 200 13756 application/javascript; charset=utf-8 111.7238ms
+2024-03-06 12:58:51.136 -08:00 [INF] The file /_framework/blazor.server.js was not modified
+2024-03-06 12:58:51.138 -08:00 [INF] Executed endpoint 'Blazor static files'
+2024-03-06 12:58:51.138 -08:00 [INF] Request finished HTTP/2 GET https://localhost:44393/_framework/blazor.server.js - 304 null text/javascript 150.3705ms
+2024-03-06 12:58:51.139 -08:00 [INF] Request finished HTTP/2 GET https://localhost:44393/ - 200 null text/html; charset=utf-8 629.7361ms
+2024-03-06 12:58:51.148 -08:00 [INF] Request starting HTTP/2 GET https://localhost:44393/_blazor/initializers - null null
+2024-03-06 12:58:51.150 -08:00 [INF] Executing endpoint 'Blazor initializers'
+2024-03-06 12:58:51.152 -08:00 [INF] Executed endpoint 'Blazor initializers'
+2024-03-06 12:58:51.152 -08:00 [INF] Request finished HTTP/2 GET https://localhost:44393/_blazor/initializers - 200 null application/json; charset=utf-8 3.6976ms
+2024-03-06 12:58:51.157 -08:00 [INF] Request finished HTTP/2 GET https://localhost:44393/_vs/browserLink - 200 null text/javascript; charset=UTF-8 167.2261ms
+2024-03-06 12:58:51.160 -08:00 [INF] Request starting HTTP/2 POST https://localhost:44393/_blazor/negotiate?negotiateVersion=1 - null 0
+2024-03-06 12:58:51.161 -08:00 [INF] Executing endpoint '/_blazor/negotiate'
+2024-03-06 12:58:51.166 -08:00 [INF] Executed endpoint '/_blazor/negotiate'
+2024-03-06 12:58:51.166 -08:00 [INF] Request finished HTTP/2 POST https://localhost:44393/_blazor/negotiate?negotiateVersion=1 - 200 316 application/json 6.505ms
+2024-03-06 12:58:51.174 -08:00 [INF] Request starting HTTP/1.1 GET https://localhost:44393/_blazor?id=tjiDQ8vFO4CgQtP-z2-o2w - null null
+2024-03-06 12:58:51.174 -08:00 [INF] Executing endpoint '/_blazor'
+2024-03-06 12:59:08.458 -08:00 [INF] Request starting HTTP/2 GET https://localhost:44393/Group/da65fcf4-4b9c-4f0f-ae08-a5e25ddc42bd? - null null
+2024-03-06 12:59:08.463 -08:00 [INF] Executing endpoint '/_Host'
+2024-03-06 12:59:08.464 -08:00 [INF] Route matched with {page = "/_Host"}. Executing page /_Host
+2024-03-06 12:59:08.465 -08:00 [INF] Executing an implicit handler method - ModelState is "Valid"
+2024-03-06 12:59:08.465 -08:00 [INF] Executed an implicit handler method, returned result Microsoft.AspNetCore.Mvc.RazorPages.PageResult.
+2024-03-06 12:59:08.480 -08:00 [INF] Executed page /_Host in 15.7622ms
+2024-03-06 12:59:08.480 -08:00 [INF] Executed endpoint '/_Host'
+2024-03-06 12:59:08.513 -08:00 [INF] Request starting HTTP/2 GET https://localhost:44393/_framework/blazor.server.js - null null
+2024-03-06 12:59:08.525 -08:00 [INF] Request starting HTTP/2 POST https://localhost:44393/_blazor/disconnect - multipart/form-data; boundary=----WebKitFormBoundaryCvrvHfkQu6vIO2dY 359
+2024-03-06 12:59:08.526 -08:00 [INF] Request starting HTTP/2 GET https://localhost:44393/_framework/aspnetcore-browser-refresh.js - null null
+2024-03-06 12:59:08.526 -08:00 [INF] Request starting HTTP/2 GET https://localhost:44393/_vs/browserLink - null null
+2024-03-06 12:59:08.538 -08:00 [INF] Executing endpoint 'Blazor static files'
+2024-03-06 12:59:08.538 -08:00 [INF] Executing endpoint 'Blazor disconnect'
+2024-03-06 12:59:08.550 -08:00 [INF] Request finished HTTP/2 GET https://localhost:44393/_framework/aspnetcore-browser-refresh.js - 200 13756 application/javascript; charset=utf-8 24.4509ms
+2024-03-06 12:59:08.550 -08:00 [INF] The file /_framework/blazor.server.js was not modified
+2024-03-06 12:59:08.552 -08:00 [INF] Executed endpoint 'Blazor static files'
+2024-03-06 12:59:08.552 -08:00 [INF] Request finished HTTP/2 GET https://localhost:44393/_framework/blazor.server.js - 304 null text/javascript 38.3318ms
+2024-03-06 12:59:08.563 -08:00 [INF] Request starting HTTP/2 GET https://localhost:44393/_blazor/initializers - null null
+2024-03-06 12:59:08.565 -08:00 [INF] Executing endpoint 'Blazor initializers'
+2024-03-06 12:59:08.578 -08:00 [INF] Executed endpoint 'Blazor initializers'
+2024-03-06 12:59:08.589 -08:00 [INF] Request finished HTTP/2 GET https://localhost:44393/_blazor/initializers - 200 null application/json; charset=utf-8 16.0329ms
+2024-03-06 12:59:08.590 -08:00 [INF] Request starting HTTP/2 POST https://localhost:44393/_blazor/negotiate?negotiateVersion=1 - null 0
+2024-03-06 12:59:08.590 -08:00 [INF] Executing endpoint '/_blazor/negotiate'
+2024-03-06 12:59:08.601 -08:00 [INF] Executed endpoint '/_blazor/negotiate'
+2024-03-06 12:59:08.601 -08:00 [INF] Request finished HTTP/2 POST https://localhost:44393/_blazor/negotiate?negotiateVersion=1 - 200 316 application/json 11.4927ms
+2024-03-06 12:59:08.604 -08:00 [INF] Request finished HTTP/2 GET https://localhost:44393/_vs/browserLink - 200 null text/javascript; charset=UTF-8 79.3565ms
+2024-03-06 12:59:08.605 -08:00 [INF] Request finished HTTP/2 GET https://localhost:44393/Group/da65fcf4-4b9c-4f0f-ae08-a5e25ddc42bd? - 200 null text/html; charset=utf-8 146.9111ms
+2024-03-06 12:59:08.606 -08:00 [INF] Request starting HTTP/1.1 GET https://localhost:44393/_blazor?id=T9RefnrcdMx0XBc5yxKzHw - null null
+2024-03-06 12:59:08.606 -08:00 [INF] Executing endpoint '/_blazor'
+2024-03-06 12:59:08.671 -08:00 [INF] Executed endpoint '/_blazor'
+2024-03-06 12:59:08.672 -08:00 [INF] Request finished HTTP/1.1 GET https://localhost:44393/_blazor?id=tjiDQ8vFO4CgQtP-z2-o2w - 101 null null 17498.941ms
+2024-03-06 12:59:08.966 -08:00 [INF] Executed endpoint 'Blazor disconnect'
+2024-03-06 12:59:08.966 -08:00 [INF] Request finished HTTP/2 POST https://localhost:44393/_blazor/disconnect - 200 null null 452.9024ms
+2024-03-06 13:01:05.459 -08:00 [INF] User profile is available. Using 'C:\Users\deliot\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-03-06 13:01:05.698 -08:00 [INF] Request starting HTTP/2 GET https://localhost:44393/ - null null
+2024-03-06 13:01:05.719 -08:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-03-06 13:01:05.720 -08:00 [INF] Hosting environment: Development
+2024-03-06 13:01:05.722 -08:00 [INF] Content root path: C:\Users\deliot\Source\Repos\EdhTracker\EdhTracker
+2024-03-06 13:01:05.790 -08:00 [INF] Executing endpoint '/_Host'
+2024-03-06 13:01:05.802 -08:00 [INF] Route matched with {page = "/_Host"}. Executing page /_Host
+2024-03-06 13:01:05.810 -08:00 [INF] Executing an implicit handler method - ModelState is "Valid"
+2024-03-06 13:01:05.811 -08:00 [INF] Executed an implicit handler method, returned result Microsoft.AspNetCore.Mvc.RazorPages.PageResult.
+2024-03-06 13:01:06.153 -08:00 [INF] Executed page /_Host in 347.8734ms
+2024-03-06 13:01:06.153 -08:00 [INF] Executed endpoint '/_Host'
+2024-03-06 13:01:06.236 -08:00 [INF] Request starting HTTP/2 GET https://localhost:44393/_vs/browserLink - null null
+2024-03-06 13:01:06.236 -08:00 [INF] Request starting HTTP/2 GET https://localhost:44393/_framework/blazor.server.js - null null
+2024-03-06 13:01:06.236 -08:00 [INF] Request starting HTTP/2 GET https://localhost:44393/_framework/aspnetcore-browser-refresh.js - null null
+2024-03-06 13:01:06.322 -08:00 [INF] Request finished HTTP/2 GET https://localhost:44393/_framework/aspnetcore-browser-refresh.js - 200 13756 application/javascript; charset=utf-8 43.5805ms
+2024-03-06 13:01:06.334 -08:00 [INF] Executing endpoint 'Blazor static files'
+2024-03-06 13:01:06.345 -08:00 [INF] The file /_framework/blazor.server.js was not modified
+2024-03-06 13:01:06.347 -08:00 [INF] Executed endpoint 'Blazor static files'
+2024-03-06 13:01:06.347 -08:00 [INF] Request finished HTTP/2 GET https://localhost:44393/_framework/blazor.server.js - 304 null text/javascript 111.6294ms
+2024-03-06 13:01:06.348 -08:00 [INF] Request finished HTTP/2 GET https://localhost:44393/ - 200 null text/html; charset=utf-8 655.1084ms
+2024-03-06 13:01:06.357 -08:00 [INF] Request starting HTTP/2 GET https://localhost:44393/_blazor/initializers - null null
+2024-03-06 13:01:06.359 -08:00 [INF] Executing endpoint 'Blazor initializers'
+2024-03-06 13:01:06.360 -08:00 [INF] Executed endpoint 'Blazor initializers'
+2024-03-06 13:01:06.360 -08:00 [INF] Request finished HTTP/2 GET https://localhost:44393/_blazor/initializers - 200 null application/json; charset=utf-8 2.8959ms
+2024-03-06 13:01:06.363 -08:00 [INF] Request finished HTTP/2 GET https://localhost:44393/_vs/browserLink - 200 null text/javascript; charset=UTF-8 127.2002ms
+2024-03-06 13:01:06.366 -08:00 [INF] Request starting HTTP/2 POST https://localhost:44393/_blazor/negotiate?negotiateVersion=1 - null 0
+2024-03-06 13:01:06.367 -08:00 [INF] Executing endpoint '/_blazor/negotiate'
+2024-03-06 13:01:06.372 -08:00 [INF] Executed endpoint '/_blazor/negotiate'
+2024-03-06 13:01:06.373 -08:00 [INF] Request finished HTTP/2 POST https://localhost:44393/_blazor/negotiate?negotiateVersion=1 - 200 316 application/json 6.7893ms
+2024-03-06 13:01:06.381 -08:00 [INF] Request starting HTTP/1.1 GET https://localhost:44393/_blazor?id=fBZ9xX9QeaEPqYGkY3-O4Q - null null
+2024-03-06 13:01:06.381 -08:00 [INF] Executing endpoint '/_blazor'
+2024-03-06 13:01:46.441 -08:00 [INF] Request starting HTTP/2 GET https://localhost:44393/Group/da65fcf4-4b9c-4f0f-ae08-a5e25ddc42bd/Decks? - null null
+2024-03-06 13:01:46.444 -08:00 [INF] Executing endpoint '/_Host'
+2024-03-06 13:01:46.446 -08:00 [INF] Route matched with {page = "/_Host"}. Executing page /_Host
+2024-03-06 13:01:46.447 -08:00 [INF] Executing an implicit handler method - ModelState is "Valid"
+2024-03-06 13:01:46.447 -08:00 [INF] Executed an implicit handler method, returned result Microsoft.AspNetCore.Mvc.RazorPages.PageResult.
+2024-03-06 13:01:46.461 -08:00 [INF] Executed page /_Host in 14.6102ms
+2024-03-06 13:01:46.461 -08:00 [INF] Executed endpoint '/_Host'
+2024-03-06 13:01:46.484 -08:00 [INF] Request starting HTTP/2 POST https://localhost:44393/_blazor/disconnect - multipart/form-data; boundary=----WebKitFormBoundary06mHhT1FuACHmCng 359
+2024-03-06 13:01:46.496 -08:00 [INF] Executing endpoint 'Blazor disconnect'
+2024-03-06 13:01:46.507 -08:00 [INF] Request starting HTTP/2 GET https://localhost:44393/_framework/aspnetcore-browser-refresh.js - null null
+2024-03-06 13:01:46.507 -08:00 [INF] Request starting HTTP/2 GET https://localhost:44393/_vs/browserLink - null null
+2024-03-06 13:01:46.507 -08:00 [INF] Request starting HTTP/2 GET https://localhost:44393/_framework/blazor.server.js - null null
+2024-03-06 13:01:46.528 -08:00 [INF] Executing endpoint 'Blazor static files'
+2024-03-06 13:01:46.529 -08:00 [INF] Request finished HTTP/2 GET https://localhost:44393/_framework/aspnetcore-browser-refresh.js - 200 13756 application/javascript; charset=utf-8 21.833ms
+2024-03-06 13:01:46.537 -08:00 [INF] The file /_framework/blazor.server.js was not modified
+2024-03-06 13:01:46.538 -08:00 [INF] Executed endpoint 'Blazor static files'
+2024-03-06 13:01:46.539 -08:00 [INF] Request finished HTTP/2 GET https://localhost:44393/_framework/blazor.server.js - 304 null text/javascript 33.2512ms
+2024-03-06 13:01:46.570 -08:00 [INF] Request starting HTTP/2 GET https://localhost:44393/_blazor/initializers - null null
+2024-03-06 13:01:46.571 -08:00 [INF] Executing endpoint 'Blazor initializers'
+2024-03-06 13:01:46.571 -08:00 [INF] Executed endpoint 'Blazor initializers'
+2024-03-06 13:01:46.571 -08:00 [INF] Request finished HTTP/2 GET https://localhost:44393/_blazor/initializers - 200 null application/json; charset=utf-8 2.2283ms
+2024-03-06 13:01:46.572 -08:00 [INF] Request finished HTTP/2 GET https://localhost:44393/Group/da65fcf4-4b9c-4f0f-ae08-a5e25ddc42bd/Decks? - 200 null text/html; charset=utf-8 131.1579ms
+2024-03-06 13:01:46.574 -08:00 [INF] Request finished HTTP/2 GET https://localhost:44393/_vs/browserLink - 200 null text/javascript; charset=UTF-8 68.296ms
+2024-03-06 13:01:46.577 -08:00 [INF] Request starting HTTP/2 POST https://localhost:44393/_blazor/negotiate?negotiateVersion=1 - null 0
+2024-03-06 13:01:46.578 -08:00 [INF] Executing endpoint '/_blazor/negotiate'
+2024-03-06 13:01:46.578 -08:00 [INF] Executed endpoint '/_blazor/negotiate'
+2024-03-06 13:01:46.578 -08:00 [INF] Request finished HTTP/2 POST https://localhost:44393/_blazor/negotiate?negotiateVersion=1 - 200 316 application/json 0.7876ms
+2024-03-06 13:01:46.585 -08:00 [INF] Request starting HTTP/1.1 GET https://localhost:44393/_blazor?id=SoWkc_p-IvoNg_a3bl2rkQ - null null
+2024-03-06 13:01:46.585 -08:00 [INF] Executing endpoint '/_blazor'
+2024-03-06 13:01:46.655 -08:00 [INF] Executed endpoint '/_blazor'
+2024-03-06 13:01:46.673 -08:00 [INF] Request finished HTTP/1.1 GET https://localhost:44393/_blazor?id=fBZ9xX9QeaEPqYGkY3-O4Q - 101 null null 40291.8921ms
+2024-03-06 13:01:46.871 -08:00 [INF] Executed endpoint 'Blazor disconnect'
+2024-03-06 13:01:46.871 -08:00 [INF] Request finished HTTP/2 POST https://localhost:44393/_blazor/disconnect - 200 null null 387.7319ms
+2024-03-06 13:02:11.847 -08:00 [INF] Request starting HTTP/2 GET https://localhost:44393/Group/da65fcf4-4b9c-4f0f-ae08-a5e25ddc42bd/Decks? - null null
+2024-03-06 13:02:11.850 -08:00 [INF] Executing endpoint '/_Host'
+2024-03-06 13:02:11.850 -08:00 [INF] Route matched with {page = "/_Host"}. Executing page /_Host
+2024-03-06 13:02:11.850 -08:00 [INF] Executing an implicit handler method - ModelState is "Valid"
+2024-03-06 13:02:11.850 -08:00 [INF] Executed an implicit handler method, returned result Microsoft.AspNetCore.Mvc.RazorPages.PageResult.
+2024-03-06 13:02:11.859 -08:00 [INF] Executed page /_Host in 8.6487ms
+2024-03-06 13:02:11.859 -08:00 [INF] Executed endpoint '/_Host'
+2024-03-06 13:02:11.890 -08:00 [INF] Request starting HTTP/2 GET https://localhost:44393/_framework/blazor.server.js - null null
+2024-03-06 13:02:11.890 -08:00 [INF] Request starting HTTP/2 POST https://localhost:44393/_blazor/disconnect - multipart/form-data; boundary=----WebKitFormBoundaryX76wKWOyS3yAxR3w 359
+2024-03-06 13:02:11.904 -08:00 [INF] Request starting HTTP/2 GET https://localhost:44393/_vs/browserLink - null null
+2024-03-06 13:02:11.904 -08:00 [INF] Request starting HTTP/2 GET https://localhost:44393/_framework/aspnetcore-browser-refresh.js - null null
+2024-03-06 13:02:11.904 -08:00 [INF] Executing endpoint 'Blazor disconnect'
+2024-03-06 13:02:11.918 -08:00 [INF] Executing endpoint 'Blazor static files'
+2024-03-06 13:02:11.930 -08:00 [INF] The file /_framework/blazor.server.js was not modified
+2024-03-06 13:02:11.932 -08:00 [INF] Executed endpoint 'Blazor static files'
+2024-03-06 13:02:11.932 -08:00 [INF] Request finished HTTP/2 GET https://localhost:44393/_framework/aspnetcore-browser-refresh.js - 200 13756 application/javascript; charset=utf-8 29.8699ms
+2024-03-06 13:02:11.945 -08:00 [INF] Request finished HTTP/2 GET https://localhost:44393/_framework/blazor.server.js - 304 null text/javascript 55.1232ms
+2024-03-06 13:02:11.977 -08:00 [INF] Request starting HTTP/2 GET https://localhost:44393/_blazor/initializers - null null
+2024-03-06 13:02:11.989 -08:00 [INF] Executing endpoint 'Blazor initializers'
+2024-03-06 13:02:12.014 -08:00 [INF] Executed endpoint 'Blazor initializers'
+2024-03-06 13:02:12.025 -08:00 [INF] Executed endpoint '/_blazor'
+2024-03-06 13:02:12.026 -08:00 [INF] Request finished HTTP/2 GET https://localhost:44393/_blazor/initializers - 200 null application/json; charset=utf-8 48.7995ms
+2024-03-06 13:02:12.037 -08:00 [INF] Request finished HTTP/1.1 GET https://localhost:44393/_blazor?id=SoWkc_p-IvoNg_a3bl2rkQ - 101 null null 25441.442ms
+2024-03-06 13:02:12.038 -08:00 [INF] Request starting HTTP/2 POST https://localhost:44393/_blazor/negotiate?negotiateVersion=1 - null 0
+2024-03-06 13:02:12.049 -08:00 [INF] Executing endpoint '/_blazor/negotiate'
+2024-03-06 13:02:12.064 -08:00 [INF] Executed endpoint '/_blazor/negotiate'
+2024-03-06 13:02:12.075 -08:00 [INF] Request finished HTTP/2 POST https://localhost:44393/_blazor/negotiate?negotiateVersion=1 - 200 316 application/json 37.5392ms
+2024-03-06 13:02:12.075 -08:00 [INF] Request finished HTTP/2 GET https://localhost:44393/Group/da65fcf4-4b9c-4f0f-ae08-a5e25ddc42bd/Decks? - 200 null text/html; charset=utf-8 228.2721ms
+2024-03-06 13:02:12.075 -08:00 [INF] Request starting HTTP/1.1 GET https://localhost:44393/_blazor?id=BET3RDc1Bp3SNhL6F23-sw - null null
+2024-03-06 13:02:12.088 -08:00 [INF] Executing endpoint '/_blazor'
+2024-03-06 13:02:12.111 -08:00 [INF] Request finished HTTP/2 GET https://localhost:44393/_vs/browserLink - 200 null text/javascript; charset=UTF-8 208.0602ms
+2024-03-06 13:02:12.277 -08:00 [INF] Executed endpoint 'Blazor disconnect'
+2024-03-06 13:02:12.278 -08:00 [INF] Request finished HTTP/2 POST https://localhost:44393/_blazor/disconnect - 200 null null 387.9528ms
+2024-03-06 13:02:27.060 -08:00 [INF] Request starting HTTP/2 GET https://localhost:44393/Group/da65fcf4-4b9c-4f0f-ae08-a5e25ddc42bd/Decks? - null null
+2024-03-06 13:02:27.062 -08:00 [INF] Executing endpoint '/_Host'
+2024-03-06 13:02:27.062 -08:00 [INF] Route matched with {page = "/_Host"}. Executing page /_Host
+2024-03-06 13:02:27.063 -08:00 [INF] Executing an implicit handler method - ModelState is "Valid"
+2024-03-06 13:02:27.063 -08:00 [INF] Executed an implicit handler method, returned result Microsoft.AspNetCore.Mvc.RazorPages.PageResult.
+2024-03-06 13:02:27.068 -08:00 [INF] Executed page /_Host in 5.0629ms
+2024-03-06 13:02:27.068 -08:00 [INF] Executed endpoint '/_Host'
+2024-03-06 13:02:27.094 -08:00 [INF] Request starting HTTP/2 POST https://localhost:44393/_blazor/disconnect - multipart/form-data; boundary=----WebKitFormBoundaryhvV3eUi1LbSf2lvr 359
+2024-03-06 13:02:27.107 -08:00 [INF] Request starting HTTP/2 GET https://localhost:44393/_framework/blazor.server.js - null null
+2024-03-06 13:02:27.107 -08:00 [INF] Request starting HTTP/2 GET https://localhost:44393/_framework/aspnetcore-browser-refresh.js - null null
+2024-03-06 13:02:27.107 -08:00 [INF] Request starting HTTP/2 GET https://localhost:44393/_vs/browserLink - null null
+2024-03-06 13:02:27.108 -08:00 [INF] Executing endpoint 'Blazor disconnect'
+2024-03-06 13:02:27.134 -08:00 [INF] Request finished HTTP/2 GET https://localhost:44393/_framework/aspnetcore-browser-refresh.js - 200 13756 application/javascript; charset=utf-8 14.7083ms
+2024-03-06 13:02:27.134 -08:00 [INF] Executing endpoint 'Blazor static files'
+2024-03-06 13:02:27.136 -08:00 [INF] The file /_framework/blazor.server.js was not modified
+2024-03-06 13:02:27.147 -08:00 [INF] Executed endpoint 'Blazor static files'
+2024-03-06 13:02:27.159 -08:00 [INF] Request finished HTTP/2 GET https://localhost:44393/_framework/blazor.server.js - 304 null text/javascript 53.5288ms
+2024-03-06 13:02:27.161 -08:00 [INF] Request starting HTTP/2 GET https://localhost:44393/_blazor/initializers - null null
+2024-03-06 13:02:27.161 -08:00 [INF] Executing endpoint 'Blazor initializers'
+2024-03-06 13:02:27.161 -08:00 [INF] Executed endpoint '/_blazor'
+2024-03-06 13:02:27.161 -08:00 [INF] Request finished HTTP/1.1 GET https://localhost:44393/_blazor?id=BET3RDc1Bp3SNhL6F23-sw - 101 null null 15086.1291ms
+2024-03-06 13:02:27.173 -08:00 [INF] Executed endpoint 'Blazor initializers'
+2024-03-06 13:02:27.173 -08:00 [INF] Request finished HTTP/2 GET https://localhost:44393/_blazor/initializers - 200 null application/json; charset=utf-8 13.2418ms
+2024-03-06 13:02:27.184 -08:00 [INF] Request starting HTTP/2 POST https://localhost:44393/_blazor/negotiate?negotiateVersion=1 - null 0
+2024-03-06 13:02:27.185 -08:00 [INF] Executing endpoint '/_blazor/negotiate'
+2024-03-06 13:02:27.185 -08:00 [INF] Request finished HTTP/2 GET https://localhost:44393/Group/da65fcf4-4b9c-4f0f-ae08-a5e25ddc42bd/Decks? - 200 null text/html; charset=utf-8 125.0415ms
+2024-03-06 13:02:27.197 -08:00 [INF] Executed endpoint '/_blazor/negotiate'
+2024-03-06 13:02:27.198 -08:00 [INF] Request finished HTTP/2 POST https://localhost:44393/_blazor/negotiate?negotiateVersion=1 - 200 316 application/json 13.1801ms
+2024-03-06 13:02:27.209 -08:00 [INF] Request starting HTTP/1.1 GET https://localhost:44393/_blazor?id=k8zJmXQj0q79J1F9F7q76A - null null
+2024-03-06 13:02:27.221 -08:00 [INF] Executing endpoint '/_blazor'
+2024-03-06 13:02:27.455 -08:00 [INF] Executed endpoint 'Blazor disconnect'
+2024-03-06 13:02:27.456 -08:00 [INF] Request finished HTTP/2 POST https://localhost:44393/_blazor/disconnect - 200 null null 361.3427ms
+2024-03-06 13:02:27.460 -08:00 [INF] Request finished HTTP/2 GET https://localhost:44393/_vs/browserLink - 200 null text/javascript; charset=UTF-8 352.7647ms
+2024-03-06 13:02:31.148 -08:00 [WRN] Unhandled exception rendering component: Error calling GetNamed: {
+  "object": "error",
+  "code": "bad_request",
+  "status": 400,
+  "details": "You must provide a `fuzzy` or `exact` parameter"
+}
+Org.OpenAPITools.Client.ApiException: Error calling GetNamed: {
+  "object": "error",
+  "code": "bad_request",
+  "status": 400,
+  "details": "You must provide a `fuzzy` or `exact` parameter"
+}
+   at Org.OpenAPITools.Api.CardsApi.GetNamedWithHttpInfoAsync(String exact, String fuzzy, String set, String format, String face, String varVersion, Nullable`1 pretty, Int32 operationIndex, CancellationToken cancellationToken) in C:\Users\deliot\Source\Repos\EdhTracker\EdhTracker\OpenAPIs\ScryfallClient\src\Org.OpenAPITools\Api\CardsApi.cs:line 1632
+   at Org.OpenAPITools.Api.CardsApi.GetNamedAsync(String exact, String fuzzy, String set, String format, String face, String varVersion, Nullable`1 pretty, Int32 operationIndex, CancellationToken cancellationToken) in C:\Users\deliot\Source\Repos\EdhTracker\EdhTracker\OpenAPIs\ScryfallClient\src\Org.OpenAPITools\Api\CardsApi.cs:line 1548
+   at EdhTracker.Pages.ManageDecks.LoadFromScryfall() in C:\Users\deliot\Source\Repos\EdhTracker\EdhTracker\Pages\ManageDecks.razor:line 91
+   at Microsoft.AspNetCore.Components.ComponentBase.CallStateHasChangedOnAsyncCompletion(Task task)
+   at MudBlazor.MudBaseButton.OnClickHandler(MouseEventArgs ev)
+   at Microsoft.AspNetCore.Components.ComponentBase.CallStateHasChangedOnAsyncCompletion(Task task)
+   at Microsoft.AspNetCore.Components.RenderTree.Renderer.GetErrorHandledTask(Task taskToHandle, ComponentState owningComponentState)
+2024-03-06 13:02:31.159 -08:00 [ERR] Unhandled exception in circuit 'pG5bJZW9GMLYdX06_UKBaTQvKA5VEGzKLZuUD8ZblPo'.
+Org.OpenAPITools.Client.ApiException: Error calling GetNamed: {
+  "object": "error",
+  "code": "bad_request",
+  "status": 400,
+  "details": "You must provide a `fuzzy` or `exact` parameter"
+}
+   at Org.OpenAPITools.Api.CardsApi.GetNamedWithHttpInfoAsync(String exact, String fuzzy, String set, String format, String face, String varVersion, Nullable`1 pretty, Int32 operationIndex, CancellationToken cancellationToken) in C:\Users\deliot\Source\Repos\EdhTracker\EdhTracker\OpenAPIs\ScryfallClient\src\Org.OpenAPITools\Api\CardsApi.cs:line 1632
+   at Org.OpenAPITools.Api.CardsApi.GetNamedAsync(String exact, String fuzzy, String set, String format, String face, String varVersion, Nullable`1 pretty, Int32 operationIndex, CancellationToken cancellationToken) in C:\Users\deliot\Source\Repos\EdhTracker\EdhTracker\OpenAPIs\ScryfallClient\src\Org.OpenAPITools\Api\CardsApi.cs:line 1548
+   at EdhTracker.Pages.ManageDecks.LoadFromScryfall() in C:\Users\deliot\Source\Repos\EdhTracker\EdhTracker\Pages\ManageDecks.razor:line 91
+   at Microsoft.AspNetCore.Components.ComponentBase.CallStateHasChangedOnAsyncCompletion(Task task)
+   at MudBlazor.MudBaseButton.OnClickHandler(MouseEventArgs ev)
+   at Microsoft.AspNetCore.Components.ComponentBase.CallStateHasChangedOnAsyncCompletion(Task task)
+   at Microsoft.AspNetCore.Components.RenderTree.Renderer.GetErrorHandledTask(Task taskToHandle, ComponentState owningComponentState)
+2024-03-06 13:02:31.192 -08:00 [INF] Executed endpoint '/_blazor'
+2024-03-06 13:02:31.205 -08:00 [INF] Request finished HTTP/1.1 GET https://localhost:44393/_blazor?id=k8zJmXQj0q79J1F9F7q76A - 101 null null 3996.2127ms
+2024-03-06 13:02:36.472 -08:00 [INF] Request starting HTTP/2 GET https://localhost:44393/Group/da65fcf4-4b9c-4f0f-ae08-a5e25ddc42bd/Decks? - null null
+2024-03-06 13:02:37.447 -08:00 [INF] Executing endpoint '/_Host'
+2024-03-06 13:02:37.447 -08:00 [INF] Route matched with {page = "/_Host"}. Executing page /_Host
+2024-03-06 13:02:37.447 -08:00 [INF] Executing an implicit handler method - ModelState is "Valid"
+2024-03-06 13:02:37.447 -08:00 [INF] Executed an implicit handler method, returned result Microsoft.AspNetCore.Mvc.RazorPages.PageResult.
+2024-03-06 13:02:37.451 -08:00 [INF] Executed page /_Host in 4.3447ms
+2024-03-06 13:02:37.451 -08:00 [INF] Executed endpoint '/_Host'
+2024-03-06 13:02:37.464 -08:00 [INF] Request starting HTTP/2 POST https://localhost:44393/_blazor/disconnect - multipart/form-data; boundary=----WebKitFormBoundaryhRq2HaaABYjYXAMg 359
+2024-03-06 13:02:37.464 -08:00 [INF] Executing endpoint 'Blazor disconnect'
+2024-03-06 13:02:37.474 -08:00 [INF] Executed endpoint 'Blazor disconnect'
+2024-03-06 13:02:37.485 -08:00 [INF] Request starting HTTP/2 GET https://localhost:44393/_framework/blazor.server.js - null null
+2024-03-06 13:02:37.485 -08:00 [INF] Request finished HTTP/2 POST https://localhost:44393/_blazor/disconnect - 200 null null 21.953ms
+2024-03-06 13:02:37.495 -08:00 [INF] Request starting HTTP/2 GET https://localhost:44393/_vs/browserLink - null null
+2024-03-06 13:02:37.495 -08:00 [INF] Request starting HTTP/2 GET https://localhost:44393/_framework/aspnetcore-browser-refresh.js - null null
+2024-03-06 13:02:37.496 -08:00 [INF] Executing endpoint 'Blazor static files'
+2024-03-06 13:02:37.505 -08:00 [INF] The file /_framework/blazor.server.js was not modified
+2024-03-06 13:02:37.505 -08:00 [INF] Executed endpoint 'Blazor static files'
+2024-03-06 13:02:37.514 -08:00 [INF] Request finished HTTP/2 GET https://localhost:44393/_framework/aspnetcore-browser-refresh.js - 200 13756 application/javascript; charset=utf-8 18.8321ms
+2024-03-06 13:02:37.514 -08:00 [INF] Request finished HTTP/2 GET https://localhost:44393/_framework/blazor.server.js - 304 null text/javascript 28.3868ms
+2024-03-06 13:02:37.515 -08:00 [INF] Request starting HTTP/2 GET https://localhost:44393/_blazor/initializers - null null
+2024-03-06 13:02:37.523 -08:00 [INF] Executing endpoint 'Blazor initializers'
+2024-03-06 13:02:37.533 -08:00 [INF] Executed endpoint 'Blazor initializers'
+2024-03-06 13:02:37.533 -08:00 [INF] Request finished HTTP/2 GET https://localhost:44393/_blazor/initializers - 200 null application/json; charset=utf-8 18.5248ms
+2024-03-06 13:02:37.533 -08:00 [INF] Request finished HTTP/2 GET https://localhost:44393/Group/da65fcf4-4b9c-4f0f-ae08-a5e25ddc42bd/Decks? - 200 null text/html; charset=utf-8 1060.7624ms
+2024-03-06 13:02:37.537 -08:00 [INF] Request starting HTTP/2 POST https://localhost:44393/_blazor/negotiate?negotiateVersion=1 - null 0
+2024-03-06 13:02:37.537 -08:00 [INF] Executing endpoint '/_blazor/negotiate'
+2024-03-06 13:02:37.537 -08:00 [INF] Executed endpoint '/_blazor/negotiate'
+2024-03-06 13:02:37.537 -08:00 [INF] Request finished HTTP/2 POST https://localhost:44393/_blazor/negotiate?negotiateVersion=1 - 200 316 application/json 0.6871ms
+2024-03-06 13:02:37.542 -08:00 [INF] Request starting HTTP/1.1 GET https://localhost:44393/_blazor?id=ivmkOUEd2aPgJbcT4dHQGw - null null
+2024-03-06 13:02:37.542 -08:00 [INF] Executing endpoint '/_blazor'
+2024-03-06 13:02:37.545 -08:00 [INF] Request finished HTTP/2 GET https://localhost:44393/_vs/browserLink - 200 null text/javascript; charset=UTF-8 49.8148ms
+2024-03-06 13:03:01.476 -08:00 [INF] Request starting HTTP/2 GET https://localhost:44393/Group/da65fcf4-4b9c-4f0f-ae08-a5e25ddc42bd/Decks? - null null
+2024-03-06 13:03:01.478 -08:00 [INF] Executing endpoint '/_Host'
+2024-03-06 13:03:01.478 -08:00 [INF] Route matched with {page = "/_Host"}. Executing page /_Host
+2024-03-06 13:03:01.479 -08:00 [INF] Executing an implicit handler method - ModelState is "Valid"
+2024-03-06 13:03:01.479 -08:00 [INF] Executed an implicit handler method, returned result Microsoft.AspNetCore.Mvc.RazorPages.PageResult.
+2024-03-06 13:03:01.483 -08:00 [INF] Executed page /_Host in 4.6357ms
+2024-03-06 13:03:01.483 -08:00 [INF] Executed endpoint '/_Host'
+2024-03-06 13:03:01.505 -08:00 [INF] Request starting HTTP/2 POST https://localhost:44393/_blazor/disconnect - multipart/form-data; boundary=----WebKitFormBoundaryS3fg2dPE24GqliZL 359
+2024-03-06 13:03:01.519 -08:00 [INF] Executing endpoint 'Blazor disconnect'
+2024-03-06 13:03:01.519 -08:00 [INF] Request starting HTTP/2 GET https://localhost:44393/_framework/blazor.server.js - null null
+2024-03-06 13:03:01.519 -08:00 [INF] Request starting HTTP/2 GET https://localhost:44393/_framework/aspnetcore-browser-refresh.js - null null
+2024-03-06 13:03:01.519 -08:00 [INF] Request starting HTTP/2 GET https://localhost:44393/_vs/browserLink - null null
+2024-03-06 13:03:01.545 -08:00 [INF] Executed endpoint '/_blazor'
+2024-03-06 13:03:01.547 -08:00 [INF] Request finished HTTP/1.1 GET https://localhost:44393/_blazor?id=ivmkOUEd2aPgJbcT4dHQGw - 101 null null 24004.4857ms
+2024-03-06 13:03:01.547 -08:00 [INF] Request finished HTTP/2 GET https://localhost:44393/_framework/aspnetcore-browser-refresh.js - 200 13756 application/javascript; charset=utf-8 27.3544ms
+2024-03-06 13:03:01.547 -08:00 [INF] Executing endpoint 'Blazor static files'
+2024-03-06 13:03:01.574 -08:00 [INF] The file /_framework/blazor.server.js was not modified
+2024-03-06 13:03:01.586 -08:00 [INF] Executed endpoint 'Blazor static files'
+2024-03-06 13:03:01.587 -08:00 [INF] Request finished HTTP/2 GET https://localhost:44393/_framework/blazor.server.js - 304 null text/javascript 68.0151ms
+2024-03-06 13:03:01.601 -08:00 [INF] Request starting HTTP/2 GET https://localhost:44393/_blazor/initializers - null null
+2024-03-06 13:03:01.601 -08:00 [INF] Executing endpoint 'Blazor initializers'
+2024-03-06 13:03:01.636 -08:00 [INF] Executed endpoint 'Blazor initializers'
+2024-03-06 13:03:01.648 -08:00 [INF] Request finished HTTP/2 GET https://localhost:44393/_blazor/initializers - 200 null application/json; charset=utf-8 37.3736ms
+2024-03-06 13:03:01.648 -08:00 [INF] Request starting HTTP/2 POST https://localhost:44393/_blazor/negotiate?negotiateVersion=1 - null 0
+2024-03-06 13:03:01.650 -08:00 [INF] Executing endpoint '/_blazor/negotiate'
+2024-03-06 13:03:01.660 -08:00 [INF] Request finished HTTP/2 GET https://localhost:44393/Group/da65fcf4-4b9c-4f0f-ae08-a5e25ddc42bd/Decks? - 200 null text/html; charset=utf-8 173.9201ms
+2024-03-06 13:03:01.672 -08:00 [INF] Executed endpoint '/_blazor/negotiate'
+2024-03-06 13:03:01.673 -08:00 [INF] Request finished HTTP/2 POST https://localhost:44393/_blazor/negotiate?negotiateVersion=1 - 200 316 application/json 25.2108ms
+2024-03-06 13:03:01.685 -08:00 [INF] Request starting HTTP/1.1 GET https://localhost:44393/_blazor?id=6cdEvfu8UYTHy1j8u3Iw_A - null null
+2024-03-06 13:03:01.685 -08:00 [INF] Executing endpoint '/_blazor'
+2024-03-06 13:03:01.731 -08:00 [INF] Request finished HTTP/2 GET https://localhost:44393/_vs/browserLink - 200 null text/javascript; charset=UTF-8 211.5289ms
+2024-03-06 13:03:01.880 -08:00 [INF] Executed endpoint 'Blazor disconnect'
+2024-03-06 13:03:01.880 -08:00 [INF] Request finished HTTP/2 POST https://localhost:44393/_blazor/disconnect - 200 null null 375.2483ms
+2024-03-06 13:03:52.748 -08:00 [INF] Request starting HTTP/2 GET https://localhost:44393/Group/da65fcf4-4b9c-4f0f-ae08-a5e25ddc42bd? - null null
+2024-03-06 13:03:52.755 -08:00 [INF] Executing endpoint '/_Host'
+2024-03-06 13:03:52.756 -08:00 [INF] Route matched with {page = "/_Host"}. Executing page /_Host
+2024-03-06 13:03:52.756 -08:00 [INF] Executing an implicit handler method - ModelState is "Valid"
+2024-03-06 13:03:52.756 -08:00 [INF] Executed an implicit handler method, returned result Microsoft.AspNetCore.Mvc.RazorPages.PageResult.
+2024-03-06 13:03:52.759 -08:00 [INF] Executed page /_Host in 3.5881ms
+2024-03-06 13:03:52.759 -08:00 [INF] Executed endpoint '/_Host'
+2024-03-06 13:03:52.778 -08:00 [INF] Request starting HTTP/2 POST https://localhost:44393/_blazor/disconnect - multipart/form-data; boundary=----WebKitFormBoundarywqnwtOf4H6IBaMDZ 359
+2024-03-06 13:03:52.792 -08:00 [INF] Request starting HTTP/2 GET https://localhost:44393/_framework/blazor.server.js - null null
+2024-03-06 13:03:52.793 -08:00 [INF] Executing endpoint 'Blazor disconnect'
+2024-03-06 13:03:52.806 -08:00 [INF] Request starting HTTP/2 GET https://localhost:44393/_vs/browserLink - null null
+2024-03-06 13:03:52.806 -08:00 [INF] Request starting HTTP/2 GET https://localhost:44393/_framework/aspnetcore-browser-refresh.js - null null
+2024-03-06 13:03:52.806 -08:00 [INF] Executing endpoint 'Blazor static files'
+2024-03-06 13:03:52.819 -08:00 [INF] The file /_framework/blazor.server.js was not modified
+2024-03-06 13:03:52.819 -08:00 [INF] Executed endpoint 'Blazor static files'
+2024-03-06 13:03:52.821 -08:00 [INF] Request finished HTTP/2 GET https://localhost:44393/_framework/blazor.server.js - 304 null text/javascript 29.4172ms
+2024-03-06 13:03:52.821 -08:00 [INF] Request finished HTTP/2 GET https://localhost:44393/_framework/aspnetcore-browser-refresh.js - 200 13756 application/javascript; charset=utf-8 15.7209ms
+2024-03-06 13:03:52.833 -08:00 [INF] Request starting HTTP/2 GET https://localhost:44393/_blazor/initializers - null null
+2024-03-06 13:03:52.834 -08:00 [INF] Executing endpoint 'Blazor initializers'
+2024-03-06 13:03:52.846 -08:00 [INF] Executed endpoint 'Blazor initializers'
+2024-03-06 13:03:52.847 -08:00 [INF] Request finished HTTP/2 GET https://localhost:44393/_blazor/initializers - 200 null application/json; charset=utf-8 14.2997ms
+2024-03-06 13:03:52.859 -08:00 [INF] Request starting HTTP/2 POST https://localhost:44393/_blazor/negotiate?negotiateVersion=1 - null 0
+2024-03-06 13:03:52.870 -08:00 [INF] Executing endpoint '/_blazor/negotiate'
+2024-03-06 13:03:52.871 -08:00 [INF] Request finished HTTP/2 GET https://localhost:44393/Group/da65fcf4-4b9c-4f0f-ae08-a5e25ddc42bd? - 200 null text/html; charset=utf-8 122.9886ms
+2024-03-06 13:03:52.871 -08:00 [INF] Executed endpoint '/_blazor/negotiate'
+2024-03-06 13:03:52.871 -08:00 [INF] Request finished HTTP/2 POST https://localhost:44393/_blazor/negotiate?negotiateVersion=1 - 200 316 application/json 12.7012ms
+2024-03-06 13:03:52.874 -08:00 [INF] Request finished HTTP/2 GET https://localhost:44393/_vs/browserLink - 200 null text/javascript; charset=UTF-8 68.8571ms
+2024-03-06 13:03:52.876 -08:00 [INF] Request starting HTTP/1.1 GET https://localhost:44393/_blazor?id=U7D7I_KywfEHLWoTR_JOGg - null null
+2024-03-06 13:03:52.876 -08:00 [INF] Executing endpoint '/_blazor'
+2024-03-06 13:03:52.922 -08:00 [INF] Executed endpoint '/_blazor'
+2024-03-06 13:03:52.924 -08:00 [INF] Request finished HTTP/1.1 GET https://localhost:44393/_blazor?id=6cdEvfu8UYTHy1j8u3Iw_A - 101 null null 51239.8729ms
+2024-03-06 13:03:53.158 -08:00 [INF] Executed endpoint 'Blazor disconnect'
+2024-03-06 13:03:53.165 -08:00 [INF] Request finished HTTP/2 POST https://localhost:44393/_blazor/disconnect - 200 null null 387.0776ms
+2024-03-06 13:09:50.209 -08:00 [INF] User profile is available. Using 'C:\Users\deliot\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-03-06 13:09:50.477 -08:00 [INF] Request starting HTTP/2 GET https://localhost:44393/ - null null
+2024-03-06 13:09:50.500 -08:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-03-06 13:09:50.502 -08:00 [INF] Hosting environment: Development
+2024-03-06 13:09:50.503 -08:00 [INF] Content root path: C:\Users\deliot\Source\Repos\EdhTracker\EdhTracker
+2024-03-06 13:09:50.574 -08:00 [INF] Executing endpoint '/_Host'
+2024-03-06 13:09:50.588 -08:00 [INF] Route matched with {page = "/_Host"}. Executing page /_Host
+2024-03-06 13:09:50.598 -08:00 [INF] Executing an implicit handler method - ModelState is "Valid"
+2024-03-06 13:09:50.598 -08:00 [INF] Executed an implicit handler method, returned result Microsoft.AspNetCore.Mvc.RazorPages.PageResult.
+2024-03-06 13:09:51.018 -08:00 [INF] Executed page /_Host in 426.958ms
+2024-03-06 13:09:51.018 -08:00 [INF] Executed endpoint '/_Host'
+2024-03-06 13:09:51.098 -08:00 [INF] Request starting HTTP/2 GET https://localhost:44393/_framework/blazor.server.js - null null
+2024-03-06 13:09:51.126 -08:00 [INF] Request starting HTTP/2 GET https://localhost:44393/_framework/aspnetcore-browser-refresh.js - null null
+2024-03-06 13:09:51.128 -08:00 [INF] Request starting HTTP/2 GET https://localhost:44393/_vs/browserLink - null null
+2024-03-06 13:09:51.177 -08:00 [INF] Executing endpoint 'Blazor static files'
+2024-03-06 13:09:51.198 -08:00 [INF] Request finished HTTP/2 GET https://localhost:44393/_framework/aspnetcore-browser-refresh.js - 200 13756 application/javascript; charset=utf-8 67.5099ms
+2024-03-06 13:09:51.204 -08:00 [INF] The file /_framework/blazor.server.js was not modified
+2024-03-06 13:09:51.206 -08:00 [INF] Executed endpoint 'Blazor static files'
+2024-03-06 13:09:51.207 -08:00 [INF] Request finished HTTP/2 GET https://localhost:44393/_framework/blazor.server.js - 304 null text/javascript 109.3068ms
+2024-03-06 13:09:51.208 -08:00 [INF] Request finished HTTP/2 GET https://localhost:44393/ - 200 null text/html; charset=utf-8 736.4689ms
+2024-03-06 13:09:51.216 -08:00 [INF] Request starting HTTP/2 GET https://localhost:44393/_blazor/initializers - null null
+2024-03-06 13:09:51.218 -08:00 [INF] Executing endpoint 'Blazor initializers'
+2024-03-06 13:09:51.221 -08:00 [INF] Executed endpoint 'Blazor initializers'
+2024-03-06 13:09:51.221 -08:00 [INF] Request finished HTTP/2 GET https://localhost:44393/_blazor/initializers - 200 null application/json; charset=utf-8 4.9011ms
+2024-03-06 13:09:51.233 -08:00 [INF] Request finished HTTP/2 GET https://localhost:44393/_vs/browserLink - 200 null text/javascript; charset=UTF-8 105.2519ms
+2024-03-06 13:09:51.237 -08:00 [INF] Request starting HTTP/2 POST https://localhost:44393/_blazor/negotiate?negotiateVersion=1 - null 0
+2024-03-06 13:09:51.238 -08:00 [INF] Executing endpoint '/_blazor/negotiate'
+2024-03-06 13:09:51.243 -08:00 [INF] Executed endpoint '/_blazor/negotiate'
+2024-03-06 13:09:51.244 -08:00 [INF] Request finished HTTP/2 POST https://localhost:44393/_blazor/negotiate?negotiateVersion=1 - 200 316 application/json 7.1273ms
+2024-03-06 13:09:51.255 -08:00 [INF] Request starting HTTP/1.1 GET https://localhost:44393/_blazor?id=cI6XLzo4L0qC8TYCG1DxOA - null null
+2024-03-06 13:09:51.255 -08:00 [INF] Executing endpoint '/_blazor'
+2024-03-06 13:09:52.790 -08:00 [WRN] Unhandled exception rendering component: InvalidCharacterError: Failed to execute 'setAttribute' on 'Element': ',' is not a valid attribute name.
+System.InvalidOperationException: InvalidCharacterError: Failed to execute 'setAttribute' on 'Element': ',' is not a valid attribute name.
+   at Microsoft.AspNetCore.Components.RenderTree.Renderer.InvokeRenderCompletedCallsAfterUpdateDisplayTask(Task updateDisplayTask, Int32[] updatedComponents)
+2024-03-06 13:09:52.800 -08:00 [ERR] Unhandled exception in circuit 'hzdkL_oNT6Wd1nHEQGjMdRfHADcBNqKla-zfz6TWhPQ'.
+System.AggregateException: One or more errors occurred. (InvalidCharacterError: Failed to execute 'setAttribute' on 'Element': ',' is not a valid attribute name.)
+ ---> System.InvalidOperationException: InvalidCharacterError: Failed to execute 'setAttribute' on 'Element': ',' is not a valid attribute name.
+   at Microsoft.AspNetCore.Components.RenderTree.Renderer.InvokeRenderCompletedCallsAfterUpdateDisplayTask(Task updateDisplayTask, Int32[] updatedComponents)
+   --- End of inner exception stack trace ---
+2024-03-06 13:09:52.808 -08:00 [INF] Executed endpoint '/_blazor'
+2024-03-06 13:09:52.880 -08:00 [INF] Request finished HTTP/1.1 GET https://localhost:44393/_blazor?id=cI6XLzo4L0qC8TYCG1DxOA - 101 null null 1623.6603ms
+2024-03-06 13:09:56.615 -08:00 [INF] Request starting HTTP/2 GET https://localhost:44393/Group/da65fcf4-4b9c-4f0f-ae08-a5e25ddc42bd - null null
+2024-03-06 13:09:56.619 -08:00 [INF] Executing endpoint '/_Host'
+2024-03-06 13:09:56.620 -08:00 [INF] Route matched with {page = "/_Host"}. Executing page /_Host
+2024-03-06 13:09:56.622 -08:00 [INF] Executing an implicit handler method - ModelState is "Valid"
+2024-03-06 13:09:56.622 -08:00 [INF] Executed an implicit handler method, returned result Microsoft.AspNetCore.Mvc.RazorPages.PageResult.
+2024-03-06 13:09:56.639 -08:00 [INF] Executed page /_Host in 18.2778ms
+2024-03-06 13:09:56.639 -08:00 [INF] Executed endpoint '/_Host'
+2024-03-06 13:09:56.679 -08:00 [INF] Request starting HTTP/2 GET https://localhost:44393/_framework/blazor.server.js - null null
+2024-03-06 13:09:56.679 -08:00 [INF] Request starting HTTP/2 POST https://localhost:44393/_blazor/disconnect - multipart/form-data; boundary=----WebKitFormBoundary5RKA0bLtWFjbc77n 359
+2024-03-06 13:09:56.679 -08:00 [INF] Request starting HTTP/2 GET https://localhost:44393/_framework/aspnetcore-browser-refresh.js - null null
+2024-03-06 13:09:56.679 -08:00 [INF] Request starting HTTP/2 GET https://localhost:44393/_vs/browserLink - null null
+2024-03-06 13:09:56.708 -08:00 [INF] Executing endpoint 'Blazor disconnect'
+2024-03-06 13:09:56.710 -08:00 [INF] Request finished HTTP/2 GET https://localhost:44393/_framework/aspnetcore-browser-refresh.js - 200 13756 application/javascript; charset=utf-8 29.2902ms
+2024-03-06 13:09:56.733 -08:00 [INF] Executing endpoint 'Blazor static files'
+2024-03-06 13:09:56.748 -08:00 [INF] The file /_framework/blazor.server.js was not modified
+2024-03-06 13:09:56.759 -08:00 [INF] Executed endpoint 'Blazor static files'
+2024-03-06 13:09:56.760 -08:00 [INF] Request finished HTTP/2 GET https://localhost:44393/_framework/blazor.server.js - 304 null text/javascript 92.883ms
+2024-03-06 13:09:56.763 -08:00 [INF] Request finished HTTP/2 GET https://localhost:44393/Group/da65fcf4-4b9c-4f0f-ae08-a5e25ddc42bd - 200 null text/html; charset=utf-8 148.5398ms
+2024-03-06 13:09:56.764 -08:00 [INF] Request starting HTTP/2 GET https://localhost:44393/_blazor/initializers - null null
+2024-03-06 13:09:56.764 -08:00 [INF] Executing endpoint 'Blazor initializers'
+2024-03-06 13:09:56.765 -08:00 [INF] Executed endpoint 'Blazor initializers'
+2024-03-06 13:09:56.765 -08:00 [INF] Request finished HTTP/2 GET https://localhost:44393/_blazor/initializers - 200 null application/json; charset=utf-8 0.7628ms
+2024-03-06 13:09:56.766 -08:00 [INF] Request finished HTTP/2 GET https://localhost:44393/_vs/browserLink - 200 null text/javascript; charset=UTF-8 87.2826ms
+2024-03-06 13:09:56.769 -08:00 [INF] Request starting HTTP/2 POST https://localhost:44393/_blazor/negotiate?negotiateVersion=1 - null 0
+2024-03-06 13:09:56.770 -08:00 [INF] Executing endpoint '/_blazor/negotiate'
+2024-03-06 13:09:56.770 -08:00 [INF] Executed endpoint '/_blazor/negotiate'
+2024-03-06 13:09:56.771 -08:00 [INF] Request finished HTTP/2 POST https://localhost:44393/_blazor/negotiate?negotiateVersion=1 - 200 316 application/json 1.2411ms
+2024-03-06 13:09:56.775 -08:00 [INF] Executed endpoint 'Blazor disconnect'
+2024-03-06 13:09:56.776 -08:00 [INF] Request finished HTTP/2 POST https://localhost:44393/_blazor/disconnect - 200 null null 109.1163ms
+2024-03-06 13:09:56.779 -08:00 [INF] Request starting HTTP/1.1 GET https://localhost:44393/_blazor?id=Sg7Hda7YWeGq86WxudqAIw - null null
+2024-03-06 13:09:56.780 -08:00 [INF] Executing endpoint '/_blazor'
+2024-03-06 13:09:56.831 -08:00 [WRN] Unhandled exception rendering component: InvalidCharacterError: Failed to execute 'setAttribute' on 'Element': ',' is not a valid attribute name.
+System.InvalidOperationException: InvalidCharacterError: Failed to execute 'setAttribute' on 'Element': ',' is not a valid attribute name.
+   at Microsoft.AspNetCore.Components.RenderTree.Renderer.InvokeRenderCompletedCallsAfterUpdateDisplayTask(Task updateDisplayTask, Int32[] updatedComponents)
+2024-03-06 13:09:56.833 -08:00 [ERR] Unhandled exception in circuit 'ENkZIPMBL8bJMQYvd809HX44xtmGjxeH4Ctx75Ose1o'.
+System.AggregateException: One or more errors occurred. (InvalidCharacterError: Failed to execute 'setAttribute' on 'Element': ',' is not a valid attribute name.)
+ ---> System.InvalidOperationException: InvalidCharacterError: Failed to execute 'setAttribute' on 'Element': ',' is not a valid attribute name.
+   at Microsoft.AspNetCore.Components.RenderTree.Renderer.InvokeRenderCompletedCallsAfterUpdateDisplayTask(Task updateDisplayTask, Int32[] updatedComponents)
+   --- End of inner exception stack trace ---
+2024-03-06 13:09:56.873 -08:00 [INF] Executed endpoint '/_blazor'
+2024-03-06 13:09:56.889 -08:00 [INF] Request finished HTTP/1.1 GET https://localhost:44393/_blazor?id=Sg7Hda7YWeGq86WxudqAIw - 101 null null 101.7122ms
+2024-03-06 13:11:00.783 -08:00 [INF] User profile is available. Using 'C:\Users\deliot\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-03-06 13:11:01.037 -08:00 [INF] Request starting HTTP/2 GET https://localhost:44393/ - null null
+2024-03-06 13:11:01.064 -08:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-03-06 13:11:01.067 -08:00 [INF] Hosting environment: Development
+2024-03-06 13:11:01.069 -08:00 [INF] Content root path: C:\Users\deliot\Source\Repos\EdhTracker\EdhTracker
+2024-03-06 13:11:01.154 -08:00 [INF] Executing endpoint '/_Host'
+2024-03-06 13:11:01.169 -08:00 [INF] Route matched with {page = "/_Host"}. Executing page /_Host
+2024-03-06 13:11:01.184 -08:00 [INF] Executing an implicit handler method - ModelState is "Valid"
+2024-03-06 13:11:01.185 -08:00 [INF] Executed an implicit handler method, returned result Microsoft.AspNetCore.Mvc.RazorPages.PageResult.
+2024-03-06 13:11:01.640 -08:00 [INF] Executed page /_Host in 467.3358ms
+2024-03-06 13:11:01.640 -08:00 [INF] Executed endpoint '/_Host'
+2024-03-06 13:11:01.786 -08:00 [INF] Request starting HTTP/2 GET https://localhost:44393/_framework/aspnetcore-browser-refresh.js - null null
+2024-03-06 13:11:01.786 -08:00 [INF] Request starting HTTP/2 GET https://localhost:44393/_framework/blazor.server.js - null null
+2024-03-06 13:11:01.787 -08:00 [INF] Request starting HTTP/2 GET https://localhost:44393/_vs/browserLink - null null
+2024-03-06 13:11:01.851 -08:00 [INF] Executing endpoint 'Blazor static files'
+2024-03-06 13:11:01.890 -08:00 [INF] Request finished HTTP/2 GET https://localhost:44393/_framework/aspnetcore-browser-refresh.js - 200 13756 application/javascript; charset=utf-8 64.4138ms
+2024-03-06 13:11:01.914 -08:00 [INF] The file /_framework/blazor.server.js was not modified
+2024-03-06 13:11:01.915 -08:00 [INF] Executed endpoint 'Blazor static files'
+2024-03-06 13:11:01.916 -08:00 [INF] Request finished HTTP/2 GET https://localhost:44393/_framework/blazor.server.js - 304 null text/javascript 131.696ms
+2024-03-06 13:11:01.918 -08:00 [INF] Request finished HTTP/2 GET https://localhost:44393/ - 200 null text/html; charset=utf-8 887.1154ms
+2024-03-06 13:11:01.926 -08:00 [INF] Request starting HTTP/2 GET https://localhost:44393/_blazor/initializers - null null
+2024-03-06 13:11:01.927 -08:00 [INF] Executing endpoint 'Blazor initializers'
+2024-03-06 13:11:01.928 -08:00 [INF] Executed endpoint 'Blazor initializers'
+2024-03-06 13:11:01.929 -08:00 [INF] Request finished HTTP/2 GET https://localhost:44393/_blazor/initializers - 200 null application/json; charset=utf-8 2.9774ms
+2024-03-06 13:11:01.932 -08:00 [INF] Request finished HTTP/2 GET https://localhost:44393/_vs/browserLink - 200 null text/javascript; charset=UTF-8 145.4525ms
+2024-03-06 13:11:01.943 -08:00 [INF] Request starting HTTP/2 POST https://localhost:44393/_blazor/negotiate?negotiateVersion=1 - null 0
+2024-03-06 13:11:01.944 -08:00 [INF] Executing endpoint '/_blazor/negotiate'
+2024-03-06 13:11:01.949 -08:00 [INF] Executed endpoint '/_blazor/negotiate'
+2024-03-06 13:11:01.949 -08:00 [INF] Request finished HTTP/2 POST https://localhost:44393/_blazor/negotiate?negotiateVersion=1 - 200 316 application/json 6.3413ms
+2024-03-06 13:11:01.960 -08:00 [INF] Request starting HTTP/1.1 GET https://localhost:44393/_blazor?id=mcUug4V-wLXu6bNp7R88_w - null null
+2024-03-06 13:11:01.960 -08:00 [INF] Executing endpoint '/_blazor'
+2024-03-06 13:11:04.247 -08:00 [WRN] Unhandled exception rendering component: InvalidCharacterError: Failed to execute 'setAttribute' on 'Element': ',' is not a valid attribute name.
+System.InvalidOperationException: InvalidCharacterError: Failed to execute 'setAttribute' on 'Element': ',' is not a valid attribute name.
+   at Microsoft.AspNetCore.Components.RenderTree.Renderer.InvokeRenderCompletedCallsAfterUpdateDisplayTask(Task updateDisplayTask, Int32[] updatedComponents)
+2024-03-06 13:11:04.257 -08:00 [ERR] Unhandled exception in circuit 'I44rJ3AmMDYuLcu3rBpDqwHNqFIEdivY4dACEkoW5ZA'.
+System.AggregateException: One or more errors occurred. (InvalidCharacterError: Failed to execute 'setAttribute' on 'Element': ',' is not a valid attribute name.)
+ ---> System.InvalidOperationException: InvalidCharacterError: Failed to execute 'setAttribute' on 'Element': ',' is not a valid attribute name.
+   at Microsoft.AspNetCore.Components.RenderTree.Renderer.InvokeRenderCompletedCallsAfterUpdateDisplayTask(Task updateDisplayTask, Int32[] updatedComponents)
+   --- End of inner exception stack trace ---
+2024-03-06 13:11:04.266 -08:00 [INF] Executed endpoint '/_blazor'
+2024-03-06 13:11:04.356 -08:00 [INF] Request finished HTTP/1.1 GET https://localhost:44393/_blazor?id=mcUug4V-wLXu6bNp7R88_w - 101 null null 2387.9573ms
+2024-03-06 13:12:50.520 -08:00 [INF] User profile is available. Using 'C:\Users\deliot\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-03-06 13:12:50.765 -08:00 [INF] Request starting HTTP/2 GET https://localhost:44393/ - null null
+2024-03-06 13:12:50.783 -08:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-03-06 13:12:50.785 -08:00 [INF] Hosting environment: Development
+2024-03-06 13:12:50.787 -08:00 [INF] Content root path: C:\Users\deliot\Source\Repos\EdhTracker\EdhTracker
+2024-03-06 13:12:50.856 -08:00 [INF] Executing endpoint '/_Host'
+2024-03-06 13:12:50.869 -08:00 [INF] Route matched with {page = "/_Host"}. Executing page /_Host
+2024-03-06 13:12:50.878 -08:00 [INF] Executing an implicit handler method - ModelState is "Valid"
+2024-03-06 13:12:50.878 -08:00 [INF] Executed an implicit handler method, returned result Microsoft.AspNetCore.Mvc.RazorPages.PageResult.
+2024-03-06 13:12:51.270 -08:00 [INF] Executed page /_Host in 398.9458ms
+2024-03-06 13:12:51.271 -08:00 [INF] Executed endpoint '/_Host'
+2024-03-06 13:12:51.352 -08:00 [INF] Request starting HTTP/2 GET https://localhost:44393/_framework/blazor.server.js - null null
+2024-03-06 13:12:51.352 -08:00 [INF] Request starting HTTP/2 GET https://localhost:44393/_framework/aspnetcore-browser-refresh.js - null null
+2024-03-06 13:12:51.391 -08:00 [INF] Request starting HTTP/2 GET https://localhost:44393/_vs/browserLink - null null
+2024-03-06 13:12:51.463 -08:00 [INF] Request finished HTTP/2 GET https://localhost:44393/_framework/aspnetcore-browser-refresh.js - 200 13756 application/javascript; charset=utf-8 94.7457ms
+2024-03-06 13:12:51.463 -08:00 [INF] Executing endpoint 'Blazor static files'
+2024-03-06 13:12:51.481 -08:00 [INF] The file /_framework/blazor.server.js was not modified
+2024-03-06 13:12:51.482 -08:00 [INF] Executed endpoint 'Blazor static files'
+2024-03-06 13:12:51.483 -08:00 [INF] Request finished HTTP/2 GET https://localhost:44393/_framework/blazor.server.js - 304 null text/javascript 131.1198ms
+2024-03-06 13:12:51.483 -08:00 [INF] Request finished HTTP/2 GET https://localhost:44393/ - 200 null text/html; charset=utf-8 722.9106ms
+2024-03-06 13:12:51.493 -08:00 [INF] Request starting HTTP/2 GET https://localhost:44393/_blazor/initializers - null null
+2024-03-06 13:12:51.495 -08:00 [INF] Executing endpoint 'Blazor initializers'
+2024-03-06 13:12:51.497 -08:00 [INF] Executed endpoint 'Blazor initializers'
+2024-03-06 13:12:51.497 -08:00 [INF] Request finished HTTP/2 GET https://localhost:44393/_blazor/initializers - 200 null application/json; charset=utf-8 3.5529ms
+2024-03-06 13:12:51.503 -08:00 [INF] Request finished HTTP/2 GET https://localhost:44393/_vs/browserLink - 200 null text/javascript; charset=UTF-8 135.2796ms
+2024-03-06 13:12:51.503 -08:00 [INF] Request starting HTTP/2 POST https://localhost:44393/_blazor/negotiate?negotiateVersion=1 - null 0
+2024-03-06 13:12:51.504 -08:00 [INF] Executing endpoint '/_blazor/negotiate'
+2024-03-06 13:12:51.510 -08:00 [INF] Executed endpoint '/_blazor/negotiate'
+2024-03-06 13:12:51.511 -08:00 [INF] Request finished HTTP/2 POST https://localhost:44393/_blazor/negotiate?negotiateVersion=1 - 200 316 application/json 7.4831ms
+2024-03-06 13:12:51.517 -08:00 [INF] Request starting HTTP/1.1 GET https://localhost:44393/_blazor?id=gMl3sNnVtdOZ8gosuK38oQ - null null
+2024-03-06 13:12:51.517 -08:00 [INF] Executing endpoint '/_blazor'
+2024-03-06 13:13:07.589 -08:00 [WRN] Unhandled exception rendering component: InvalidCharacterError: Failed to execute 'setAttribute' on 'Element': ',' is not a valid attribute name.
+System.InvalidOperationException: InvalidCharacterError: Failed to execute 'setAttribute' on 'Element': ',' is not a valid attribute name.
+   at Microsoft.AspNetCore.Components.RenderTree.Renderer.InvokeRenderCompletedCallsAfterUpdateDisplayTask(Task updateDisplayTask, Int32[] updatedComponents)
+2024-03-06 13:13:07.598 -08:00 [ERR] Unhandled exception in circuit 'KWJXI5ovAenBpRJkJRtZnsa5tRBQsDOD7zZGl3_-cBs'.
+System.AggregateException: One or more errors occurred. (InvalidCharacterError: Failed to execute 'setAttribute' on 'Element': ',' is not a valid attribute name.)
+ ---> System.InvalidOperationException: InvalidCharacterError: Failed to execute 'setAttribute' on 'Element': ',' is not a valid attribute name.
+   at Microsoft.AspNetCore.Components.RenderTree.Renderer.InvokeRenderCompletedCallsAfterUpdateDisplayTask(Task updateDisplayTask, Int32[] updatedComponents)
+   --- End of inner exception stack trace ---
+2024-03-06 13:13:07.603 -08:00 [INF] Executed endpoint '/_blazor'
+2024-03-06 13:13:07.646 -08:00 [INF] Request finished HTTP/1.1 GET https://localhost:44393/_blazor?id=gMl3sNnVtdOZ8gosuK38oQ - 101 null null 16119.6075ms
+2024-03-06 13:13:15.629 -08:00 [INF] Request starting HTTP/2 GET https://localhost:44393/Group/da65fcf4-4b9c-4f0f-ae08-a5e25ddc42bd/Players - null null
+2024-03-06 13:13:15.634 -08:00 [INF] Executing endpoint '/_Host'
+2024-03-06 13:13:15.635 -08:00 [INF] Route matched with {page = "/_Host"}. Executing page /_Host
+2024-03-06 13:13:15.637 -08:00 [INF] Executing an implicit handler method - ModelState is "Valid"
+2024-03-06 13:13:15.637 -08:00 [INF] Executed an implicit handler method, returned result Microsoft.AspNetCore.Mvc.RazorPages.PageResult.
+2024-03-06 13:13:15.763 -08:00 [INF] Executed page /_Host in 127.3084ms
+2024-03-06 13:13:15.763 -08:00 [INF] Executed endpoint '/_Host'
+2024-03-06 13:13:15.772 -08:00 [INF] Request starting HTTP/2 POST https://localhost:44393/_blazor/disconnect - multipart/form-data; boundary=----WebKitFormBoundaryx8gLWBuy9o78pKwW 359
+2024-03-06 13:13:15.801 -08:00 [INF] Executing endpoint 'Blazor disconnect'
+2024-03-06 13:13:15.803 -08:00 [INF] Request starting HTTP/2 GET https://localhost:44393/_vs/browserLink - null null
+2024-03-06 13:13:15.803 -08:00 [INF] Request starting HTTP/2 GET https://localhost:44393/_framework/blazor.server.js - null null
+2024-03-06 13:13:15.821 -08:00 [INF] Request starting HTTP/2 GET https://localhost:44393/_framework/aspnetcore-browser-refresh.js - null null
+2024-03-06 13:13:15.823 -08:00 [INF] Executing endpoint 'Blazor static files'
+2024-03-06 13:13:15.841 -08:00 [INF] The file /_framework/blazor.server.js was not modified
+2024-03-06 13:13:15.847 -08:00 [INF] Request finished HTTP/2 GET https://localhost:44393/_framework/aspnetcore-browser-refresh.js - 200 13756 application/javascript; charset=utf-8 28.3376ms
+2024-03-06 13:13:15.847 -08:00 [INF] Executed endpoint 'Blazor static files'
+2024-03-06 13:13:15.856 -08:00 [INF] Request finished HTTP/2 GET https://localhost:44393/_framework/blazor.server.js - 304 null text/javascript 54.9411ms
+2024-03-06 13:13:15.857 -08:00 [INF] Request starting HTTP/2 GET https://localhost:44393/_blazor/initializers - null null
+2024-03-06 13:13:15.859 -08:00 [INF] Executing endpoint 'Blazor initializers'
+2024-03-06 13:13:15.865 -08:00 [INF] Executed endpoint 'Blazor initializers'
+2024-03-06 13:13:15.866 -08:00 [INF] Request finished HTTP/2 GET https://localhost:44393/_blazor/initializers - 200 null application/json; charset=utf-8 8.7299ms
+2024-03-06 13:13:15.867 -08:00 [INF] Request finished HTTP/2 GET https://localhost:44393/Group/da65fcf4-4b9c-4f0f-ae08-a5e25ddc42bd/Players - 200 null text/html; charset=utf-8 238.04ms
+2024-03-06 13:13:15.869 -08:00 [INF] Request finished HTTP/2 GET https://localhost:44393/_vs/browserLink - 200 null text/javascript; charset=UTF-8 68.1126ms
+2024-03-06 13:13:15.870 -08:00 [INF] Request starting HTTP/2 POST https://localhost:44393/_blazor/negotiate?negotiateVersion=1 - null 0
+2024-03-06 13:13:15.870 -08:00 [INF] Executing endpoint '/_blazor/negotiate'
+2024-03-06 13:13:15.871 -08:00 [INF] Executed endpoint '/_blazor/negotiate'
+2024-03-06 13:13:15.872 -08:00 [INF] Request finished HTTP/2 POST https://localhost:44393/_blazor/negotiate?negotiateVersion=1 - 200 316 application/json 2.1832ms
+2024-03-06 13:13:15.876 -08:00 [INF] Executed endpoint 'Blazor disconnect'
+2024-03-06 13:13:15.876 -08:00 [INF] Request finished HTTP/2 POST https://localhost:44393/_blazor/disconnect - 200 null null 104.8768ms
+2024-03-06 13:13:15.881 -08:00 [INF] Request starting HTTP/1.1 GET https://localhost:44393/_blazor?id=9skzf_wvFsjGp6cQ7iKA8g - null null
+2024-03-06 13:13:15.881 -08:00 [INF] Executing endpoint '/_blazor'
+2024-03-06 13:13:21.356 -08:00 [WRN] Unhandled exception rendering component: InvalidCharacterError: Failed to execute 'setAttribute' on 'Element': ',' is not a valid attribute name.
+System.InvalidOperationException: InvalidCharacterError: Failed to execute 'setAttribute' on 'Element': ',' is not a valid attribute name.
+   at Microsoft.AspNetCore.Components.RenderTree.Renderer.InvokeRenderCompletedCallsAfterUpdateDisplayTask(Task updateDisplayTask, Int32[] updatedComponents)
+2024-03-06 13:13:21.358 -08:00 [ERR] Unhandled exception in circuit '_PkHXHSWSHrkXId6yWRD4m_JPVx9ycnIjOIFwB02Bd0'.
+System.AggregateException: One or more errors occurred. (InvalidCharacterError: Failed to execute 'setAttribute' on 'Element': ',' is not a valid attribute name.)
+ ---> System.InvalidOperationException: InvalidCharacterError: Failed to execute 'setAttribute' on 'Element': ',' is not a valid attribute name.
+   at Microsoft.AspNetCore.Components.RenderTree.Renderer.InvokeRenderCompletedCallsAfterUpdateDisplayTask(Task updateDisplayTask, Int32[] updatedComponents)
+   --- End of inner exception stack trace ---
+2024-03-06 13:13:21.493 -08:00 [INF] Executed endpoint '/_blazor'
+2024-03-06 13:13:21.502 -08:00 [INF] Request finished HTTP/1.1 GET https://localhost:44393/_blazor?id=9skzf_wvFsjGp6cQ7iKA8g - 101 null null 5620.4811ms
+2024-03-06 13:13:42.872 -08:00 [INF] User profile is available. Using 'C:\Users\deliot\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-03-06 13:13:43.134 -08:00 [INF] Request starting HTTP/2 GET https://localhost:44393/ - null null
+2024-03-06 13:13:43.156 -08:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-03-06 13:13:43.158 -08:00 [INF] Hosting environment: Development
+2024-03-06 13:13:43.159 -08:00 [INF] Content root path: C:\Users\deliot\Source\Repos\EdhTracker\EdhTracker
+2024-03-06 13:13:43.231 -08:00 [INF] Executing endpoint '/_Host'
+2024-03-06 13:13:43.246 -08:00 [INF] Route matched with {page = "/_Host"}. Executing page /_Host
+2024-03-06 13:13:43.255 -08:00 [INF] Executing an implicit handler method - ModelState is "Valid"
+2024-03-06 13:13:43.256 -08:00 [INF] Executed an implicit handler method, returned result Microsoft.AspNetCore.Mvc.RazorPages.PageResult.
+2024-03-06 13:13:43.664 -08:00 [INF] Executed page /_Host in 416.2291ms
+2024-03-06 13:13:43.665 -08:00 [INF] Executed endpoint '/_Host'
+2024-03-06 13:13:43.750 -08:00 [INF] Request starting HTTP/2 GET https://localhost:44393/_framework/aspnetcore-browser-refresh.js - null null
+2024-03-06 13:13:43.750 -08:00 [INF] Request starting HTTP/2 GET https://localhost:44393/_vs/browserLink - null null
+2024-03-06 13:13:43.750 -08:00 [INF] Request starting HTTP/2 GET https://localhost:44393/_framework/blazor.server.js - null null
+2024-03-06 13:13:43.863 -08:00 [INF] Request finished HTTP/2 GET https://localhost:44393/_framework/aspnetcore-browser-refresh.js - 200 13756 application/javascript; charset=utf-8 78.9312ms
+2024-03-06 13:13:43.863 -08:00 [INF] Executing endpoint 'Blazor static files'
+2024-03-06 13:13:43.872 -08:00 [INF] The file /_framework/blazor.server.js was not modified
+2024-03-06 13:13:43.873 -08:00 [INF] Executed endpoint 'Blazor static files'
+2024-03-06 13:13:43.874 -08:00 [INF] Request finished HTTP/2 GET https://localhost:44393/_framework/blazor.server.js - 304 null text/javascript 124.845ms
+2024-03-06 13:13:43.874 -08:00 [INF] Request finished HTTP/2 GET https://localhost:44393/ - 200 null text/html; charset=utf-8 745.104ms
+2024-03-06 13:13:43.883 -08:00 [INF] Request starting HTTP/2 GET https://localhost:44393/_blazor/initializers - null null
+2024-03-06 13:13:43.885 -08:00 [INF] Executing endpoint 'Blazor initializers'
+2024-03-06 13:13:43.888 -08:00 [INF] Executed endpoint 'Blazor initializers'
+2024-03-06 13:13:43.888 -08:00 [INF] Request finished HTTP/2 GET https://localhost:44393/_blazor/initializers - 200 null application/json; charset=utf-8 4.9835ms
+2024-03-06 13:13:43.895 -08:00 [INF] Request finished HTTP/2 GET https://localhost:44393/_vs/browserLink - 200 null text/javascript; charset=UTF-8 144.2834ms
+2024-03-06 13:13:43.899 -08:00 [INF] Request starting HTTP/2 POST https://localhost:44393/_blazor/negotiate?negotiateVersion=1 - null 0
+2024-03-06 13:13:43.900 -08:00 [INF] Executing endpoint '/_blazor/negotiate'
+2024-03-06 13:13:43.906 -08:00 [INF] Executed endpoint '/_blazor/negotiate'
+2024-03-06 13:13:43.906 -08:00 [INF] Request finished HTTP/2 POST https://localhost:44393/_blazor/negotiate?negotiateVersion=1 - 200 316 application/json 7.3217ms
+2024-03-06 13:13:43.912 -08:00 [INF] Request starting HTTP/1.1 GET https://localhost:44393/_blazor?id=0tiHMW8FWHUHsneKlT0Jyw - null null
+2024-03-06 13:13:43.912 -08:00 [INF] Executing endpoint '/_blazor'
+2024-03-06 13:13:46.956 -08:00 [WRN] Unhandled exception rendering component: InvalidCharacterError: Failed to execute 'setAttribute' on 'Element': ',' is not a valid attribute name.
+System.InvalidOperationException: InvalidCharacterError: Failed to execute 'setAttribute' on 'Element': ',' is not a valid attribute name.
+   at Microsoft.AspNetCore.Components.RenderTree.Renderer.InvokeRenderCompletedCallsAfterUpdateDisplayTask(Task updateDisplayTask, Int32[] updatedComponents)
+2024-03-06 13:13:46.966 -08:00 [ERR] Unhandled exception in circuit '6iArvD1J_sofmkvk1bsf02DZBggTk266z8oU7mZjD8Q'.
+System.AggregateException: One or more errors occurred. (InvalidCharacterError: Failed to execute 'setAttribute' on 'Element': ',' is not a valid attribute name.)
+ ---> System.InvalidOperationException: InvalidCharacterError: Failed to execute 'setAttribute' on 'Element': ',' is not a valid attribute name.
+   at Microsoft.AspNetCore.Components.RenderTree.Renderer.InvokeRenderCompletedCallsAfterUpdateDisplayTask(Task updateDisplayTask, Int32[] updatedComponents)
+   --- End of inner exception stack trace ---
+2024-03-06 13:13:46.973 -08:00 [INF] Executed endpoint '/_blazor'
+2024-03-06 13:13:47.032 -08:00 [INF] Request finished HTTP/1.1 GET https://localhost:44393/_blazor?id=0tiHMW8FWHUHsneKlT0Jyw - 101 null null 3111.5869ms
+2024-03-06 13:15:37.419 -08:00 [INF] User profile is available. Using 'C:\Users\deliot\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-03-06 13:15:37.663 -08:00 [INF] Request starting HTTP/2 GET https://localhost:44393/ - null null
+2024-03-06 13:15:37.680 -08:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-03-06 13:15:37.682 -08:00 [INF] Hosting environment: Development
+2024-03-06 13:15:37.683 -08:00 [INF] Content root path: C:\Users\deliot\Source\Repos\EdhTracker\EdhTracker
+2024-03-06 13:15:37.753 -08:00 [INF] Executing endpoint '/_Host'
+2024-03-06 13:15:37.766 -08:00 [INF] Route matched with {page = "/_Host"}. Executing page /_Host
+2024-03-06 13:15:37.775 -08:00 [INF] Executing an implicit handler method - ModelState is "Valid"
+2024-03-06 13:15:37.776 -08:00 [INF] Executed an implicit handler method, returned result Microsoft.AspNetCore.Mvc.RazorPages.PageResult.
+2024-03-06 13:15:38.178 -08:00 [INF] Executed page /_Host in 408.6611ms
+2024-03-06 13:15:38.178 -08:00 [INF] Executed endpoint '/_Host'
+2024-03-06 13:15:38.265 -08:00 [INF] Request starting HTTP/2 GET https://localhost:44393/_framework/aspnetcore-browser-refresh.js - null null
+2024-03-06 13:15:38.265 -08:00 [INF] Request starting HTTP/2 GET https://localhost:44393/_framework/blazor.server.js - null null
+2024-03-06 13:15:38.265 -08:00 [INF] Request starting HTTP/2 GET https://localhost:44393/_vs/browserLink - null null
+2024-03-06 13:15:38.359 -08:00 [INF] Executing endpoint 'Blazor static files'
+2024-03-06 13:15:38.371 -08:00 [INF] Request finished HTTP/2 GET https://localhost:44393/_framework/aspnetcore-browser-refresh.js - 200 13756 application/javascript; charset=utf-8 76.987ms
+2024-03-06 13:15:38.382 -08:00 [INF] The file /_framework/blazor.server.js was not modified
+2024-03-06 13:15:38.384 -08:00 [INF] Executed endpoint 'Blazor static files'
+2024-03-06 13:15:38.384 -08:00 [INF] Request finished HTTP/2 GET https://localhost:44393/_framework/blazor.server.js - 304 null text/javascript 119.8181ms
+2024-03-06 13:15:38.387 -08:00 [INF] Request finished HTTP/2 GET https://localhost:44393/ - 200 null text/html; charset=utf-8 728.0548ms
+2024-03-06 13:15:38.398 -08:00 [INF] Request starting HTTP/2 GET https://localhost:44393/_blazor/initializers - null null
+2024-03-06 13:15:38.399 -08:00 [INF] Executing endpoint 'Blazor initializers'
+2024-03-06 13:15:38.400 -08:00 [INF] Executed endpoint 'Blazor initializers'
+2024-03-06 13:15:38.400 -08:00 [INF] Request finished HTTP/2 GET https://localhost:44393/_blazor/initializers - 200 null application/json; charset=utf-8 2.9006ms
+2024-03-06 13:15:38.405 -08:00 [INF] Request finished HTTP/2 GET https://localhost:44393/_vs/browserLink - 200 null text/javascript; charset=UTF-8 139.8375ms
+2024-03-06 13:15:38.409 -08:00 [INF] Request starting HTTP/2 POST https://localhost:44393/_blazor/negotiate?negotiateVersion=1 - null 0
+2024-03-06 13:15:38.409 -08:00 [INF] Executing endpoint '/_blazor/negotiate'
+2024-03-06 13:15:38.415 -08:00 [INF] Executed endpoint '/_blazor/negotiate'
+2024-03-06 13:15:38.415 -08:00 [INF] Request finished HTTP/2 POST https://localhost:44393/_blazor/negotiate?negotiateVersion=1 - 200 316 application/json 6.5077ms
+2024-03-06 13:15:38.422 -08:00 [INF] Request starting HTTP/1.1 GET https://localhost:44393/_blazor?id=0YbynZeVXO_me1qgATdsSQ - null null
+2024-03-06 13:15:38.422 -08:00 [INF] Executing endpoint '/_blazor'
+2024-03-06 13:59:01.251 -08:00 [INF] User profile is available. Using 'C:\Users\deliot\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-03-06 13:59:01.581 -08:00 [INF] Request starting HTTP/2 GET https://localhost:44393/ - null null
+2024-03-06 13:59:01.585 -08:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-03-06 13:59:01.587 -08:00 [INF] Hosting environment: Development
+2024-03-06 13:59:01.588 -08:00 [INF] Content root path: C:\Users\deliot\Source\Repos\EdhTracker\EdhTracker
+2024-03-06 13:59:01.684 -08:00 [INF] Executing endpoint '/_Host'
+2024-03-06 13:59:01.702 -08:00 [INF] Route matched with {page = "/_Host"}. Executing page /_Host
+2024-03-06 13:59:01.710 -08:00 [INF] Executing an implicit handler method - ModelState is "Valid"
+2024-03-06 13:59:01.711 -08:00 [INF] Executed an implicit handler method, returned result Microsoft.AspNetCore.Mvc.RazorPages.PageResult.
+2024-03-06 13:59:02.126 -08:00 [INF] Executed page /_Host in 422.159ms
+2024-03-06 13:59:02.127 -08:00 [INF] Executed endpoint '/_Host'
+2024-03-06 13:59:02.204 -08:00 [INF] Request starting HTTP/2 GET https://localhost:44393/_framework/blazor.server.js - null null
+2024-03-06 13:59:02.220 -08:00 [INF] Request starting HTTP/2 GET https://localhost:44393/_framework/aspnetcore-browser-refresh.js - null null
+2024-03-06 13:59:02.222 -08:00 [INF] Request starting HTTP/2 GET https://localhost:44393/_vs/browserLink - null null
+2024-03-06 13:59:02.294 -08:00 [INF] Executing endpoint 'Blazor static files'
+2024-03-06 13:59:02.295 -08:00 [INF] Request finished HTTP/2 GET https://localhost:44393/_framework/aspnetcore-browser-refresh.js - 200 13756 application/javascript; charset=utf-8 47.3288ms
+2024-03-06 13:59:02.306 -08:00 [INF] The file /_framework/blazor.server.js was not modified
+2024-03-06 13:59:02.308 -08:00 [INF] Executed endpoint 'Blazor static files'
+2024-03-06 13:59:02.309 -08:00 [INF] Request finished HTTP/2 GET https://localhost:44393/_framework/blazor.server.js - 304 null text/javascript 105.1322ms
+2024-03-06 13:59:02.309 -08:00 [INF] Request finished HTTP/2 GET https://localhost:44393/ - 200 null text/html; charset=utf-8 736.4339ms
+2024-03-06 13:59:02.319 -08:00 [INF] Request starting HTTP/2 GET https://localhost:44393/_blazor/initializers - null null
+2024-03-06 13:59:02.320 -08:00 [INF] Executing endpoint 'Blazor initializers'
+2024-03-06 13:59:02.322 -08:00 [INF] Executed endpoint 'Blazor initializers'
+2024-03-06 13:59:02.323 -08:00 [INF] Request finished HTTP/2 GET https://localhost:44393/_blazor/initializers - 200 null application/json; charset=utf-8 3.578ms
+2024-03-06 13:59:02.325 -08:00 [INF] Request finished HTTP/2 GET https://localhost:44393/_vs/browserLink - 200 null text/javascript; charset=UTF-8 102.8723ms
+2024-03-06 13:59:02.338 -08:00 [INF] Request starting HTTP/2 POST https://localhost:44393/_blazor/negotiate?negotiateVersion=1 - null 0
+2024-03-06 13:59:02.339 -08:00 [INF] Executing endpoint '/_blazor/negotiate'
+2024-03-06 13:59:02.345 -08:00 [INF] Executed endpoint '/_blazor/negotiate'
+2024-03-06 13:59:02.345 -08:00 [INF] Request finished HTTP/2 POST https://localhost:44393/_blazor/negotiate?negotiateVersion=1 - 200 316 application/json 6.8299ms
+2024-03-06 13:59:02.357 -08:00 [INF] Request starting HTTP/1.1 GET https://localhost:44393/_blazor?id=oJmwURAmsrJkClv4Hl_Khw - null null
+2024-03-06 13:59:02.357 -08:00 [INF] Executing endpoint '/_blazor'
+2024-03-06 14:06:51.300 -08:00 [INF] User profile is available. Using 'C:\Users\deliot\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-03-06 14:06:51.549 -08:00 [INF] Request starting HTTP/2 GET https://localhost:44393/ - null null
+2024-03-06 14:06:51.566 -08:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-03-06 14:06:51.568 -08:00 [INF] Hosting environment: Development
+2024-03-06 14:06:51.576 -08:00 [INF] Content root path: C:\Users\deliot\Source\Repos\EdhTracker\EdhTracker
+2024-03-06 14:06:52.226 -08:00 [INF] Executing endpoint '/_Host'
+2024-03-06 14:06:52.238 -08:00 [INF] Route matched with {page = "/_Host"}. Executing page /_Host
+2024-03-06 14:06:52.246 -08:00 [INF] Executing an implicit handler method - ModelState is "Valid"
+2024-03-06 14:06:52.247 -08:00 [INF] Executed an implicit handler method, returned result Microsoft.AspNetCore.Mvc.RazorPages.PageResult.
+2024-03-06 14:06:52.627 -08:00 [INF] Executed page /_Host in 386.0821ms
+2024-03-06 14:06:52.627 -08:00 [INF] Executed endpoint '/_Host'
+2024-03-06 14:06:52.705 -08:00 [INF] Request starting HTTP/2 GET https://localhost:44393/_framework/aspnetcore-browser-refresh.js - null null
+2024-03-06 14:06:52.705 -08:00 [INF] Request starting HTTP/2 GET https://localhost:44393/_framework/blazor.server.js - null null
+2024-03-06 14:06:52.705 -08:00 [INF] Request starting HTTP/2 GET https://localhost:44393/_vs/browserLink - null null
+2024-03-06 14:06:52.809 -08:00 [INF] Executing endpoint 'Blazor static files'
+2024-03-06 14:06:52.813 -08:00 [INF] Request finished HTTP/2 GET https://localhost:44393/_framework/aspnetcore-browser-refresh.js - 200 13756 application/javascript; charset=utf-8 92.8081ms
+2024-03-06 14:06:52.819 -08:00 [INF] The file /_framework/blazor.server.js was not modified
+2024-03-06 14:06:52.826 -08:00 [INF] Executed endpoint 'Blazor static files'
+2024-03-06 14:06:52.827 -08:00 [INF] Request finished HTTP/2 GET https://localhost:44393/_framework/blazor.server.js - 304 null text/javascript 122.4883ms
+2024-03-06 14:06:52.830 -08:00 [INF] Request finished HTTP/2 GET https://localhost:44393/ - 200 null text/html; charset=utf-8 1286.4242ms
+2024-03-06 14:06:52.836 -08:00 [INF] Request starting HTTP/2 GET https://localhost:44393/_blazor/initializers - null null
+2024-03-06 14:06:52.838 -08:00 [INF] Executing endpoint 'Blazor initializers'
+2024-03-06 14:06:52.840 -08:00 [INF] Executed endpoint 'Blazor initializers'
+2024-03-06 14:06:52.840 -08:00 [INF] Request finished HTTP/2 GET https://localhost:44393/_blazor/initializers - 200 null application/json; charset=utf-8 3.6902ms
+2024-03-06 14:06:52.845 -08:00 [INF] Request starting HTTP/2 POST https://localhost:44393/_blazor/negotiate?negotiateVersion=1 - null 0
+2024-03-06 14:06:52.846 -08:00 [INF] Request finished HTTP/2 GET https://localhost:44393/_vs/browserLink - 200 null text/javascript; charset=UTF-8 140.9854ms
+2024-03-06 14:06:52.846 -08:00 [INF] Executing endpoint '/_blazor/negotiate'
+2024-03-06 14:06:52.852 -08:00 [INF] Executed endpoint '/_blazor/negotiate'
+2024-03-06 14:06:52.852 -08:00 [INF] Request finished HTTP/2 POST https://localhost:44393/_blazor/negotiate?negotiateVersion=1 - 200 316 application/json 6.8996ms
+2024-03-06 14:06:52.864 -08:00 [INF] Request starting HTTP/1.1 GET https://localhost:44393/_blazor?id=BnFBviuqU0OBGA7eOCQZbg - null null
+2024-03-06 14:06:52.865 -08:00 [INF] Executing endpoint '/_blazor'
+2024-03-06 14:08:03.368 -08:00 [INF] User profile is available. Using 'C:\Users\deliot\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-03-06 14:08:03.614 -08:00 [INF] Request starting HTTP/2 GET https://localhost:44393/ - null null
+2024-03-06 14:08:03.638 -08:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-03-06 14:08:03.639 -08:00 [INF] Hosting environment: Development
+2024-03-06 14:08:03.640 -08:00 [INF] Content root path: C:\Users\deliot\Source\Repos\EdhTracker\EdhTracker
+2024-03-06 14:08:03.705 -08:00 [INF] Executing endpoint '/_Host'
+2024-03-06 14:08:03.717 -08:00 [INF] Route matched with {page = "/_Host"}. Executing page /_Host
+2024-03-06 14:08:03.725 -08:00 [INF] Executing an implicit handler method - ModelState is "Valid"
+2024-03-06 14:08:03.726 -08:00 [INF] Executed an implicit handler method, returned result Microsoft.AspNetCore.Mvc.RazorPages.PageResult.
+2024-03-06 14:08:04.100 -08:00 [INF] Executed page /_Host in 380.5626ms
+2024-03-06 14:08:04.100 -08:00 [INF] Executed endpoint '/_Host'
+2024-03-06 14:08:04.180 -08:00 [INF] Request starting HTTP/2 GET https://localhost:44393/_framework/blazor.server.js - null null
+2024-03-06 14:08:04.207 -08:00 [INF] Request starting HTTP/2 GET https://localhost:44393/_vs/browserLink - null null
+2024-03-06 14:08:04.209 -08:00 [INF] Request starting HTTP/2 GET https://localhost:44393/_framework/aspnetcore-browser-refresh.js - null null
+2024-03-06 14:08:04.240 -08:00 [INF] Executing endpoint 'Blazor static files'
+2024-03-06 14:08:04.269 -08:00 [INF] Request finished HTTP/2 GET https://localhost:44393/_framework/aspnetcore-browser-refresh.js - 200 13756 application/javascript; charset=utf-8 44.1714ms
+2024-03-06 14:08:04.274 -08:00 [INF] The file /_framework/blazor.server.js was not modified
+2024-03-06 14:08:04.276 -08:00 [INF] Executed endpoint 'Blazor static files'
+2024-03-06 14:08:04.282 -08:00 [INF] Request finished HTTP/2 GET https://localhost:44393/_framework/blazor.server.js - 304 null text/javascript 102.4673ms
+2024-03-06 14:08:04.285 -08:00 [INF] Request finished HTTP/2 GET https://localhost:44393/ - 200 null text/html; charset=utf-8 675.1716ms
+2024-03-06 14:08:04.287 -08:00 [INF] Request starting HTTP/2 GET https://localhost:44393/_blazor/initializers - null null
+2024-03-06 14:08:04.288 -08:00 [INF] Executing endpoint 'Blazor initializers'
+2024-03-06 14:08:04.289 -08:00 [INF] Executed endpoint 'Blazor initializers'
+2024-03-06 14:08:04.289 -08:00 [INF] Request finished HTTP/2 GET https://localhost:44393/_blazor/initializers - 200 null application/json; charset=utf-8 2.7583ms
+2024-03-06 14:08:04.303 -08:00 [INF] Request finished HTTP/2 GET https://localhost:44393/_vs/browserLink - 200 null text/javascript; charset=UTF-8 108.7586ms
+2024-03-06 14:08:04.305 -08:00 [INF] Request starting HTTP/2 POST https://localhost:44393/_blazor/negotiate?negotiateVersion=1 - null 0
+2024-03-06 14:08:04.306 -08:00 [INF] Executing endpoint '/_blazor/negotiate'
+2024-03-06 14:08:04.312 -08:00 [INF] Executed endpoint '/_blazor/negotiate'
+2024-03-06 14:08:04.312 -08:00 [INF] Request finished HTTP/2 POST https://localhost:44393/_blazor/negotiate?negotiateVersion=1 - 200 316 application/json 6.8715ms
+2024-03-06 14:08:04.326 -08:00 [INF] Request starting HTTP/1.1 GET https://localhost:44393/_blazor?id=35Ob2mlpBP7k7Is9ADNWfg - null null
+2024-03-06 14:08:04.326 -08:00 [INF] Executing endpoint '/_blazor'
+2024-03-06 14:33:39.092 -08:00 [INF] User profile is available. Using 'C:\Users\deliot\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-03-06 14:33:39.335 -08:00 [INF] Request starting HTTP/2 GET https://localhost:44393/ - null null
+2024-03-06 14:33:39.351 -08:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-03-06 14:33:39.353 -08:00 [INF] Hosting environment: Development
+2024-03-06 14:33:39.354 -08:00 [INF] Content root path: C:\Users\deliot\Source\Repos\EdhTracker\EdhTracker
+2024-03-06 14:33:39.423 -08:00 [INF] Executing endpoint '/_Host'
+2024-03-06 14:33:39.436 -08:00 [INF] Route matched with {page = "/_Host"}. Executing page /_Host
+2024-03-06 14:33:39.444 -08:00 [INF] Executing an implicit handler method - ModelState is "Valid"
+2024-03-06 14:33:39.445 -08:00 [INF] Executed an implicit handler method, returned result Microsoft.AspNetCore.Mvc.RazorPages.PageResult.
+2024-03-06 14:33:39.828 -08:00 [INF] Executed page /_Host in 389.4972ms
+2024-03-06 14:33:39.828 -08:00 [INF] Executed endpoint '/_Host'
+2024-03-06 14:33:39.905 -08:00 [INF] Request starting HTTP/2 GET https://localhost:44393/_framework/blazor.server.js - null null
+2024-03-06 14:33:39.935 -08:00 [INF] Request starting HTTP/2 GET https://localhost:44393/_framework/aspnetcore-browser-refresh.js - null null
+2024-03-06 14:33:39.935 -08:00 [INF] Request starting HTTP/2 GET https://localhost:44393/_vs/browserLink - null null
+2024-03-06 14:33:39.986 -08:00 [INF] Executing endpoint 'Blazor static files'
+2024-03-06 14:33:39.993 -08:00 [INF] Request finished HTTP/2 GET https://localhost:44393/_framework/aspnetcore-browser-refresh.js - 200 13756 application/javascript; charset=utf-8 51.0982ms
+2024-03-06 14:33:40.003 -08:00 [INF] The file /_framework/blazor.server.js was not modified
+2024-03-06 14:33:40.005 -08:00 [INF] Executed endpoint 'Blazor static files'
+2024-03-06 14:33:40.005 -08:00 [INF] Request finished HTTP/2 GET https://localhost:44393/_framework/blazor.server.js - 304 null text/javascript 100.4919ms
+2024-03-06 14:33:40.006 -08:00 [INF] Request finished HTTP/2 GET https://localhost:44393/ - 200 null text/html; charset=utf-8 675.591ms
+2024-03-06 14:33:40.014 -08:00 [INF] Request starting HTTP/2 GET https://localhost:44393/_blazor/initializers - null null
+2024-03-06 14:33:40.016 -08:00 [INF] Executing endpoint 'Blazor initializers'
+2024-03-06 14:33:40.017 -08:00 [INF] Executed endpoint 'Blazor initializers'
+2024-03-06 14:33:40.017 -08:00 [INF] Request finished HTTP/2 GET https://localhost:44393/_blazor/initializers - 200 null application/json; charset=utf-8 2.8906ms
+2024-03-06 14:33:40.021 -08:00 [INF] Request finished HTTP/2 GET https://localhost:44393/_vs/browserLink - 200 null text/javascript; charset=UTF-8 85.3886ms
+2024-03-06 14:33:40.032 -08:00 [INF] Request starting HTTP/2 POST https://localhost:44393/_blazor/negotiate?negotiateVersion=1 - null 0
+2024-03-06 14:33:40.033 -08:00 [INF] Executing endpoint '/_blazor/negotiate'
+2024-03-06 14:33:40.039 -08:00 [INF] Executed endpoint '/_blazor/negotiate'
+2024-03-06 14:33:40.039 -08:00 [INF] Request finished HTTP/2 POST https://localhost:44393/_blazor/negotiate?negotiateVersion=1 - 200 316 application/json 6.6959ms
+2024-03-06 14:33:40.049 -08:00 [INF] Request starting HTTP/1.1 GET https://localhost:44393/_blazor?id=qjGpXCdCGn9T1NzTah8Pjg - null null
+2024-03-06 14:33:40.049 -08:00 [INF] Executing endpoint '/_blazor'
+2024-03-06 14:33:51.826 -08:00 [ERR] Couldn't find card in scryfall matching null
+Org.OpenAPITools.Client.ApiException: Missing required parameter 'q' when calling CardsApi->CardsAutocomplete
+   at Org.OpenAPITools.Api.CardsApi.CardsAutocompleteWithHttpInfoAsync(String q, Int32 operationIndex, CancellationToken cancellationToken) in C:\Users\deliot\Source\Repos\EdhTracker\EdhTracker\OpenAPIs\ScryfallClient\src\Org.OpenAPITools\Api\CardsApi.cs:line 704
+   at Org.OpenAPITools.Api.CardsApi.CardsAutocompleteAsync(String q, Int32 operationIndex, CancellationToken cancellationToken) in C:\Users\deliot\Source\Repos\EdhTracker\EdhTracker\OpenAPIs\ScryfallClient\src\Org.OpenAPITools\Api\CardsApi.cs:line 687
+   at EdhTracker.Pages.ManageDecks.ScryfallSearch(String value) in C:\Users\deliot\Source\Repos\EdhTracker\EdhTracker\Pages\ManageDecks.razor:line 124
+2024-03-06 14:35:24.456 -08:00 [INF] Request starting HTTP/2 GET https://localhost:44393/Group/da65fcf4-4b9c-4f0f-ae08-a5e25ddc42bd/Decks? - null null
+2024-03-06 14:35:24.462 -08:00 [INF] Executing endpoint '/_Host'
+2024-03-06 14:35:24.464 -08:00 [INF] Route matched with {page = "/_Host"}. Executing page /_Host
+2024-03-06 14:35:24.465 -08:00 [INF] Executing an implicit handler method - ModelState is "Valid"
+2024-03-06 14:35:24.465 -08:00 [INF] Executed an implicit handler method, returned result Microsoft.AspNetCore.Mvc.RazorPages.PageResult.
+2024-03-06 14:35:24.481 -08:00 [INF] Executed page /_Host in 17.1039ms
+2024-03-06 14:35:24.481 -08:00 [INF] Executed endpoint '/_Host'
+2024-03-06 14:35:24.522 -08:00 [INF] Request starting HTTP/2 POST https://localhost:44393/_blazor/disconnect - multipart/form-data; boundary=----WebKitFormBoundaryNFsmGpAM8AbGXXGy 359
+2024-03-06 14:35:24.524 -08:00 [INF] Request starting HTTP/2 GET https://localhost:44393/_framework/aspnetcore-browser-refresh.js - null null
+2024-03-06 14:35:24.533 -08:00 [INF] Executing endpoint 'Blazor disconnect'
+2024-03-06 14:35:24.533 -08:00 [INF] Request finished HTTP/2 GET https://localhost:44393/_framework/aspnetcore-browser-refresh.js - 200 13756 application/javascript; charset=utf-8 9.0488ms
+2024-03-06 14:35:24.533 -08:00 [INF] Request starting HTTP/2 GET https://localhost:44393/_framework/blazor.server.js - null null
+2024-03-06 14:35:24.535 -08:00 [INF] Request starting HTTP/2 GET https://localhost:44393/_vs/browserLink - null null
+2024-03-06 14:35:24.536 -08:00 [INF] Executing endpoint 'Blazor static files'
+2024-03-06 14:35:24.543 -08:00 [INF] The file /_framework/blazor.server.js was not modified
+2024-03-06 14:35:24.544 -08:00 [INF] Executed endpoint 'Blazor static files'
+2024-03-06 14:35:24.545 -08:00 [INF] Request finished HTTP/2 GET https://localhost:44393/_framework/blazor.server.js - 304 null text/javascript 12.6033ms
+2024-03-06 14:35:24.556 -08:00 [INF] Request starting HTTP/2 GET https://localhost:44393/_blazor/initializers - null null
+2024-03-06 14:35:24.556 -08:00 [INF] Executing endpoint 'Blazor initializers'
+2024-03-06 14:35:24.566 -08:00 [INF] Executed endpoint 'Blazor initializers'
+2024-03-06 14:35:24.567 -08:00 [INF] Request finished HTTP/2 GET https://localhost:44393/_blazor/initializers - 200 null application/json; charset=utf-8 11.1417ms
+2024-03-06 14:35:24.568 -08:00 [INF] Request finished HTTP/2 GET https://localhost:44393/Group/da65fcf4-4b9c-4f0f-ae08-a5e25ddc42bd/Decks? - 200 null text/html; charset=utf-8 111.9661ms
+2024-03-06 14:35:24.571 -08:00 [INF] Request finished HTTP/2 GET https://localhost:44393/_vs/browserLink - 200 null text/javascript; charset=UTF-8 35.4627ms
+2024-03-06 14:35:24.573 -08:00 [INF] Request starting HTTP/2 POST https://localhost:44393/_blazor/negotiate?negotiateVersion=1 - null 0
+2024-03-06 14:35:24.573 -08:00 [INF] Executing endpoint '/_blazor/negotiate'
+2024-03-06 14:35:24.574 -08:00 [INF] Executed endpoint '/_blazor/negotiate'
+2024-03-06 14:35:24.574 -08:00 [INF] Request finished HTTP/2 POST https://localhost:44393/_blazor/negotiate?negotiateVersion=1 - 200 316 application/json 0.7784ms
+2024-03-06 14:35:24.578 -08:00 [INF] Request starting HTTP/1.1 GET https://localhost:44393/_blazor?id=77ThunAtaKIZEM3Lk-Gjfg - null null
+2024-03-06 14:35:24.578 -08:00 [INF] Executing endpoint '/_blazor'
+2024-03-06 14:36:15.065 -08:00 [INF] Request starting HTTP/2 POST https://localhost:44393/_blazor/negotiate?negotiateVersion=1 - null 0
+2024-03-06 14:36:15.068 -08:00 [INF] Executing endpoint '/_blazor/negotiate'
+2024-03-06 14:36:15.076 -08:00 [INF] Executed endpoint '/_blazor/negotiate'
+2024-03-06 14:36:32.829 -08:00 [INF] Request finished HTTP/2 POST https://localhost:44393/_blazor/negotiate?negotiateVersion=1 - 200 316 application/json 17765.1385ms
+2024-03-06 14:36:32.831 -08:00 [INF] Request starting HTTP/1.1 GET https://localhost:44393/_blazor?id=2UZjUlaeCHmLI-WhSRr73Q - null null
+2024-03-06 14:36:32.831 -08:00 [INF] Executing endpoint '/_blazor'
+2024-03-06 14:36:33.480 -08:00 [INF] Executed endpoint '/_blazor'
+2024-03-06 14:36:33.480 -08:00 [INF] Executed endpoint '/_blazor'
+2024-03-06 14:36:33.481 -08:00 [INF] Request finished HTTP/1.1 GET https://localhost:44393/_blazor?id=qjGpXCdCGn9T1NzTah8Pjg - 101 null null 173435.592ms
+2024-03-06 14:36:33.481 -08:00 [INF] Request finished HTTP/1.1 GET https://localhost:44393/_blazor?id=77ThunAtaKIZEM3Lk-Gjfg - 101 null null 68904.9335ms
+2024-03-06 14:36:33.755 -08:00 [INF] Executed endpoint 'Blazor disconnect'
+2024-03-06 14:36:33.755 -08:00 [INF] Request finished HTTP/2 POST https://localhost:44393/_blazor/disconnect - 499 null null 69241.9716ms
+2024-03-06 14:47:02.759 -08:00 [INF] Request starting HTTP/2 POST https://localhost:44393/_blazor/disconnect - multipart/form-data; boundary=----WebKitFormBoundary0LmjQi3m1ZVyjMkA 359
+2024-03-06 14:47:02.760 -08:00 [INF] Executing endpoint 'Blazor disconnect'
+2024-03-06 14:47:02.889 -08:00 [INF] Executed endpoint '/_blazor'
+2024-03-06 14:47:02.890 -08:00 [INF] Request finished HTTP/1.1 GET https://localhost:44393/_blazor?id=2UZjUlaeCHmLI-WhSRr73Q - 101 null null 630068.6825ms
+2024-03-06 15:01:10.527 -08:00 [INF] User profile is available. Using 'C:\Users\deliot\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-03-06 15:01:10.771 -08:00 [INF] Request starting HTTP/2 GET https://localhost:44393/ - null null
+2024-03-06 15:01:10.786 -08:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-03-06 15:01:10.788 -08:00 [INF] Hosting environment: Development
+2024-03-06 15:01:10.789 -08:00 [INF] Content root path: C:\Users\deliot\Source\Repos\EdhTracker\EdhTracker
+2024-03-06 15:01:10.857 -08:00 [INF] Executing endpoint '/_Host'
+2024-03-06 15:01:10.870 -08:00 [INF] Route matched with {page = "/_Host"}. Executing page /_Host
+2024-03-06 15:01:10.878 -08:00 [INF] Executing an implicit handler method - ModelState is "Valid"
+2024-03-06 15:01:10.879 -08:00 [INF] Executed an implicit handler method, returned result Microsoft.AspNetCore.Mvc.RazorPages.PageResult.
+2024-03-06 15:01:11.251 -08:00 [INF] Executed page /_Host in 378.0075ms
+2024-03-06 15:01:11.252 -08:00 [INF] Executed endpoint '/_Host'
+2024-03-06 15:01:11.333 -08:00 [INF] Request starting HTTP/2 GET https://localhost:44393/_framework/aspnetcore-browser-refresh.js - null null
+2024-03-06 15:01:11.333 -08:00 [INF] Request starting HTTP/2 GET https://localhost:44393/_vs/browserLink - null null
+2024-03-06 15:01:11.333 -08:00 [INF] Request starting HTTP/2 GET https://localhost:44393/_framework/blazor.server.js - null null
+2024-03-06 15:01:11.437 -08:00 [INF] Executing endpoint 'Blazor static files'
+2024-03-06 15:01:11.441 -08:00 [INF] Request finished HTTP/2 GET https://localhost:44393/_framework/aspnetcore-browser-refresh.js - 200 13756 application/javascript; charset=utf-8 103.6097ms
+2024-03-06 15:01:11.452 -08:00 [INF] The file /_framework/blazor.server.js was not modified
+2024-03-06 15:01:11.453 -08:00 [INF] Executed endpoint 'Blazor static files'
+2024-03-06 15:01:11.454 -08:00 [INF] Request finished HTTP/2 GET https://localhost:44393/_framework/blazor.server.js - 304 null text/javascript 121.0252ms
+2024-03-06 15:01:11.455 -08:00 [INF] Request finished HTTP/2 GET https://localhost:44393/ - 200 null text/html; charset=utf-8 688.5984ms
+2024-03-06 15:01:11.468 -08:00 [INF] Request starting HTTP/2 GET https://localhost:44393/_blazor/initializers - null null
+2024-03-06 15:01:11.470 -08:00 [INF] Executing endpoint 'Blazor initializers'
+2024-03-06 15:01:11.471 -08:00 [INF] Executed endpoint 'Blazor initializers'
+2024-03-06 15:01:11.472 -08:00 [INF] Request finished HTTP/2 GET https://localhost:44393/_blazor/initializers - 200 null application/json; charset=utf-8 3.2623ms
+2024-03-06 15:01:11.479 -08:00 [INF] Request finished HTTP/2 GET https://localhost:44393/_vs/browserLink - 200 null text/javascript; charset=UTF-8 145.6876ms
+2024-03-06 15:01:11.479 -08:00 [INF] Request starting HTTP/2 POST https://localhost:44393/_blazor/negotiate?negotiateVersion=1 - null 0
+2024-03-06 15:01:11.480 -08:00 [INF] Executing endpoint '/_blazor/negotiate'
+2024-03-06 15:01:11.489 -08:00 [INF] Executed endpoint '/_blazor/negotiate'
+2024-03-06 15:01:11.489 -08:00 [INF] Request finished HTTP/2 POST https://localhost:44393/_blazor/negotiate?negotiateVersion=1 - 200 316 application/json 9.7266ms
+2024-03-06 15:01:11.495 -08:00 [INF] Request starting HTTP/1.1 GET https://localhost:44393/_blazor?id=IvyeOTFGrnTn3wXGcTnysg - null null
+2024-03-06 15:01:11.496 -08:00 [INF] Executing endpoint '/_blazor'
+2024-03-06 15:13:23.313 -08:00 [INF] User profile is available. Using 'C:\Users\deliot\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-03-06 15:13:23.620 -08:00 [INF] Request starting HTTP/2 GET https://localhost:44393/ - null null
+2024-03-06 15:13:23.644 -08:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-03-06 15:13:23.646 -08:00 [INF] Hosting environment: Development
+2024-03-06 15:13:23.648 -08:00 [INF] Content root path: C:\Users\deliot\Source\Repos\EdhTracker\EdhTracker
+2024-03-06 15:13:23.718 -08:00 [INF] Executing endpoint '/_Host'
+2024-03-06 15:13:23.731 -08:00 [INF] Route matched with {page = "/_Host"}. Executing page /_Host
+2024-03-06 15:13:23.740 -08:00 [INF] Executing an implicit handler method - ModelState is "Valid"
+2024-03-06 15:13:23.740 -08:00 [INF] Executed an implicit handler method, returned result Microsoft.AspNetCore.Mvc.RazorPages.PageResult.
+2024-03-06 15:13:24.119 -08:00 [INF] Executed page /_Host in 385.1002ms
+2024-03-06 15:13:24.119 -08:00 [INF] Executed endpoint '/_Host'
+2024-03-06 15:13:24.195 -08:00 [INF] Request starting HTTP/2 GET https://localhost:44393/_framework/blazor.server.js - null null
+2024-03-06 15:13:24.225 -08:00 [INF] Request starting HTTP/2 GET https://localhost:44393/_framework/aspnetcore-browser-refresh.js - null null
+2024-03-06 15:13:24.225 -08:00 [INF] Request starting HTTP/2 GET https://localhost:44393/_vs/browserLink - null null
+2024-03-06 15:13:24.290 -08:00 [INF] Executing endpoint 'Blazor static files'
+2024-03-06 15:13:24.292 -08:00 [INF] Request finished HTTP/2 GET https://localhost:44393/_framework/aspnetcore-browser-refresh.js - 200 13756 application/javascript; charset=utf-8 62.8149ms
+2024-03-06 15:13:24.298 -08:00 [INF] The file /_framework/blazor.server.js was not modified
+2024-03-06 15:13:24.299 -08:00 [INF] Executed endpoint 'Blazor static files'
+2024-03-06 15:13:24.300 -08:00 [INF] Request finished HTTP/2 GET https://localhost:44393/_framework/blazor.server.js - 304 null text/javascript 105.2899ms
+2024-03-06 15:13:24.301 -08:00 [INF] Request finished HTTP/2 GET https://localhost:44393/ - 200 null text/html; charset=utf-8 685.044ms
+2024-03-06 15:13:24.309 -08:00 [INF] Request starting HTTP/2 GET https://localhost:44393/_blazor/initializers - null null
+2024-03-06 15:13:24.311 -08:00 [INF] Executing endpoint 'Blazor initializers'
+2024-03-06 15:13:24.312 -08:00 [INF] Executed endpoint 'Blazor initializers'
+2024-03-06 15:13:24.312 -08:00 [INF] Request finished HTTP/2 GET https://localhost:44393/_blazor/initializers - 200 null application/json; charset=utf-8 2.9547ms
+2024-03-06 15:13:24.316 -08:00 [INF] Request finished HTTP/2 GET https://localhost:44393/_vs/browserLink - 200 null text/javascript; charset=UTF-8 90.633ms
+2024-03-06 15:13:24.327 -08:00 [INF] Request starting HTTP/2 POST https://localhost:44393/_blazor/negotiate?negotiateVersion=1 - null 0
+2024-03-06 15:13:24.328 -08:00 [INF] Executing endpoint '/_blazor/negotiate'
+2024-03-06 15:13:24.333 -08:00 [INF] Executed endpoint '/_blazor/negotiate'
+2024-03-06 15:13:24.333 -08:00 [INF] Request finished HTTP/2 POST https://localhost:44393/_blazor/negotiate?negotiateVersion=1 - 200 316 application/json 6.043ms
+2024-03-06 15:13:24.345 -08:00 [INF] Request starting HTTP/1.1 GET https://localhost:44393/_blazor?id=a-sDxWbjD8DGjxNPZDOnxg - null null
+2024-03-06 15:13:24.345 -08:00 [INF] Executing endpoint '/_blazor'
+2024-03-06 15:13:51.528 -08:00 [ERR] Couldn't find card in scryfall matching null
+Org.OpenAPITools.Client.ApiException: Missing required parameter 'q' when calling CardsApi->CardsAutocomplete
+   at Org.OpenAPITools.Api.CardsApi.CardsAutocompleteWithHttpInfoAsync(String q, Int32 operationIndex, CancellationToken cancellationToken) in C:\Users\deliot\Source\Repos\EdhTracker\EdhTracker\OpenAPIs\ScryfallClient\src\Org.OpenAPITools\Api\CardsApi.cs:line 704
+   at Org.OpenAPITools.Api.CardsApi.CardsAutocompleteAsync(String q, Int32 operationIndex, CancellationToken cancellationToken) in C:\Users\deliot\Source\Repos\EdhTracker\EdhTracker\OpenAPIs\ScryfallClient\src\Org.OpenAPITools\Api\CardsApi.cs:line 687
+   at EdhTracker.Components.AddDeckDialog.ScryfallSearch(String value) in C:\Users\deliot\Source\Repos\EdhTracker\EdhTracker\Components\AddDeckDialog.razor:line 107
+2024-03-06 15:17:19.329 -08:00 [INF] User profile is available. Using 'C:\Users\deliot\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-03-06 15:17:19.563 -08:00 [INF] Request starting HTTP/2 GET https://localhost:44393/ - null null
+2024-03-06 15:17:19.583 -08:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-03-06 15:17:19.585 -08:00 [INF] Hosting environment: Development
+2024-03-06 15:17:19.586 -08:00 [INF] Content root path: C:\Users\deliot\Source\Repos\EdhTracker\EdhTracker
+2024-03-06 15:17:19.653 -08:00 [INF] Executing endpoint '/_Host'
+2024-03-06 15:17:19.666 -08:00 [INF] Route matched with {page = "/_Host"}. Executing page /_Host
+2024-03-06 15:17:19.674 -08:00 [INF] Executing an implicit handler method - ModelState is "Valid"
+2024-03-06 15:17:19.674 -08:00 [INF] Executed an implicit handler method, returned result Microsoft.AspNetCore.Mvc.RazorPages.PageResult.
+2024-03-06 15:17:20.047 -08:00 [INF] Executed page /_Host in 379.0185ms
+2024-03-06 15:17:20.048 -08:00 [INF] Executed endpoint '/_Host'
+2024-03-06 15:17:20.134 -08:00 [INF] Request starting HTTP/2 GET https://localhost:44393/_framework/blazor.server.js - null null
+2024-03-06 15:17:20.134 -08:00 [INF] Request starting HTTP/2 GET https://localhost:44393/_framework/aspnetcore-browser-refresh.js - null null
+2024-03-06 15:17:20.134 -08:00 [INF] Request starting HTTP/2 GET https://localhost:44393/_vs/browserLink - null null
+2024-03-06 15:17:20.240 -08:00 [INF] Executing endpoint 'Blazor static files'
+2024-03-06 15:17:20.240 -08:00 [INF] Request finished HTTP/2 GET https://localhost:44393/_framework/aspnetcore-browser-refresh.js - 200 13756 application/javascript; charset=utf-8 89.131ms
+2024-03-06 15:17:20.251 -08:00 [INF] The file /_framework/blazor.server.js was not modified
+2024-03-06 15:17:20.253 -08:00 [INF] Executed endpoint 'Blazor static files'
+2024-03-06 15:17:20.253 -08:00 [INF] Request finished HTTP/2 GET https://localhost:44393/_framework/blazor.server.js - 304 null text/javascript 118.9746ms
+2024-03-06 15:17:20.254 -08:00 [INF] Request finished HTTP/2 GET https://localhost:44393/ - 200 null text/html; charset=utf-8 695.6959ms
+2024-03-06 15:17:20.262 -08:00 [INF] Request starting HTTP/2 GET https://localhost:44393/_blazor/initializers - null null
+2024-03-06 15:17:20.264 -08:00 [INF] Executing endpoint 'Blazor initializers'
+2024-03-06 15:17:20.266 -08:00 [INF] Executed endpoint 'Blazor initializers'
+2024-03-06 15:17:20.266 -08:00 [INF] Request finished HTTP/2 GET https://localhost:44393/_blazor/initializers - 200 null application/json; charset=utf-8 3.7683ms
+2024-03-06 15:17:20.272 -08:00 [INF] Request finished HTTP/2 GET https://localhost:44393/_vs/browserLink - 200 null text/javascript; charset=UTF-8 137.9603ms
+2024-03-06 15:17:20.276 -08:00 [INF] Request starting HTTP/2 POST https://localhost:44393/_blazor/negotiate?negotiateVersion=1 - null 0
+2024-03-06 15:17:20.277 -08:00 [INF] Executing endpoint '/_blazor/negotiate'
+2024-03-06 15:17:20.283 -08:00 [INF] Executed endpoint '/_blazor/negotiate'
+2024-03-06 15:17:20.284 -08:00 [INF] Request finished HTTP/2 POST https://localhost:44393/_blazor/negotiate?negotiateVersion=1 - 200 316 application/json 7.3657ms
+2024-03-06 15:17:20.292 -08:00 [INF] Request starting HTTP/1.1 GET https://localhost:44393/_blazor?id=kBHf2ckpn-TwhcMisr-Qdg - null null
+2024-03-06 15:17:20.292 -08:00 [INF] Executing endpoint '/_blazor'
+2024-03-06 15:20:22.811 -08:00 [INF] User profile is available. Using 'C:\Users\deliot\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-03-06 15:20:23.042 -08:00 [INF] Request starting HTTP/2 GET https://localhost:44393/ - null null
+2024-03-06 15:20:23.061 -08:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-03-06 15:20:23.062 -08:00 [INF] Hosting environment: Development
+2024-03-06 15:20:23.064 -08:00 [INF] Content root path: C:\Users\deliot\Source\Repos\EdhTracker\EdhTracker
+2024-03-06 15:20:23.133 -08:00 [INF] Executing endpoint '/_Host'
+2024-03-06 15:20:23.145 -08:00 [INF] Route matched with {page = "/_Host"}. Executing page /_Host
+2024-03-06 15:20:23.153 -08:00 [INF] Executing an implicit handler method - ModelState is "Valid"
+2024-03-06 15:20:23.154 -08:00 [INF] Executed an implicit handler method, returned result Microsoft.AspNetCore.Mvc.RazorPages.PageResult.
+2024-03-06 15:20:23.525 -08:00 [INF] Executed page /_Host in 376.8951ms
+2024-03-06 15:20:23.525 -08:00 [INF] Executed endpoint '/_Host'
+2024-03-06 15:20:23.605 -08:00 [INF] Request starting HTTP/2 GET https://localhost:44393/_framework/blazor.server.js - null null
+2024-03-06 15:20:23.605 -08:00 [INF] Request starting HTTP/2 GET https://localhost:44393/_framework/aspnetcore-browser-refresh.js - null null
+2024-03-06 15:20:23.605 -08:00 [INF] Request starting HTTP/2 GET https://localhost:44393/_vs/browserLink - null null
+2024-03-06 15:20:23.707 -08:00 [INF] Executing endpoint 'Blazor static files'
+2024-03-06 15:20:23.711 -08:00 [INF] Request finished HTTP/2 GET https://localhost:44393/_framework/aspnetcore-browser-refresh.js - 200 13756 application/javascript; charset=utf-8 88.1745ms
+2024-03-06 15:20:23.724 -08:00 [INF] The file /_framework/blazor.server.js was not modified
+2024-03-06 15:20:23.725 -08:00 [INF] Executed endpoint 'Blazor static files'
+2024-03-06 15:20:23.727 -08:00 [INF] Request finished HTTP/2 GET https://localhost:44393/_framework/blazor.server.js - 304 null text/javascript 121.3084ms
+2024-03-06 15:20:23.730 -08:00 [INF] Request finished HTTP/2 GET https://localhost:44393/ - 200 null text/html; charset=utf-8 692.5554ms
+2024-03-06 15:20:23.736 -08:00 [INF] Request starting HTTP/2 GET https://localhost:44393/_blazor/initializers - null null
+2024-03-06 15:20:23.738 -08:00 [INF] Executing endpoint 'Blazor initializers'
+2024-03-06 15:20:23.739 -08:00 [INF] Executed endpoint 'Blazor initializers'
+2024-03-06 15:20:23.739 -08:00 [INF] Request finished HTTP/2 GET https://localhost:44393/_blazor/initializers - 200 null application/json; charset=utf-8 3.2336ms
+2024-03-06 15:20:23.745 -08:00 [INF] Request finished HTTP/2 GET https://localhost:44393/_vs/browserLink - 200 null text/javascript; charset=UTF-8 140.3557ms
+2024-03-06 15:20:23.747 -08:00 [INF] Request starting HTTP/2 POST https://localhost:44393/_blazor/negotiate?negotiateVersion=1 - null 0
+2024-03-06 15:20:23.748 -08:00 [INF] Executing endpoint '/_blazor/negotiate'
+2024-03-06 15:20:23.754 -08:00 [INF] Executed endpoint '/_blazor/negotiate'
+2024-03-06 15:20:23.754 -08:00 [INF] Request finished HTTP/2 POST https://localhost:44393/_blazor/negotiate?negotiateVersion=1 - 200 316 application/json 7.2775ms
+2024-03-06 15:20:23.764 -08:00 [INF] Request starting HTTP/1.1 GET https://localhost:44393/_blazor?id=3h4UniIOnckrawYjsvqpLg - null null
+2024-03-06 15:20:23.764 -08:00 [INF] Executing endpoint '/_blazor'
+2024-03-06 15:28:59.572 -08:00 [INF] User profile is available. Using 'C:\Users\deliot\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-03-06 15:28:59.848 -08:00 [INF] Request starting HTTP/2 GET https://localhost:44393/ - null null
+2024-03-06 15:28:59.871 -08:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-03-06 15:28:59.873 -08:00 [INF] Hosting environment: Development
+2024-03-06 15:28:59.874 -08:00 [INF] Content root path: C:\Users\deliot\Source\Repos\EdhTracker\EdhTracker
+2024-03-06 15:28:59.940 -08:00 [INF] Executing endpoint '/_Host'
+2024-03-06 15:28:59.955 -08:00 [INF] Route matched with {page = "/_Host"}. Executing page /_Host
+2024-03-06 15:28:59.963 -08:00 [INF] Executing an implicit handler method - ModelState is "Valid"
+2024-03-06 15:28:59.964 -08:00 [INF] Executed an implicit handler method, returned result Microsoft.AspNetCore.Mvc.RazorPages.PageResult.
+2024-03-06 15:29:00.339 -08:00 [INF] Executed page /_Host in 381.4169ms
+2024-03-06 15:29:00.339 -08:00 [INF] Executed endpoint '/_Host'
+2024-03-06 15:29:00.420 -08:00 [INF] Request starting HTTP/2 GET https://localhost:44393/_framework/blazor.server.js - null null
+2024-03-06 15:29:00.420 -08:00 [INF] Request starting HTTP/2 GET https://localhost:44393/_framework/aspnetcore-browser-refresh.js - null null
+2024-03-06 15:29:00.420 -08:00 [INF] Request starting HTTP/2 GET https://localhost:44393/_vs/browserLink - null null
+2024-03-06 15:29:00.516 -08:00 [INF] Request finished HTTP/2 GET https://localhost:44393/_framework/aspnetcore-browser-refresh.js - 200 13756 application/javascript; charset=utf-8 63.7152ms
+2024-03-06 15:29:00.528 -08:00 [INF] Executing endpoint 'Blazor static files'
+2024-03-06 15:29:00.539 -08:00 [INF] The file /_framework/blazor.server.js was not modified
+2024-03-06 15:29:00.540 -08:00 [INF] Executed endpoint 'Blazor static files'
+2024-03-06 15:29:00.540 -08:00 [INF] Request finished HTTP/2 GET https://localhost:44393/_framework/blazor.server.js - 304 null text/javascript 121.8728ms
+2024-03-06 15:29:00.542 -08:00 [INF] Request finished HTTP/2 GET https://localhost:44393/ - 200 null text/html; charset=utf-8 698.4344ms
+2024-03-06 15:29:00.552 -08:00 [INF] Request starting HTTP/2 GET https://localhost:44393/_blazor/initializers - null null
+2024-03-06 15:29:00.553 -08:00 [INF] Executing endpoint 'Blazor initializers'
+2024-03-06 15:29:00.555 -08:00 [INF] Executed endpoint 'Blazor initializers'
+2024-03-06 15:29:00.555 -08:00 [INF] Request finished HTTP/2 GET https://localhost:44393/_blazor/initializers - 200 null application/json; charset=utf-8 2.8512ms
+2024-03-06 15:29:00.557 -08:00 [INF] Request finished HTTP/2 GET https://localhost:44393/_vs/browserLink - 200 null text/javascript; charset=UTF-8 138.8914ms
+2024-03-06 15:29:00.561 -08:00 [INF] Request starting HTTP/2 POST https://localhost:44393/_blazor/negotiate?negotiateVersion=1 - null 0
+2024-03-06 15:29:00.562 -08:00 [INF] Executing endpoint '/_blazor/negotiate'
+2024-03-06 15:29:00.568 -08:00 [INF] Executed endpoint '/_blazor/negotiate'
+2024-03-06 15:29:00.568 -08:00 [INF] Request finished HTTP/2 POST https://localhost:44393/_blazor/negotiate?negotiateVersion=1 - 200 316 application/json 6.9861ms
+2024-03-06 15:29:00.577 -08:00 [INF] Request starting HTTP/1.1 GET https://localhost:44393/_blazor?id=4bA7wA7FRRXSBtc7Uco3eQ - null null
+2024-03-06 15:29:00.578 -08:00 [INF] Executing endpoint '/_blazor'
+2024-03-06 15:31:09.640 -08:00 [INF] User profile is available. Using 'C:\Users\deliot\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-03-06 15:31:09.903 -08:00 [INF] Request starting HTTP/2 GET https://localhost:44393/ - null null
+2024-03-06 15:31:09.928 -08:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-03-06 15:31:09.930 -08:00 [INF] Hosting environment: Development
+2024-03-06 15:31:09.932 -08:00 [INF] Content root path: C:\Users\deliot\Source\Repos\EdhTracker\EdhTracker
+2024-03-06 15:31:09.998 -08:00 [INF] Executing endpoint '/_Host'
+2024-03-06 15:31:10.011 -08:00 [INF] Route matched with {page = "/_Host"}. Executing page /_Host
+2024-03-06 15:31:10.019 -08:00 [INF] Executing an implicit handler method - ModelState is "Valid"
+2024-03-06 15:31:10.020 -08:00 [INF] Executed an implicit handler method, returned result Microsoft.AspNetCore.Mvc.RazorPages.PageResult.
+2024-03-06 15:31:10.397 -08:00 [INF] Executed page /_Host in 383.855ms
+2024-03-06 15:31:10.397 -08:00 [INF] Executed endpoint '/_Host'
+2024-03-06 15:31:10.478 -08:00 [INF] Request starting HTTP/2 GET https://localhost:44393/_framework/aspnetcore-browser-refresh.js - null null
+2024-03-06 15:31:10.480 -08:00 [INF] Request starting HTTP/2 GET https://localhost:44393/_framework/blazor.server.js - null null
+2024-03-06 15:31:10.480 -08:00 [INF] Request starting HTTP/2 GET https://localhost:44393/_vs/browserLink - null null
+2024-03-06 15:31:10.527 -08:00 [INF] Request finished HTTP/2 GET https://localhost:44393/_framework/aspnetcore-browser-refresh.js - 200 13756 application/javascript; charset=utf-8 43.2909ms
+2024-03-06 15:31:10.544 -08:00 [INF] Executing endpoint 'Blazor static files'
+2024-03-06 15:31:10.590 -08:00 [INF] The file /_framework/blazor.server.js was not modified
+2024-03-06 15:31:10.592 -08:00 [INF] Executed endpoint 'Blazor static files'
+2024-03-06 15:31:10.593 -08:00 [INF] Request finished HTTP/2 GET https://localhost:44393/_framework/blazor.server.js - 304 null text/javascript 114.7034ms
+2024-03-06 15:31:10.595 -08:00 [INF] Request finished HTTP/2 GET https://localhost:44393/ - 200 null text/html; charset=utf-8 696.7193ms
+2024-03-06 15:31:10.601 -08:00 [INF] Request starting HTTP/2 GET https://localhost:44393/_blazor/initializers - null null
+2024-03-06 15:31:10.603 -08:00 [INF] Executing endpoint 'Blazor initializers'
+2024-03-06 15:31:10.604 -08:00 [INF] Executed endpoint 'Blazor initializers'
+2024-03-06 15:31:10.604 -08:00 [INF] Request finished HTTP/2 GET https://localhost:44393/_blazor/initializers - 200 null application/json; charset=utf-8 2.9831ms
+2024-03-06 15:31:10.609 -08:00 [INF] Request finished HTTP/2 GET https://localhost:44393/_vs/browserLink - 200 null text/javascript; charset=UTF-8 128.7703ms
+2024-03-06 15:31:10.612 -08:00 [INF] Request starting HTTP/2 POST https://localhost:44393/_blazor/negotiate?negotiateVersion=1 - null 0
+2024-03-06 15:31:10.613 -08:00 [INF] Executing endpoint '/_blazor/negotiate'
+2024-03-06 15:31:10.619 -08:00 [INF] Executed endpoint '/_blazor/negotiate'
+2024-03-06 15:31:10.619 -08:00 [INF] Request finished HTTP/2 POST https://localhost:44393/_blazor/negotiate?negotiateVersion=1 - 200 316 application/json 7.4038ms
+2024-03-06 15:31:10.630 -08:00 [INF] Request starting HTTP/1.1 GET https://localhost:44393/_blazor?id=zpiQFRwV5WQvjzJqvkTm9g - null null
+2024-03-06 15:31:10.630 -08:00 [INF] Executing endpoint '/_blazor'
+2024-03-06 15:32:32.262 -08:00 [ERR] Couldn't find card in scryfall matching null
+Org.OpenAPITools.Client.ApiException: Missing required parameter 'q' when calling CardsApi->CardsAutocomplete
+   at Org.OpenAPITools.Api.CardsApi.CardsAutocompleteWithHttpInfoAsync(String q, Int32 operationIndex, CancellationToken cancellationToken) in C:\Users\deliot\Source\Repos\EdhTracker\EdhTracker\OpenAPIs\ScryfallClient\src\Org.OpenAPITools\Api\CardsApi.cs:line 704
+   at Org.OpenAPITools.Api.CardsApi.CardsAutocompleteAsync(String q, Int32 operationIndex, CancellationToken cancellationToken) in C:\Users\deliot\Source\Repos\EdhTracker\EdhTracker\OpenAPIs\ScryfallClient\src\Org.OpenAPITools\Api\CardsApi.cs:line 687
+   at EdhTracker.Components.AddDeckDialog.ScryfallSearch(String value) in C:\Users\deliot\Source\Repos\EdhTracker\EdhTracker\Components\AddDeckDialog.razor:line 105
+2024-03-06 15:33:10.906 -08:00 [INF] Executed endpoint '/_blazor'
+2024-03-06 15:33:10.907 -08:00 [INF] Request finished HTTP/1.1 GET https://localhost:44393/_blazor?id=zpiQFRwV5WQvjzJqvkTm9g - 101 null null 120278.1326ms
+2024-03-06 15:33:10.923 -08:00 [INF] Request starting HTTP/2 POST https://localhost:44393/_blazor/disconnect - multipart/form-data; boundary=----WebKitFormBoundaryXNqyf2dwhRt8AB8k 359
+2024-03-06 15:33:10.924 -08:00 [INF] Executing endpoint 'Blazor disconnect'
+2024-03-06 15:41:31.974 -08:00 [INF] User profile is available. Using 'C:\Users\deliot\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-03-06 15:41:32.217 -08:00 [INF] Request starting HTTP/2 GET https://localhost:44393/ - null null
+2024-03-06 15:41:32.236 -08:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-03-06 15:41:32.238 -08:00 [INF] Hosting environment: Development
+2024-03-06 15:41:32.239 -08:00 [INF] Content root path: C:\Users\deliot\Source\Repos\EdhTracker\EdhTracker
+2024-03-06 15:41:32.307 -08:00 [INF] Executing endpoint '/_Host'
+2024-03-06 15:41:32.320 -08:00 [INF] Route matched with {page = "/_Host"}. Executing page /_Host
+2024-03-06 15:41:32.327 -08:00 [INF] Executing an implicit handler method - ModelState is "Valid"
+2024-03-06 15:41:32.328 -08:00 [INF] Executed an implicit handler method, returned result Microsoft.AspNetCore.Mvc.RazorPages.PageResult.
+2024-03-06 15:41:32.704 -08:00 [INF] Executed page /_Host in 381.3532ms
+2024-03-06 15:41:32.704 -08:00 [INF] Executed endpoint '/_Host'
+2024-03-06 15:41:32.783 -08:00 [INF] Request starting HTTP/2 GET https://localhost:44393/_framework/blazor.server.js - null null
+2024-03-06 15:41:32.783 -08:00 [INF] Request starting HTTP/2 GET https://localhost:44393/_vs/browserLink - null null
+2024-03-06 15:41:32.783 -08:00 [INF] Request starting HTTP/2 GET https://localhost:44393/_framework/aspnetcore-browser-refresh.js - null null
+2024-03-06 15:41:32.881 -08:00 [INF] Request finished HTTP/2 GET https://localhost:44393/_framework/aspnetcore-browser-refresh.js - 200 13756 application/javascript; charset=utf-8 71.8899ms
+2024-03-06 15:41:32.881 -08:00 [INF] Executing endpoint 'Blazor static files'
+2024-03-06 15:41:32.888 -08:00 [INF] The file /_framework/blazor.server.js was not modified
+2024-03-06 15:41:32.894 -08:00 [INF] Executed endpoint 'Blazor static files'
+2024-03-06 15:41:32.894 -08:00 [INF] Request finished HTTP/2 GET https://localhost:44393/_framework/blazor.server.js - 304 null text/javascript 111.7195ms
+2024-03-06 15:41:32.898 -08:00 [INF] Request finished HTTP/2 GET https://localhost:44393/ - 200 null text/html; charset=utf-8 685.7429ms
+2024-03-06 15:41:32.903 -08:00 [INF] Request starting HTTP/2 GET https://localhost:44393/_blazor/initializers - null null
+2024-03-06 15:41:32.905 -08:00 [INF] Executing endpoint 'Blazor initializers'
+2024-03-06 15:41:32.906 -08:00 [INF] Executed endpoint 'Blazor initializers'
+2024-03-06 15:41:32.906 -08:00 [INF] Request finished HTTP/2 GET https://localhost:44393/_blazor/initializers - 200 null application/json; charset=utf-8 3.4104ms
+2024-03-06 15:41:32.919 -08:00 [INF] Request starting HTTP/2 POST https://localhost:44393/_blazor/negotiate?negotiateVersion=1 - null 0
+2024-03-06 15:41:32.919 -08:00 [INF] Request finished HTTP/2 GET https://localhost:44393/_vs/browserLink - 200 null text/javascript; charset=UTF-8 136.0236ms
+2024-03-06 15:41:32.919 -08:00 [INF] Executing endpoint '/_blazor/negotiate'
+2024-03-06 15:41:32.926 -08:00 [INF] Executed endpoint '/_blazor/negotiate'
+2024-03-06 15:41:32.926 -08:00 [INF] Request finished HTTP/2 POST https://localhost:44393/_blazor/negotiate?negotiateVersion=1 - 200 316 application/json 7.6226ms
+2024-03-06 15:41:32.933 -08:00 [INF] Request starting HTTP/1.1 GET https://localhost:44393/_blazor?id=nTzBvDwZfs_0aqeX4lMLHg - null null
+2024-03-06 15:41:32.933 -08:00 [INF] Executing endpoint '/_blazor'
+2024-03-06 15:42:00.031 -08:00 [ERR] Couldn't find card in scryfall matching null
+Org.OpenAPITools.Client.ApiException: Missing required parameter 'q' when calling CardsApi->CardsAutocomplete
+   at Org.OpenAPITools.Api.CardsApi.CardsAutocompleteWithHttpInfoAsync(String q, Int32 operationIndex, CancellationToken cancellationToken) in C:\Users\deliot\Source\Repos\EdhTracker\EdhTracker\OpenAPIs\ScryfallClient\src\Org.OpenAPITools\Api\CardsApi.cs:line 704
+   at Org.OpenAPITools.Api.CardsApi.CardsAutocompleteAsync(String q, Int32 operationIndex, CancellationToken cancellationToken) in C:\Users\deliot\Source\Repos\EdhTracker\EdhTracker\OpenAPIs\ScryfallClient\src\Org.OpenAPITools\Api\CardsApi.cs:line 687
+   at EdhTracker.Components.AddDeckDialog.ScryfallSearch(String value) in C:\Users\deliot\Source\Repos\EdhTracker\EdhTracker\Components\AddDeckDialog.razor:line 114
+2024-03-06 15:42:44.764 -08:00 [INF] Executed endpoint '/_blazor'
+2024-03-06 15:42:44.765 -08:00 [INF] Request finished HTTP/1.1 GET https://localhost:44393/_blazor?id=nTzBvDwZfs_0aqeX4lMLHg - 101 null null 71833.0749ms
+2024-03-06 15:42:44.786 -08:00 [INF] Request starting HTTP/2 POST https://localhost:44393/_blazor/disconnect - multipart/form-data; boundary=----WebKitFormBoundaryWK2OYgwPoRludR1D 359
+2024-03-06 15:42:44.787 -08:00 [INF] Executing endpoint 'Blazor disconnect'
+2024-03-06 15:43:42.479 -08:00 [INF] User profile is available. Using 'C:\Users\deliot\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-03-06 15:43:42.711 -08:00 [INF] Request starting HTTP/2 GET https://localhost:44393/ - null null
+2024-03-06 15:43:42.731 -08:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-03-06 15:43:42.733 -08:00 [INF] Hosting environment: Development
+2024-03-06 15:43:42.734 -08:00 [INF] Content root path: C:\Users\deliot\Source\Repos\EdhTracker\EdhTracker
+2024-03-06 15:43:42.804 -08:00 [INF] Executing endpoint '/_Host'
+2024-03-06 15:43:42.816 -08:00 [INF] Route matched with {page = "/_Host"}. Executing page /_Host
+2024-03-06 15:43:42.824 -08:00 [INF] Executing an implicit handler method - ModelState is "Valid"
+2024-03-06 15:43:42.825 -08:00 [INF] Executed an implicit handler method, returned result Microsoft.AspNetCore.Mvc.RazorPages.PageResult.
+2024-03-06 15:43:43.204 -08:00 [INF] Executed page /_Host in 385.771ms
+2024-03-06 15:43:43.205 -08:00 [INF] Executed endpoint '/_Host'
+2024-03-06 15:43:43.279 -08:00 [INF] Request starting HTTP/2 GET https://localhost:44393/_framework/blazor.server.js - null null
+2024-03-06 15:43:43.306 -08:00 [INF] Request starting HTTP/2 GET https://localhost:44393/_framework/aspnetcore-browser-refresh.js - null null
+2024-03-06 15:43:43.309 -08:00 [INF] Request starting HTTP/2 GET https://localhost:44393/_vs/browserLink - null null
+2024-03-06 15:43:43.364 -08:00 [INF] Executing endpoint 'Blazor static files'
+2024-03-06 15:43:43.368 -08:00 [INF] Request finished HTTP/2 GET https://localhost:44393/_framework/aspnetcore-browser-refresh.js - 200 13756 application/javascript; charset=utf-8 58.2185ms
+2024-03-06 15:43:43.377 -08:00 [INF] The file /_framework/blazor.server.js was not modified
+2024-03-06 15:43:43.380 -08:00 [INF] Executed endpoint 'Blazor static files'
+2024-03-06 15:43:43.380 -08:00 [INF] Request finished HTTP/2 GET https://localhost:44393/_framework/blazor.server.js - 304 null text/javascript 101.1441ms
+2024-03-06 15:43:43.381 -08:00 [INF] Request finished HTTP/2 GET https://localhost:44393/ - 200 null text/html; charset=utf-8 675.0173ms
+2024-03-06 15:43:43.392 -08:00 [INF] Request starting HTTP/2 GET https://localhost:44393/_blazor/initializers - null null
+2024-03-06 15:43:43.394 -08:00 [INF] Executing endpoint 'Blazor initializers'
+2024-03-06 15:43:43.396 -08:00 [INF] Executed endpoint 'Blazor initializers'
+2024-03-06 15:43:43.397 -08:00 [INF] Request finished HTTP/2 GET https://localhost:44393/_blazor/initializers - 200 null application/json; charset=utf-8 4.3368ms
+2024-03-06 15:43:43.406 -08:00 [INF] Request finished HTTP/2 GET https://localhost:44393/_vs/browserLink - 200 null text/javascript; charset=UTF-8 97.163ms
+2024-03-06 15:43:43.414 -08:00 [INF] Request starting HTTP/2 POST https://localhost:44393/_blazor/negotiate?negotiateVersion=1 - null 0
+2024-03-06 15:43:43.415 -08:00 [INF] Executing endpoint '/_blazor/negotiate'
+2024-03-06 15:43:43.421 -08:00 [INF] Executed endpoint '/_blazor/negotiate'
+2024-03-06 15:43:43.421 -08:00 [INF] Request finished HTTP/2 POST https://localhost:44393/_blazor/negotiate?negotiateVersion=1 - 200 316 application/json 6.6579ms
+2024-03-06 15:43:43.433 -08:00 [INF] Request starting HTTP/1.1 GET https://localhost:44393/_blazor?id=W1M56M_hKPGAHzwDjoYwTw - null null
+2024-03-06 15:43:43.433 -08:00 [INF] Executing endpoint '/_blazor'
+2024-03-06 15:50:15.093 -08:00 [INF] User profile is available. Using 'C:\Users\deliot\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-03-06 15:50:15.324 -08:00 [INF] Request starting HTTP/2 GET https://localhost:44393/ - null null
+2024-03-06 15:50:15.345 -08:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-03-06 15:50:15.346 -08:00 [INF] Hosting environment: Development
+2024-03-06 15:50:15.348 -08:00 [INF] Content root path: C:\Users\deliot\Source\Repos\EdhTracker\EdhTracker
+2024-03-06 15:50:15.416 -08:00 [INF] Executing endpoint '/_Host'
+2024-03-06 15:50:15.429 -08:00 [INF] Route matched with {page = "/_Host"}. Executing page /_Host
+2024-03-06 15:50:15.440 -08:00 [INF] Executing an implicit handler method - ModelState is "Valid"
+2024-03-06 15:50:15.440 -08:00 [INF] Executed an implicit handler method, returned result Microsoft.AspNetCore.Mvc.RazorPages.PageResult.
+2024-03-06 15:50:15.821 -08:00 [INF] Executed page /_Host in 389.875ms
+2024-03-06 15:50:15.822 -08:00 [INF] Executed endpoint '/_Host'
+2024-03-06 15:50:15.902 -08:00 [INF] Request starting HTTP/2 GET https://localhost:44393/_framework/blazor.server.js - null null
+2024-03-06 15:50:15.918 -08:00 [INF] Request starting HTTP/2 GET https://localhost:44393/_framework/aspnetcore-browser-refresh.js - null null
+2024-03-06 15:50:15.932 -08:00 [INF] Request starting HTTP/2 GET https://localhost:44393/_vs/browserLink - null null
+2024-03-06 15:50:15.994 -08:00 [INF] Executing endpoint 'Blazor static files'
+2024-03-06 15:50:15.997 -08:00 [INF] Request finished HTTP/2 GET https://localhost:44393/_framework/aspnetcore-browser-refresh.js - 200 13756 application/javascript; charset=utf-8 72.876ms
+2024-03-06 15:50:16.005 -08:00 [INF] The file /_framework/blazor.server.js was not modified
+2024-03-06 15:50:16.010 -08:00 [INF] Executed endpoint 'Blazor static files'
+2024-03-06 15:50:16.011 -08:00 [INF] Request finished HTTP/2 GET https://localhost:44393/_framework/blazor.server.js - 304 null text/javascript 109.1968ms
+2024-03-06 15:50:16.012 -08:00 [INF] Request finished HTTP/2 GET https://localhost:44393/ - 200 null text/html; charset=utf-8 691.7621ms
+2024-03-06 15:50:16.021 -08:00 [INF] Request starting HTTP/2 GET https://localhost:44393/_blazor/initializers - null null
+2024-03-06 15:50:16.023 -08:00 [INF] Executing endpoint 'Blazor initializers'
+2024-03-06 15:50:16.024 -08:00 [INF] Executed endpoint 'Blazor initializers'
+2024-03-06 15:50:16.024 -08:00 [INF] Request finished HTTP/2 GET https://localhost:44393/_blazor/initializers - 200 null application/json; charset=utf-8 2.9887ms
+2024-03-06 15:50:16.028 -08:00 [INF] Request finished HTTP/2 GET https://localhost:44393/_vs/browserLink - 200 null text/javascript; charset=UTF-8 95.7459ms
+2024-03-06 15:50:16.038 -08:00 [INF] Request starting HTTP/2 POST https://localhost:44393/_blazor/negotiate?negotiateVersion=1 - null 0
+2024-03-06 15:50:16.039 -08:00 [INF] Executing endpoint '/_blazor/negotiate'
+2024-03-06 15:50:16.044 -08:00 [INF] Executed endpoint '/_blazor/negotiate'
+2024-03-06 15:50:16.044 -08:00 [INF] Request finished HTTP/2 POST https://localhost:44393/_blazor/negotiate?negotiateVersion=1 - 200 316 application/json 6.4432ms
+2024-03-06 15:50:16.055 -08:00 [INF] Request starting HTTP/1.1 GET https://localhost:44393/_blazor?id=sDDgwzSypIRjO6J7720-VA - null null
+2024-03-06 15:50:16.055 -08:00 [INF] Executing endpoint '/_blazor'
+2024-03-06 15:51:38.627 -08:00 [INF] User profile is available. Using 'C:\Users\deliot\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-03-06 15:51:38.855 -08:00 [INF] Request starting HTTP/2 GET https://localhost:44393/ - null null
+2024-03-06 15:51:38.870 -08:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-03-06 15:51:38.872 -08:00 [INF] Hosting environment: Development
+2024-03-06 15:51:38.873 -08:00 [INF] Content root path: C:\Users\deliot\Source\Repos\EdhTracker\EdhTracker
+2024-03-06 15:51:38.941 -08:00 [INF] Executing endpoint '/_Host'
+2024-03-06 15:51:38.953 -08:00 [INF] Route matched with {page = "/_Host"}. Executing page /_Host
+2024-03-06 15:51:38.961 -08:00 [INF] Executing an implicit handler method - ModelState is "Valid"
+2024-03-06 15:51:38.962 -08:00 [INF] Executed an implicit handler method, returned result Microsoft.AspNetCore.Mvc.RazorPages.PageResult.
+2024-03-06 15:51:39.339 -08:00 [INF] Executed page /_Host in 382.9926ms
+2024-03-06 15:51:39.339 -08:00 [INF] Executed endpoint '/_Host'
+2024-03-06 15:51:39.424 -08:00 [INF] Request starting HTTP/2 GET https://localhost:44393/_framework/blazor.server.js - null null
+2024-03-06 15:51:39.424 -08:00 [INF] Request starting HTTP/2 GET https://localhost:44393/_vs/browserLink - null null
+2024-03-06 15:51:39.424 -08:00 [INF] Request starting HTTP/2 GET https://localhost:44393/_framework/aspnetcore-browser-refresh.js - null null
+2024-03-06 15:51:39.537 -08:00 [INF] Executing endpoint 'Blazor static files'
+2024-03-06 15:51:39.540 -08:00 [INF] Request finished HTTP/2 GET https://localhost:44393/_framework/aspnetcore-browser-refresh.js - 200 13756 application/javascript; charset=utf-8 86.4082ms
+2024-03-06 15:51:39.554 -08:00 [INF] The file /_framework/blazor.server.js was not modified
+2024-03-06 15:51:39.556 -08:00 [INF] Executed endpoint 'Blazor static files'
+2024-03-06 15:51:39.556 -08:00 [INF] Request finished HTTP/2 GET https://localhost:44393/_framework/blazor.server.js - 304 null text/javascript 132.0959ms
+2024-03-06 15:51:39.558 -08:00 [INF] Request finished HTTP/2 GET https://localhost:44393/ - 200 null text/html; charset=utf-8 707.8679ms
+2024-03-06 15:51:39.569 -08:00 [INF] Request starting HTTP/2 GET https://localhost:44393/_blazor/initializers - null null
+2024-03-06 15:51:39.571 -08:00 [INF] Executing endpoint 'Blazor initializers'
+2024-03-06 15:51:39.572 -08:00 [INF] Executed endpoint 'Blazor initializers'
+2024-03-06 15:51:39.572 -08:00 [INF] Request finished HTTP/2 GET https://localhost:44393/_blazor/initializers - 200 null application/json; charset=utf-8 3.2383ms
+2024-03-06 15:51:39.583 -08:00 [INF] Request starting HTTP/2 POST https://localhost:44393/_blazor/negotiate?negotiateVersion=1 - null 0
+2024-03-06 15:51:39.583 -08:00 [INF] Request finished HTTP/2 GET https://localhost:44393/_vs/browserLink - 200 null text/javascript; charset=UTF-8 158.8778ms
+2024-03-06 15:51:39.584 -08:00 [INF] Executing endpoint '/_blazor/negotiate'
+2024-03-06 15:51:39.590 -08:00 [INF] Executed endpoint '/_blazor/negotiate'
+2024-03-06 15:51:39.590 -08:00 [INF] Request finished HTTP/2 POST https://localhost:44393/_blazor/negotiate?negotiateVersion=1 - 200 316 application/json 8.7197ms
+2024-03-06 15:51:39.596 -08:00 [INF] Request starting HTTP/1.1 GET https://localhost:44393/_blazor?id=8TEb9BGIQkAc4fax1G_i9w - null null
+2024-03-06 15:51:39.596 -08:00 [INF] Executing endpoint '/_blazor'
+2024-03-06 15:51:54.264 -08:00 [ERR] Couldn't find card in scryfall matching null
+Org.OpenAPITools.Client.ApiException: Missing required parameter 'q' when calling CardsApi->CardsAutocomplete
+   at Org.OpenAPITools.Api.CardsApi.CardsAutocompleteWithHttpInfoAsync(String q, Int32 operationIndex, CancellationToken cancellationToken) in C:\Users\deliot\Source\Repos\EdhTracker\EdhTracker\OpenAPIs\ScryfallClient\src\Org.OpenAPITools\Api\CardsApi.cs:line 704
+   at Org.OpenAPITools.Api.CardsApi.CardsAutocompleteAsync(String q, Int32 operationIndex, CancellationToken cancellationToken) in C:\Users\deliot\Source\Repos\EdhTracker\EdhTracker\OpenAPIs\ScryfallClient\src\Org.OpenAPITools\Api\CardsApi.cs:line 687
+   at EdhTracker.Components.AddDeckDialog.ScryfallSearch(String value) in C:\Users\deliot\Source\Repos\EdhTracker\EdhTracker\Components\AddDeckDialog.razor:line 114
+2024-03-06 15:53:36.107 -08:00 [INF] User profile is available. Using 'C:\Users\deliot\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-03-06 15:53:36.338 -08:00 [INF] Request starting HTTP/2 GET https://localhost:44393/ - null null
+2024-03-06 15:53:36.358 -08:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-03-06 15:53:36.360 -08:00 [INF] Hosting environment: Development
+2024-03-06 15:53:36.362 -08:00 [INF] Content root path: C:\Users\deliot\Source\Repos\EdhTracker\EdhTracker
+2024-03-06 15:53:36.429 -08:00 [INF] Executing endpoint '/_Host'
+2024-03-06 15:53:36.443 -08:00 [INF] Route matched with {page = "/_Host"}. Executing page /_Host
+2024-03-06 15:53:36.452 -08:00 [INF] Executing an implicit handler method - ModelState is "Valid"
+2024-03-06 15:53:36.452 -08:00 [INF] Executed an implicit handler method, returned result Microsoft.AspNetCore.Mvc.RazorPages.PageResult.
+2024-03-06 15:53:36.832 -08:00 [INF] Executed page /_Host in 386.4805ms
+2024-03-06 15:53:36.833 -08:00 [INF] Executed endpoint '/_Host'
+2024-03-06 15:53:36.914 -08:00 [INF] Request starting HTTP/2 GET https://localhost:44393/_framework/aspnetcore-browser-refresh.js - null null
+2024-03-06 15:53:36.914 -08:00 [INF] Request starting HTTP/2 GET https://localhost:44393/_framework/blazor.server.js - null null
+2024-03-06 15:53:36.914 -08:00 [INF] Request starting HTTP/2 GET https://localhost:44393/_vs/browserLink - null null
+2024-03-06 15:53:37.016 -08:00 [INF] Executing endpoint 'Blazor static files'
+2024-03-06 15:53:37.020 -08:00 [INF] Request finished HTTP/2 GET https://localhost:44393/_framework/aspnetcore-browser-refresh.js - 200 13756 application/javascript; charset=utf-8 89.8392ms
+2024-03-06 15:53:37.030 -08:00 [INF] The file /_framework/blazor.server.js was not modified
+2024-03-06 15:53:37.031 -08:00 [INF] Executed endpoint 'Blazor static files'
+2024-03-06 15:53:37.032 -08:00 [INF] Request finished HTTP/2 GET https://localhost:44393/_framework/blazor.server.js - 304 null text/javascript 118.1189ms
+2024-03-06 15:53:37.033 -08:00 [INF] Request finished HTTP/2 GET https://localhost:44393/ - 200 null text/html; charset=utf-8 699.7931ms
+2024-03-06 15:53:37.041 -08:00 [INF] Request starting HTTP/2 GET https://localhost:44393/_blazor/initializers - null null
+2024-03-06 15:53:37.043 -08:00 [INF] Executing endpoint 'Blazor initializers'
+2024-03-06 15:53:37.044 -08:00 [INF] Executed endpoint 'Blazor initializers'
+2024-03-06 15:53:37.044 -08:00 [INF] Request finished HTTP/2 GET https://localhost:44393/_blazor/initializers - 200 null application/json; charset=utf-8 2.953ms
+2024-03-06 15:53:37.050 -08:00 [INF] Request finished HTTP/2 GET https://localhost:44393/_vs/browserLink - 200 null text/javascript; charset=UTF-8 136.2675ms
+2024-03-06 15:53:37.051 -08:00 [INF] Request starting HTTP/2 POST https://localhost:44393/_blazor/negotiate?negotiateVersion=1 - null 0
+2024-03-06 15:53:37.052 -08:00 [INF] Executing endpoint '/_blazor/negotiate'
+2024-03-06 15:53:37.059 -08:00 [INF] Executed endpoint '/_blazor/negotiate'
+2024-03-06 15:53:37.059 -08:00 [INF] Request finished HTTP/2 POST https://localhost:44393/_blazor/negotiate?negotiateVersion=1 - 200 316 application/json 7.9389ms
+2024-03-06 15:53:37.064 -08:00 [INF] Request starting HTTP/1.1 GET https://localhost:44393/_blazor?id=Iy94Dz4VLe_to5lIJc_5Bg - null null
+2024-03-06 15:53:37.065 -08:00 [INF] Executing endpoint '/_blazor'
+2024-03-06 15:55:16.966 -08:00 [INF] Request starting HTTP/2 GET https://localhost:44393/Group/da65fcf4-4b9c-4f0f-ae08-a5e25ddc42bd/Decks - null null
+2024-03-06 15:55:16.976 -08:00 [INF] Executing endpoint '/_Host'
+2024-03-06 15:55:16.978 -08:00 [INF] Route matched with {page = "/_Host"}. Executing page /_Host
+2024-03-06 15:55:16.979 -08:00 [INF] Executing an implicit handler method - ModelState is "Valid"
+2024-03-06 15:55:16.979 -08:00 [INF] Executed an implicit handler method, returned result Microsoft.AspNetCore.Mvc.RazorPages.PageResult.
+2024-03-06 15:55:16.996 -08:00 [INF] Executed page /_Host in 18.6503ms
+2024-03-06 15:55:16.997 -08:00 [INF] Executed endpoint '/_Host'
+2024-03-06 15:55:17.022 -08:00 [INF] Request starting HTTP/2 POST https://localhost:44393/_blazor/disconnect - multipart/form-data; boundary=----WebKitFormBoundary1ZqtfU2wka4OQjgb 359
+2024-03-06 15:55:17.032 -08:00 [INF] Request starting HTTP/2 GET https://localhost:44393/_framework/aspnetcore-browser-refresh.js - null null
+2024-03-06 15:55:17.032 -08:00 [INF] Request starting HTTP/2 GET https://localhost:44393/_vs/browserLink - null null
+2024-03-06 15:55:17.032 -08:00 [INF] Request starting HTTP/2 GET https://localhost:44393/_framework/blazor.server.js - null null
+2024-03-06 15:55:17.041 -08:00 [INF] Executing endpoint 'Blazor disconnect'
+2024-03-06 15:55:17.051 -08:00 [INF] Request finished HTTP/2 GET https://localhost:44393/_framework/aspnetcore-browser-refresh.js - 200 13756 application/javascript; charset=utf-8 18.0106ms
+2024-03-06 15:55:17.051 -08:00 [INF] Executing endpoint 'Blazor static files'
+2024-03-06 15:55:17.064 -08:00 [INF] The file /_framework/blazor.server.js was not modified
+2024-03-06 15:55:17.076 -08:00 [INF] Executed endpoint 'Blazor static files'
+2024-03-06 15:55:17.077 -08:00 [INF] Request finished HTTP/2 GET https://localhost:44393/_framework/blazor.server.js - 304 null text/javascript 44.0796ms
+2024-03-06 15:55:17.089 -08:00 [INF] Request finished HTTP/2 GET https://localhost:44393/Group/da65fcf4-4b9c-4f0f-ae08-a5e25ddc42bd/Decks - 200 null text/html; charset=utf-8 123.6524ms
+2024-03-06 15:55:17.091 -08:00 [INF] Request finished HTTP/2 GET https://localhost:44393/_vs/browserLink - 200 null text/javascript; charset=UTF-8 58.2646ms
+2024-03-06 15:55:17.094 -08:00 [INF] Request starting HTTP/2 GET https://localhost:44393/_blazor/initializers - null null
+2024-03-06 15:55:17.094 -08:00 [INF] Executing endpoint 'Blazor initializers'
+2024-03-06 15:55:17.095 -08:00 [INF] Executed endpoint 'Blazor initializers'
+2024-03-06 15:55:17.095 -08:00 [INF] Request finished HTTP/2 GET https://localhost:44393/_blazor/initializers - 200 null application/json; charset=utf-8 0.8636ms
+2024-03-06 15:55:17.097 -08:00 [INF] Executed endpoint '/_blazor'
+2024-03-06 15:55:17.098 -08:00 [INF] Request finished HTTP/1.1 GET https://localhost:44393/_blazor?id=Iy94Dz4VLe_to5lIJc_5Bg - 101 null null 100034.7916ms
+2024-03-06 15:55:17.170 -08:00 [INF] Request starting HTTP/2 POST https://localhost:44393/_blazor/negotiate?negotiateVersion=1 - null 0
+2024-03-06 15:55:17.197 -08:00 [INF] Executing endpoint '/_blazor/negotiate'
+2024-03-06 15:55:17.242 -08:00 [INF] Executed endpoint '/_blazor/negotiate'
+2024-03-06 15:55:17.242 -08:00 [INF] Request finished HTTP/2 POST https://localhost:44393/_blazor/negotiate?negotiateVersion=1 - 200 316 application/json 85.1731ms
+2024-03-06 15:55:17.267 -08:00 [INF] Request starting HTTP/1.1 GET https://localhost:44393/_blazor?id=93SavRSGOw44BdlecfaE3g - null null
+2024-03-06 15:55:17.280 -08:00 [INF] Executing endpoint '/_blazor'
+2024-03-06 15:55:18.024 -08:00 [INF] Executed endpoint 'Blazor disconnect'
+2024-03-06 15:55:18.024 -08:00 [INF] Request finished HTTP/2 POST https://localhost:44393/_blazor/disconnect - 200 null null 1009.7323ms
+2024-03-06 15:55:29.753 -08:00 [INF] User profile is available. Using 'C:\Users\deliot\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-03-06 15:55:29.981 -08:00 [INF] Request starting HTTP/2 GET https://localhost:44393/ - null null
+2024-03-06 15:55:30.000 -08:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-03-06 15:55:30.001 -08:00 [INF] Hosting environment: Development
+2024-03-06 15:55:30.003 -08:00 [INF] Content root path: C:\Users\deliot\Source\Repos\EdhTracker\EdhTracker
+2024-03-06 15:55:30.071 -08:00 [INF] Executing endpoint '/_Host'
+2024-03-06 15:55:30.083 -08:00 [INF] Route matched with {page = "/_Host"}. Executing page /_Host
+2024-03-06 15:55:30.091 -08:00 [INF] Executing an implicit handler method - ModelState is "Valid"
+2024-03-06 15:55:30.091 -08:00 [INF] Executed an implicit handler method, returned result Microsoft.AspNetCore.Mvc.RazorPages.PageResult.
+2024-03-06 15:55:30.459 -08:00 [INF] Executed page /_Host in 374.0096ms
+2024-03-06 15:55:30.460 -08:00 [INF] Executed endpoint '/_Host'
+2024-03-06 15:55:30.540 -08:00 [INF] Request starting HTTP/2 GET https://localhost:44393/_vs/browserLink - null null
+2024-03-06 15:55:30.540 -08:00 [INF] Request starting HTTP/2 GET https://localhost:44393/_framework/blazor.server.js - null null
+2024-03-06 15:55:30.540 -08:00 [INF] Request starting HTTP/2 GET https://localhost:44393/_framework/aspnetcore-browser-refresh.js - null null
+2024-03-06 15:55:30.661 -08:00 [INF] Executing endpoint 'Blazor static files'
+2024-03-06 15:55:30.662 -08:00 [INF] Request finished HTTP/2 GET https://localhost:44393/_framework/aspnetcore-browser-refresh.js - 200 13756 application/javascript; charset=utf-8 109.2231ms
+2024-03-06 15:55:30.676 -08:00 [INF] The file /_framework/blazor.server.js was not modified
+2024-03-06 15:55:30.678 -08:00 [INF] Executed endpoint 'Blazor static files'
+2024-03-06 15:55:30.678 -08:00 [INF] Request finished HTTP/2 GET https://localhost:44393/_framework/blazor.server.js - 304 null text/javascript 139.6979ms
+2024-03-06 15:55:30.680 -08:00 [INF] Request finished HTTP/2 GET https://localhost:44393/ - 200 null text/html; charset=utf-8 703.8512ms
+2024-03-06 15:55:30.689 -08:00 [INF] Request starting HTTP/2 GET https://localhost:44393/_blazor/initializers - null null
+2024-03-06 15:55:30.690 -08:00 [INF] Executing endpoint 'Blazor initializers'
+2024-03-06 15:55:30.691 -08:00 [INF] Executed endpoint 'Blazor initializers'
+2024-03-06 15:55:30.692 -08:00 [INF] Request finished HTTP/2 GET https://localhost:44393/_blazor/initializers - 200 null application/json; charset=utf-8 2.9103ms
+2024-03-06 15:55:30.697 -08:00 [INF] Request finished HTTP/2 GET https://localhost:44393/_vs/browserLink - 200 null text/javascript; charset=UTF-8 154.8919ms
+2024-03-06 15:55:30.697 -08:00 [INF] Request starting HTTP/2 POST https://localhost:44393/_blazor/negotiate?negotiateVersion=1 - null 0
+2024-03-06 15:55:30.698 -08:00 [INF] Executing endpoint '/_blazor/negotiate'
+2024-03-06 15:55:30.704 -08:00 [INF] Executed endpoint '/_blazor/negotiate'
+2024-03-06 15:55:30.704 -08:00 [INF] Request finished HTTP/2 POST https://localhost:44393/_blazor/negotiate?negotiateVersion=1 - 200 316 application/json 7.0464ms
+2024-03-06 15:55:30.712 -08:00 [INF] Request starting HTTP/1.1 GET https://localhost:44393/_blazor?id=6l_IDXuchDMAMmqIu3G90g - null null
+2024-03-06 15:55:30.712 -08:00 [INF] Executing endpoint '/_blazor'
+2024-03-06 15:55:49.090 -08:00 [ERR] Couldn't find card in scryfall matching null
+Org.OpenAPITools.Client.ApiException: Missing required parameter 'q' when calling CardsApi->CardsAutocomplete
+   at Org.OpenAPITools.Api.CardsApi.CardsAutocompleteWithHttpInfoAsync(String q, Int32 operationIndex, CancellationToken cancellationToken) in C:\Users\deliot\Source\Repos\EdhTracker\EdhTracker\OpenAPIs\ScryfallClient\src\Org.OpenAPITools\Api\CardsApi.cs:line 704
+   at Org.OpenAPITools.Api.CardsApi.CardsAutocompleteAsync(String q, Int32 operationIndex, CancellationToken cancellationToken) in C:\Users\deliot\Source\Repos\EdhTracker\EdhTracker\OpenAPIs\ScryfallClient\src\Org.OpenAPITools\Api\CardsApi.cs:line 687
+   at EdhTracker.Components.AddDeckDialog.ScryfallSearch(String value) in C:\Users\deliot\Source\Repos\EdhTracker\EdhTracker\Components\AddDeckDialog.razor:line 114
+2024-03-06 15:56:05.046 -08:00 [INF] Request starting HTTP/2 GET https://localhost:44393/Group/da65fcf4-4b9c-4f0f-ae08-a5e25ddc42bd/Decks? - null null
+2024-03-06 15:56:05.049 -08:00 [INF] Executing endpoint '/_Host'
+2024-03-06 15:56:05.051 -08:00 [INF] Route matched with {page = "/_Host"}. Executing page /_Host
+2024-03-06 15:56:05.053 -08:00 [INF] Executing an implicit handler method - ModelState is "Valid"
+2024-03-06 15:56:05.053 -08:00 [INF] Executed an implicit handler method, returned result Microsoft.AspNetCore.Mvc.RazorPages.PageResult.
+2024-03-06 15:56:05.070 -08:00 [INF] Executed page /_Host in 19.0116ms
+2024-03-06 15:56:05.070 -08:00 [INF] Executed endpoint '/_Host'
+2024-03-06 15:56:05.094 -08:00 [INF] Request starting HTTP/2 POST https://localhost:44393/_blazor/disconnect - multipart/form-data; boundary=----WebKitFormBoundaryJMSGUrdZBu58ERJT 359
+2024-03-06 15:56:05.104 -08:00 [INF] Request starting HTTP/2 GET https://localhost:44393/_framework/aspnetcore-browser-refresh.js - null null
+2024-03-06 15:56:05.104 -08:00 [INF] Request starting HTTP/2 GET https://localhost:44393/_framework/blazor.server.js - null null
+2024-03-06 15:56:05.104 -08:00 [INF] Executing endpoint 'Blazor disconnect'
+2024-03-06 15:56:05.113 -08:00 [INF] Request finished HTTP/2 GET https://localhost:44393/_framework/aspnetcore-browser-refresh.js - 200 13756 application/javascript; charset=utf-8 9.7617ms
+2024-03-06 15:56:05.113 -08:00 [INF] Request starting HTTP/2 GET https://localhost:44393/_vs/browserLink - null null
+2024-03-06 15:56:05.114 -08:00 [INF] Executing endpoint 'Blazor static files'
+2024-03-06 15:56:05.128 -08:00 [INF] The file /_framework/blazor.server.js was not modified
+2024-03-06 15:56:05.131 -08:00 [INF] Executed endpoint 'Blazor static files'
+2024-03-06 15:56:05.140 -08:00 [INF] Request finished HTTP/2 GET https://localhost:44393/_framework/blazor.server.js - 304 null text/javascript 35.7859ms
+2024-03-06 15:56:05.140 -08:00 [INF] Request starting HTTP/2 GET https://localhost:44393/_blazor/initializers - null null
+2024-03-06 15:56:05.140 -08:00 [INF] Executing endpoint 'Blazor initializers'
+2024-03-06 15:56:05.148 -08:00 [INF] Executed endpoint 'Blazor initializers'
+2024-03-06 15:56:05.149 -08:00 [INF] Request finished HTTP/2 GET https://localhost:44393/_blazor/initializers - 200 null application/json; charset=utf-8 8.8551ms
+2024-03-06 15:56:05.150 -08:00 [INF] Request finished HTTP/2 GET https://localhost:44393/Group/da65fcf4-4b9c-4f0f-ae08-a5e25ddc42bd/Decks? - 200 null text/html; charset=utf-8 103.8956ms
+2024-03-06 15:56:05.154 -08:00 [INF] Request starting HTTP/2 POST https://localhost:44393/_blazor/negotiate?negotiateVersion=1 - null 0
+2024-03-06 15:56:05.155 -08:00 [INF] Executing endpoint '/_blazor/negotiate'
+2024-03-06 15:56:05.155 -08:00 [INF] Executed endpoint '/_blazor/negotiate'
+2024-03-06 15:56:05.156 -08:00 [INF] Request finished HTTP/2 POST https://localhost:44393/_blazor/negotiate?negotiateVersion=1 - 200 316 application/json 1.3173ms
+2024-03-06 15:56:05.160 -08:00 [INF] Request starting HTTP/1.1 GET https://localhost:44393/_blazor?id=Y6prwOoohPZIAiMNoU3rOQ - null null
+2024-03-06 15:56:05.161 -08:00 [INF] Executing endpoint '/_blazor'
+2024-03-06 15:56:05.165 -08:00 [INF] Request finished HTTP/2 GET https://localhost:44393/_vs/browserLink - 200 null text/javascript; charset=UTF-8 51.7869ms
+2024-03-06 15:56:05.281 -08:00 [INF] Executed endpoint '/_blazor'
+2024-03-06 15:56:05.314 -08:00 [INF] Request finished HTTP/1.1 GET https://localhost:44393/_blazor?id=6l_IDXuchDMAMmqIu3G90g - 101 null null 34602.4514ms
+2024-03-06 15:56:05.820 -08:00 [INF] Executed endpoint 'Blazor disconnect'
+2024-03-06 15:56:05.821 -08:00 [INF] Request finished HTTP/2 POST https://localhost:44393/_blazor/disconnect - 200 null null 733.8859ms
+2024-03-06 15:57:01.875 -08:00 [ERR] Couldn't find card in scryfall matching null
+Org.OpenAPITools.Client.ApiException: Missing required parameter 'q' when calling CardsApi->CardsAutocomplete
+   at Org.OpenAPITools.Api.CardsApi.CardsAutocompleteWithHttpInfoAsync(String q, Int32 operationIndex, CancellationToken cancellationToken) in C:\Users\deliot\Source\Repos\EdhTracker\EdhTracker\OpenAPIs\ScryfallClient\src\Org.OpenAPITools\Api\CardsApi.cs:line 704
+   at Org.OpenAPITools.Api.CardsApi.CardsAutocompleteAsync(String q, Int32 operationIndex, CancellationToken cancellationToken) in C:\Users\deliot\Source\Repos\EdhTracker\EdhTracker\OpenAPIs\ScryfallClient\src\Org.OpenAPITools\Api\CardsApi.cs:line 687
+   at EdhTracker.Components.AddDeckDialog.ScryfallSearch(String value) in C:\Users\deliot\Source\Repos\EdhTracker\EdhTracker\Components\AddDeckDialog.razor:line 114
+2024-03-06 15:57:10.680 -08:00 [INF] Request starting HTTP/2 POST https://localhost:44393/_blazor/disconnect - multipart/form-data; boundary=----WebKitFormBoundaryB8Gur5M3er8KPKPv 359
+2024-03-06 15:57:10.681 -08:00 [INF] Executing endpoint 'Blazor disconnect'
+2024-03-06 15:57:10.840 -08:00 [INF] Executed endpoint '/_blazor'
+2024-03-06 15:57:10.852 -08:00 [INF] Request finished HTTP/1.1 GET https://localhost:44393/_blazor?id=Y6prwOoohPZIAiMNoU3rOQ - 101 null null 65681.8369ms
+2024-03-06 15:57:11.002 -08:00 [INF] Executed endpoint 'Blazor disconnect'
+2024-03-06 15:57:11.002 -08:00 [INF] Request finished HTTP/2 POST https://localhost:44393/_blazor/disconnect - 499 null null 321.8076ms
+2024-03-06 16:01:39.554 -08:00 [INF] User profile is available. Using 'C:\Users\deliot\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-03-06 16:01:39.792 -08:00 [INF] Request starting HTTP/2 GET https://localhost:44393/ - null null
+2024-03-06 16:01:39.813 -08:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-03-06 16:01:39.815 -08:00 [INF] Hosting environment: Development
+2024-03-06 16:01:39.817 -08:00 [INF] Content root path: C:\Users\deliot\Source\Repos\EdhTracker\EdhTracker
+2024-03-06 16:01:39.884 -08:00 [INF] Executing endpoint '/_Host'
+2024-03-06 16:01:39.897 -08:00 [INF] Route matched with {page = "/_Host"}. Executing page /_Host
+2024-03-06 16:01:39.905 -08:00 [INF] Executing an implicit handler method - ModelState is "Valid"
+2024-03-06 16:01:39.906 -08:00 [INF] Executed an implicit handler method, returned result Microsoft.AspNetCore.Mvc.RazorPages.PageResult.
+2024-03-06 16:01:40.313 -08:00 [INF] Executed page /_Host in 413.3609ms
+2024-03-06 16:01:40.313 -08:00 [INF] Executed endpoint '/_Host'
+2024-03-06 16:01:40.403 -08:00 [INF] Request starting HTTP/2 GET https://localhost:44393/_framework/blazor.server.js - null null
+2024-03-06 16:01:40.403 -08:00 [INF] Request starting HTTP/2 GET https://localhost:44393/_framework/aspnetcore-browser-refresh.js - null null
+2024-03-06 16:01:40.403 -08:00 [INF] Request starting HTTP/2 GET https://localhost:44393/_vs/browserLink - null null
+2024-03-06 16:01:40.503 -08:00 [INF] Request finished HTTP/2 GET https://localhost:44393/_framework/aspnetcore-browser-refresh.js - 200 13756 application/javascript; charset=utf-8 73.9298ms
+2024-03-06 16:01:40.503 -08:00 [INF] Executing endpoint 'Blazor static files'
+2024-03-06 16:01:40.524 -08:00 [INF] The file /_framework/blazor.server.js was not modified
+2024-03-06 16:01:40.525 -08:00 [INF] Executed endpoint 'Blazor static files'
+2024-03-06 16:01:40.525 -08:00 [INF] Request finished HTTP/2 GET https://localhost:44393/_framework/blazor.server.js - 304 null text/javascript 124.9107ms
+2024-03-06 16:01:40.527 -08:00 [INF] Request finished HTTP/2 GET https://localhost:44393/ - 200 null text/html; charset=utf-8 739.1872ms
+2024-03-06 16:01:40.539 -08:00 [INF] Request starting HTTP/2 GET https://localhost:44393/_blazor/initializers - null null
+2024-03-06 16:01:40.541 -08:00 [INF] Executing endpoint 'Blazor initializers'
+2024-03-06 16:01:40.542 -08:00 [INF] Executed endpoint 'Blazor initializers'
+2024-03-06 16:01:40.542 -08:00 [INF] Request finished HTTP/2 GET https://localhost:44393/_blazor/initializers - 200 null application/json; charset=utf-8 3.0812ms
+2024-03-06 16:01:40.544 -08:00 [INF] Request finished HTTP/2 GET https://localhost:44393/_vs/browserLink - 200 null text/javascript; charset=UTF-8 141.3899ms
+2024-03-06 16:01:40.548 -08:00 [INF] Request starting HTTP/2 POST https://localhost:44393/_blazor/negotiate?negotiateVersion=1 - null 0
+2024-03-06 16:01:40.549 -08:00 [INF] Executing endpoint '/_blazor/negotiate'
+2024-03-06 16:01:40.554 -08:00 [INF] Executed endpoint '/_blazor/negotiate'
+2024-03-06 16:01:40.554 -08:00 [INF] Request finished HTTP/2 POST https://localhost:44393/_blazor/negotiate?negotiateVersion=1 - 200 316 application/json 6.447ms
+2024-03-06 16:01:40.562 -08:00 [INF] Request starting HTTP/1.1 GET https://localhost:44393/_blazor?id=mbd4fLzolhYIH-6jsVJNew - null null
+2024-03-06 16:01:40.562 -08:00 [INF] Executing endpoint '/_blazor'
+2024-03-06 16:01:48.919 -08:00 [ERR] Couldn't find card in scryfall matching null
+Org.OpenAPITools.Client.ApiException: Missing required parameter 'q' when calling CardsApi->CardsAutocomplete
+   at Org.OpenAPITools.Api.CardsApi.CardsAutocompleteWithHttpInfoAsync(String q, Int32 operationIndex, CancellationToken cancellationToken) in C:\Users\deliot\Source\Repos\EdhTracker\EdhTracker\OpenAPIs\ScryfallClient\src\Org.OpenAPITools\Api\CardsApi.cs:line 704
+   at Org.OpenAPITools.Api.CardsApi.CardsAutocompleteAsync(String q, Int32 operationIndex, CancellationToken cancellationToken) in C:\Users\deliot\Source\Repos\EdhTracker\EdhTracker\OpenAPIs\ScryfallClient\src\Org.OpenAPITools\Api\CardsApi.cs:line 687
+   at EdhTracker.Components.AddDeckDialog.ScryfallSearch(String value) in C:\Users\deliot\Source\Repos\EdhTracker\EdhTracker\Components\AddDeckDialog.razor:line 114
+2024-03-06 16:02:24.800 -08:00 [INF] Request starting HTTP/2 GET https://localhost:44393/Group/da65fcf4-4b9c-4f0f-ae08-a5e25ddc42bd/Decks? - null null
+2024-03-06 16:02:24.804 -08:00 [INF] Executing endpoint '/_Host'
+2024-03-06 16:02:24.806 -08:00 [INF] Route matched with {page = "/_Host"}. Executing page /_Host
+2024-03-06 16:02:24.807 -08:00 [INF] Executing an implicit handler method - ModelState is "Valid"
+2024-03-06 16:02:24.807 -08:00 [INF] Executed an implicit handler method, returned result Microsoft.AspNetCore.Mvc.RazorPages.PageResult.
+2024-03-06 16:02:24.825 -08:00 [INF] Executed page /_Host in 19.4321ms
+2024-03-06 16:02:24.825 -08:00 [INF] Executed endpoint '/_Host'
+2024-03-06 16:02:24.851 -08:00 [INF] Request starting HTTP/2 POST https://localhost:44393/_blazor/disconnect - multipart/form-data; boundary=----WebKitFormBoundary0qq2lDqNGhqFhll5 359
+2024-03-06 16:02:24.861 -08:00 [INF] Executing endpoint 'Blazor disconnect'
+2024-03-06 16:02:24.870 -08:00 [INF] Request starting HTTP/2 GET https://localhost:44393/_framework/blazor.server.js - null null
+2024-03-06 16:02:24.871 -08:00 [INF] Request starting HTTP/2 GET https://localhost:44393/_vs/browserLink - null null
+2024-03-06 16:02:24.878 -08:00 [INF] Executing endpoint 'Blazor static files'
+2024-03-06 16:02:24.878 -08:00 [INF] Request starting HTTP/2 GET https://localhost:44393/_framework/aspnetcore-browser-refresh.js - null null
+2024-03-06 16:02:24.887 -08:00 [INF] The file /_framework/blazor.server.js was not modified
+2024-03-06 16:02:24.888 -08:00 [INF] Executed endpoint 'Blazor static files'
+2024-03-06 16:02:24.889 -08:00 [INF] Request finished HTTP/2 GET https://localhost:44393/_framework/aspnetcore-browser-refresh.js - 200 13756 application/javascript; charset=utf-8 10.3768ms
+2024-03-06 16:02:24.892 -08:00 [INF] Request finished HTTP/2 GET https://localhost:44393/_framework/blazor.server.js - 304 null text/javascript 23.1186ms
+2024-03-06 16:02:24.901 -08:00 [INF] Request starting HTTP/2 GET https://localhost:44393/_blazor/initializers - null null
+2024-03-06 16:02:24.909 -08:00 [INF] Executing endpoint 'Blazor initializers'
+2024-03-06 16:02:24.913 -08:00 [INF] Executed endpoint 'Blazor initializers'
+2024-03-06 16:02:24.913 -08:00 [INF] Request finished HTTP/2 GET https://localhost:44393/Group/da65fcf4-4b9c-4f0f-ae08-a5e25ddc42bd/Decks? - 200 null text/html; charset=utf-8 112.5586ms
+2024-03-06 16:02:24.914 -08:00 [INF] Request finished HTTP/2 GET https://localhost:44393/_blazor/initializers - 200 null application/json; charset=utf-8 13.0953ms
+2024-03-06 16:02:24.917 -08:00 [INF] Request finished HTTP/2 GET https://localhost:44393/_vs/browserLink - 200 null text/javascript; charset=UTF-8 48.612ms
+2024-03-06 16:02:24.919 -08:00 [INF] Request starting HTTP/2 POST https://localhost:44393/_blazor/negotiate?negotiateVersion=1 - null 0
+2024-03-06 16:02:24.919 -08:00 [INF] Executing endpoint '/_blazor/negotiate'
+2024-03-06 16:02:24.920 -08:00 [INF] Executed endpoint '/_blazor/negotiate'
+2024-03-06 16:02:24.920 -08:00 [INF] Request finished HTTP/2 POST https://localhost:44393/_blazor/negotiate?negotiateVersion=1 - 200 316 application/json 0.959ms
+2024-03-06 16:02:24.924 -08:00 [INF] Request starting HTTP/1.1 GET https://localhost:44393/_blazor?id=QMKdmqJGJBLeHIO3a41G8A - null null
+2024-03-06 16:02:24.924 -08:00 [INF] Executing endpoint '/_blazor'
+2024-03-06 16:02:25.061 -08:00 [INF] Executed endpoint '/_blazor'
+2024-03-06 16:02:25.118 -08:00 [INF] Request finished HTTP/1.1 GET https://localhost:44393/_blazor?id=mbd4fLzolhYIH-6jsVJNew - 101 null null 44556.0524ms
+2024-03-06 16:02:25.597 -08:00 [INF] Executed endpoint 'Blazor disconnect'
+2024-03-06 16:02:25.598 -08:00 [INF] Request finished HTTP/2 POST https://localhost:44393/_blazor/disconnect - 200 null null 756.0792ms
+2024-03-06 16:04:13.089 -08:00 [INF] User profile is available. Using 'C:\Users\deliot\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-03-06 16:04:13.327 -08:00 [INF] Request starting HTTP/2 GET https://localhost:44393/ - null null
+2024-03-06 16:04:13.346 -08:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-03-06 16:04:13.348 -08:00 [INF] Hosting environment: Development
+2024-03-06 16:04:13.349 -08:00 [INF] Content root path: C:\Users\deliot\Source\Repos\EdhTracker\EdhTracker
+2024-03-06 16:04:13.417 -08:00 [INF] Executing endpoint '/_Host'
+2024-03-06 16:04:13.430 -08:00 [INF] Route matched with {page = "/_Host"}. Executing page /_Host
+2024-03-06 16:04:13.438 -08:00 [INF] Executing an implicit handler method - ModelState is "Valid"
+2024-03-06 16:04:13.439 -08:00 [INF] Executed an implicit handler method, returned result Microsoft.AspNetCore.Mvc.RazorPages.PageResult.
+2024-03-06 16:04:13.820 -08:00 [INF] Executed page /_Host in 387.4075ms
+2024-03-06 16:04:13.820 -08:00 [INF] Executed endpoint '/_Host'
+2024-03-06 16:04:13.896 -08:00 [INF] Request starting HTTP/2 GET https://localhost:44393/_framework/blazor.server.js - null null
+2024-03-06 16:04:13.896 -08:00 [INF] Request starting HTTP/2 GET https://localhost:44393/_framework/aspnetcore-browser-refresh.js - null null
+2024-03-06 16:04:13.896 -08:00 [INF] Request starting HTTP/2 GET https://localhost:44393/_vs/browserLink - null null
+2024-03-06 16:04:13.997 -08:00 [INF] Request finished HTTP/2 GET https://localhost:44393/_framework/aspnetcore-browser-refresh.js - 200 13756 application/javascript; charset=utf-8 86.7781ms
+2024-03-06 16:04:13.997 -08:00 [INF] Executing endpoint 'Blazor static files'
+2024-03-06 16:04:14.008 -08:00 [INF] The file /_framework/blazor.server.js was not modified
+2024-03-06 16:04:14.009 -08:00 [INF] Executed endpoint 'Blazor static files'
+2024-03-06 16:04:14.010 -08:00 [INF] Request finished HTTP/2 GET https://localhost:44393/_framework/blazor.server.js - 304 null text/javascript 114.5429ms
+2024-03-06 16:04:14.010 -08:00 [INF] Request finished HTTP/2 GET https://localhost:44393/ - 200 null text/html; charset=utf-8 687.7778ms
+2024-03-06 16:04:14.022 -08:00 [INF] Request starting HTTP/2 GET https://localhost:44393/_blazor/initializers - null null
+2024-03-06 16:04:14.023 -08:00 [INF] Executing endpoint 'Blazor initializers'
+2024-03-06 16:04:14.025 -08:00 [INF] Executed endpoint 'Blazor initializers'
+2024-03-06 16:04:14.025 -08:00 [INF] Request finished HTTP/2 GET https://localhost:44393/_blazor/initializers - 200 null application/json; charset=utf-8 2.9177ms
+2024-03-06 16:04:14.028 -08:00 [INF] Request finished HTTP/2 GET https://localhost:44393/_vs/browserLink - 200 null text/javascript; charset=UTF-8 132.1284ms
+2024-03-06 16:04:14.031 -08:00 [INF] Request starting HTTP/2 POST https://localhost:44393/_blazor/negotiate?negotiateVersion=1 - null 0
+2024-03-06 16:04:14.032 -08:00 [INF] Executing endpoint '/_blazor/negotiate'
+2024-03-06 16:04:14.037 -08:00 [INF] Executed endpoint '/_blazor/negotiate'
+2024-03-06 16:04:14.037 -08:00 [INF] Request finished HTTP/2 POST https://localhost:44393/_blazor/negotiate?negotiateVersion=1 - 200 316 application/json 6.6482ms
+2024-03-06 16:04:14.047 -08:00 [INF] Request starting HTTP/1.1 GET https://localhost:44393/_blazor?id=_Ync4LlGvMGa7GMIwLqEuQ - null null
+2024-03-06 16:04:14.047 -08:00 [INF] Executing endpoint '/_blazor'
+2024-03-06 16:04:21.269 -08:00 [ERR] Couldn't find card in scryfall matching null
+Org.OpenAPITools.Client.ApiException: Missing required parameter 'q' when calling CardsApi->CardsAutocomplete
+   at Org.OpenAPITools.Api.CardsApi.CardsAutocompleteWithHttpInfoAsync(String q, Int32 operationIndex, CancellationToken cancellationToken) in C:\Users\deliot\Source\Repos\EdhTracker\EdhTracker\OpenAPIs\ScryfallClient\src\Org.OpenAPITools\Api\CardsApi.cs:line 704
+   at Org.OpenAPITools.Api.CardsApi.CardsAutocompleteAsync(String q, Int32 operationIndex, CancellationToken cancellationToken) in C:\Users\deliot\Source\Repos\EdhTracker\EdhTracker\OpenAPIs\ScryfallClient\src\Org.OpenAPITools\Api\CardsApi.cs:line 687
+   at EdhTracker.Components.AddDeckDialog.ScryfallSearch(String value) in C:\Users\deliot\Source\Repos\EdhTracker\EdhTracker\Components\AddDeckDialog.razor:line 114
+2024-03-06 16:05:13.271 -08:00 [INF] Request starting HTTP/2 GET https://localhost:44393/Group/da65fcf4-4b9c-4f0f-ae08-a5e25ddc42bd/Decks? - null null
+2024-03-06 16:05:13.274 -08:00 [INF] Executing endpoint '/_Host'
+2024-03-06 16:05:13.276 -08:00 [INF] Route matched with {page = "/_Host"}. Executing page /_Host
+2024-03-06 16:05:13.277 -08:00 [INF] Executing an implicit handler method - ModelState is "Valid"
+2024-03-06 16:05:13.277 -08:00 [INF] Executed an implicit handler method, returned result Microsoft.AspNetCore.Mvc.RazorPages.PageResult.
+2024-03-06 16:05:13.295 -08:00 [INF] Executed page /_Host in 19.6568ms
+2024-03-06 16:05:13.296 -08:00 [INF] Executed endpoint '/_Host'
+2024-03-06 16:05:13.313 -08:00 [INF] Request starting HTTP/2 POST https://localhost:44393/_blazor/disconnect - multipart/form-data; boundary=----WebKitFormBoundary1HKUBMkcDi8hGic5 359
+2024-03-06 16:05:13.321 -08:00 [INF] Executing endpoint 'Blazor disconnect'
+2024-03-06 16:05:13.332 -08:00 [INF] Request starting HTTP/2 GET https://localhost:44393/_framework/blazor.server.js - null null
+2024-03-06 16:05:13.340 -08:00 [INF] Request starting HTTP/2 GET https://localhost:44393/_framework/aspnetcore-browser-refresh.js - null null
+2024-03-06 16:05:13.340 -08:00 [INF] Request starting HTTP/2 GET https://localhost:44393/_vs/browserLink - null null
+2024-03-06 16:05:13.341 -08:00 [INF] Executing endpoint 'Blazor static files'
+2024-03-06 16:05:13.349 -08:00 [INF] The file /_framework/blazor.server.js was not modified
+2024-03-06 16:05:13.349 -08:00 [INF] Executed endpoint 'Blazor static files'
+2024-03-06 16:05:13.358 -08:00 [INF] Request finished HTTP/2 GET https://localhost:44393/_framework/blazor.server.js - 304 null text/javascript 25.3782ms
+2024-03-06 16:05:13.360 -08:00 [INF] Request finished HTTP/2 GET https://localhost:44393/_framework/aspnetcore-browser-refresh.js - 200 13756 application/javascript; charset=utf-8 25.3549ms
+2024-03-06 16:05:13.378 -08:00 [INF] Request starting HTTP/2 GET https://localhost:44393/_blazor/initializers - null null
+2024-03-06 16:05:13.385 -08:00 [INF] Executing endpoint 'Blazor initializers'
+2024-03-06 16:05:13.385 -08:00 [INF] Executed endpoint 'Blazor initializers'
+2024-03-06 16:05:13.385 -08:00 [INF] Request finished HTTP/2 GET https://localhost:44393/_blazor/initializers - 200 null application/json; charset=utf-8 7.7879ms
+2024-03-06 16:05:13.386 -08:00 [INF] Request finished HTTP/2 GET https://localhost:44393/Group/da65fcf4-4b9c-4f0f-ae08-a5e25ddc42bd/Decks? - 200 null text/html; charset=utf-8 115.2117ms
+2024-03-06 16:05:13.390 -08:00 [INF] Request starting HTTP/2 POST https://localhost:44393/_blazor/negotiate?negotiateVersion=1 - null 0
+2024-03-06 16:05:13.391 -08:00 [INF] Executing endpoint '/_blazor/negotiate'
+2024-03-06 16:05:13.391 -08:00 [INF] Executed endpoint '/_blazor/negotiate'
+2024-03-06 16:05:13.391 -08:00 [INF] Request finished HTTP/2 POST https://localhost:44393/_blazor/negotiate?negotiateVersion=1 - 200 316 application/json 1.0546ms
+2024-03-06 16:05:13.394 -08:00 [INF] Request finished HTTP/2 GET https://localhost:44393/_vs/browserLink - 200 null text/javascript; charset=UTF-8 54.3713ms
+2024-03-06 16:05:13.396 -08:00 [INF] Request starting HTTP/1.1 GET https://localhost:44393/_blazor?id=WtLhAfro5CnV_OxfNS7wpQ - null null
+2024-03-06 16:05:13.396 -08:00 [INF] Executing endpoint '/_blazor'
+2024-03-06 16:05:13.512 -08:00 [INF] Executed endpoint '/_blazor'
+2024-03-06 16:05:13.530 -08:00 [INF] Request finished HTTP/1.1 GET https://localhost:44393/_blazor?id=_Ync4LlGvMGa7GMIwLqEuQ - 101 null null 59483.7738ms
+2024-03-06 16:05:14.056 -08:00 [INF] Executed endpoint 'Blazor disconnect'
+2024-03-06 16:05:14.057 -08:00 [INF] Request finished HTTP/2 POST https://localhost:44393/_blazor/disconnect - 200 null null 744.5107ms
+2024-03-06 16:07:24.980 -08:00 [INF] User profile is available. Using 'C:\Users\deliot\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-03-06 16:07:25.220 -08:00 [INF] Request starting HTTP/2 GET https://localhost:44393/ - null null
+2024-03-06 16:07:25.240 -08:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-03-06 16:07:25.242 -08:00 [INF] Hosting environment: Development
+2024-03-06 16:07:25.243 -08:00 [INF] Content root path: C:\Users\deliot\Source\Repos\EdhTracker\EdhTracker
+2024-03-06 16:07:25.310 -08:00 [INF] Executing endpoint '/_Host'
+2024-03-06 16:07:25.322 -08:00 [INF] Route matched with {page = "/_Host"}. Executing page /_Host
+2024-03-06 16:07:25.330 -08:00 [INF] Executing an implicit handler method - ModelState is "Valid"
+2024-03-06 16:07:25.331 -08:00 [INF] Executed an implicit handler method, returned result Microsoft.AspNetCore.Mvc.RazorPages.PageResult.
+2024-03-06 16:07:25.704 -08:00 [INF] Executed page /_Host in 378.982ms
+2024-03-06 16:07:25.704 -08:00 [INF] Executed endpoint '/_Host'
+2024-03-06 16:07:25.786 -08:00 [INF] Request starting HTTP/2 GET https://localhost:44393/_framework/aspnetcore-browser-refresh.js - null null
+2024-03-06 16:07:25.786 -08:00 [INF] Request starting HTTP/2 GET https://localhost:44393/_vs/browserLink - null null
+2024-03-06 16:07:25.786 -08:00 [INF] Request starting HTTP/2 GET https://localhost:44393/_framework/blazor.server.js - null null
+2024-03-06 16:07:25.887 -08:00 [INF] Request finished HTTP/2 GET https://localhost:44393/_framework/aspnetcore-browser-refresh.js - 200 13756 application/javascript; charset=utf-8 63.5465ms
+2024-03-06 16:07:25.887 -08:00 [INF] Executing endpoint 'Blazor static files'
+2024-03-06 16:07:25.897 -08:00 [INF] The file /_framework/blazor.server.js was not modified
+2024-03-06 16:07:25.898 -08:00 [INF] Executed endpoint 'Blazor static files'
+2024-03-06 16:07:25.899 -08:00 [INF] Request finished HTTP/2 GET https://localhost:44393/_framework/blazor.server.js - 304 null text/javascript 112.7783ms
+2024-03-06 16:07:25.900 -08:00 [INF] Request finished HTTP/2 GET https://localhost:44393/ - 200 null text/html; charset=utf-8 684.4433ms
+2024-03-06 16:07:25.908 -08:00 [INF] Request starting HTTP/2 GET https://localhost:44393/_blazor/initializers - null null
+2024-03-06 16:07:25.909 -08:00 [INF] Executing endpoint 'Blazor initializers'
+2024-03-06 16:07:25.910 -08:00 [INF] Executed endpoint 'Blazor initializers'
+2024-03-06 16:07:25.911 -08:00 [INF] Request finished HTTP/2 GET https://localhost:44393/_blazor/initializers - 200 null application/json; charset=utf-8 2.9251ms
+2024-03-06 16:07:25.914 -08:00 [INF] Request finished HTTP/2 GET https://localhost:44393/_vs/browserLink - 200 null text/javascript; charset=UTF-8 128.0174ms
+2024-03-06 16:07:25.917 -08:00 [INF] Request starting HTTP/2 POST https://localhost:44393/_blazor/negotiate?negotiateVersion=1 - null 0
+2024-03-06 16:07:25.917 -08:00 [INF] Executing endpoint '/_blazor/negotiate'
+2024-03-06 16:07:25.922 -08:00 [INF] Executed endpoint '/_blazor/negotiate'
+2024-03-06 16:07:25.923 -08:00 [INF] Request finished HTTP/2 POST https://localhost:44393/_blazor/negotiate?negotiateVersion=1 - 200 316 application/json 6.0457ms
+2024-03-06 16:07:25.934 -08:00 [INF] Request starting HTTP/1.1 GET https://localhost:44393/_blazor?id=hSR7GIsKQp3iIu5yfwmEMw - null null
+2024-03-06 16:07:25.934 -08:00 [INF] Executing endpoint '/_blazor'
+2024-03-06 16:07:34.084 -08:00 [ERR] Couldn't find card in scryfall matching null
+Org.OpenAPITools.Client.ApiException: Missing required parameter 'q' when calling CardsApi->CardsAutocomplete
+   at Org.OpenAPITools.Api.CardsApi.CardsAutocompleteWithHttpInfoAsync(String q, Int32 operationIndex, CancellationToken cancellationToken) in C:\Users\deliot\Source\Repos\EdhTracker\EdhTracker\OpenAPIs\ScryfallClient\src\Org.OpenAPITools\Api\CardsApi.cs:line 704
+   at Org.OpenAPITools.Api.CardsApi.CardsAutocompleteAsync(String q, Int32 operationIndex, CancellationToken cancellationToken) in C:\Users\deliot\Source\Repos\EdhTracker\EdhTracker\OpenAPIs\ScryfallClient\src\Org.OpenAPITools\Api\CardsApi.cs:line 687
+   at EdhTracker.Components.AddDeckDialog.ScryfallSearch(String value) in C:\Users\deliot\Source\Repos\EdhTracker\EdhTracker\Components\AddDeckDialog.razor:line 114
+2024-03-06 16:07:51.307 -08:00 [INF] Request starting HTTP/2 GET https://localhost:44393/Group/da65fcf4-4b9c-4f0f-ae08-a5e25ddc42bd/Decks? - null null
+2024-03-06 16:07:51.311 -08:00 [INF] Executing endpoint '/_Host'
+2024-03-06 16:07:51.319 -08:00 [INF] Route matched with {page = "/_Host"}. Executing page /_Host
+2024-03-06 16:07:51.322 -08:00 [INF] Executing an implicit handler method - ModelState is "Valid"
+2024-03-06 16:07:51.323 -08:00 [INF] Executed an implicit handler method, returned result Microsoft.AspNetCore.Mvc.RazorPages.PageResult.
+2024-03-06 16:07:51.347 -08:00 [INF] Executed page /_Host in 28.5067ms
+2024-03-06 16:07:51.347 -08:00 [INF] Executed endpoint '/_Host'
+2024-03-06 16:07:51.376 -08:00 [INF] Request starting HTTP/2 POST https://localhost:44393/_blazor/disconnect - multipart/form-data; boundary=----WebKitFormBoundaryUMqzeF7sfeyTvf0u 359
+2024-03-06 16:07:51.388 -08:00 [INF] Request starting HTTP/2 GET https://localhost:44393/_framework/blazor.server.js - null null
+2024-03-06 16:07:51.396 -08:00 [INF] Executing endpoint 'Blazor disconnect'
+2024-03-06 16:07:51.396 -08:00 [INF] Request starting HTTP/2 GET https://localhost:44393/_vs/browserLink - null null
+2024-03-06 16:07:51.407 -08:00 [INF] Executing endpoint 'Blazor static files'
+2024-03-06 16:07:51.407 -08:00 [INF] Request starting HTTP/2 GET https://localhost:44393/_framework/aspnetcore-browser-refresh.js - null null
+2024-03-06 16:07:51.419 -08:00 [INF] The file /_framework/blazor.server.js was not modified
+2024-03-06 16:07:51.419 -08:00 [INF] Executed endpoint 'Blazor static files'
+2024-03-06 16:07:51.421 -08:00 [INF] Request finished HTTP/2 GET https://localhost:44393/_framework/aspnetcore-browser-refresh.js - 200 13756 application/javascript; charset=utf-8 14.866ms
+2024-03-06 16:07:51.428 -08:00 [INF] Request finished HTTP/2 GET https://localhost:44393/_framework/blazor.server.js - 304 null text/javascript 39.4193ms
+2024-03-06 16:07:51.429 -08:00 [INF] Request starting HTTP/2 GET https://localhost:44393/_blazor/initializers - null null
+2024-03-06 16:07:51.429 -08:00 [INF] Executing endpoint 'Blazor initializers'
+2024-03-06 16:07:51.439 -08:00 [INF] Executed endpoint 'Blazor initializers'
+2024-03-06 16:07:51.439 -08:00 [INF] Request finished HTTP/2 GET https://localhost:44393/_blazor/initializers - 200 null application/json; charset=utf-8 10.7722ms
+2024-03-06 16:07:51.440 -08:00 [INF] Request finished HTTP/2 GET https://localhost:44393/Group/da65fcf4-4b9c-4f0f-ae08-a5e25ddc42bd/Decks? - 200 null text/html; charset=utf-8 133.2672ms
+2024-03-06 16:07:51.443 -08:00 [INF] Request starting HTTP/2 POST https://localhost:44393/_blazor/negotiate?negotiateVersion=1 - null 0
+2024-03-06 16:07:51.444 -08:00 [INF] Executing endpoint '/_blazor/negotiate'
+2024-03-06 16:07:51.444 -08:00 [INF] Executed endpoint '/_blazor/negotiate'
+2024-03-06 16:07:51.444 -08:00 [INF] Request finished HTTP/2 POST https://localhost:44393/_blazor/negotiate?negotiateVersion=1 - 200 316 application/json 0.8386ms
+2024-03-06 16:07:51.449 -08:00 [INF] Request finished HTTP/2 GET https://localhost:44393/_vs/browserLink - 200 null text/javascript; charset=UTF-8 52.5024ms
+2024-03-06 16:07:51.449 -08:00 [INF] Request starting HTTP/1.1 GET https://localhost:44393/_blazor?id=DmEefeBqG8W3FQhY8vnLfQ - null null
+2024-03-06 16:07:51.449 -08:00 [INF] Executing endpoint '/_blazor'
+2024-03-06 16:07:51.635 -08:00 [INF] Executed endpoint '/_blazor'
+2024-03-06 16:07:51.665 -08:00 [INF] Request finished HTTP/1.1 GET https://localhost:44393/_blazor?id=hSR7GIsKQp3iIu5yfwmEMw - 101 null null 25729.8816ms
+2024-03-06 16:07:51.794 -08:00 [INF] Executed endpoint 'Blazor disconnect'
+2024-03-06 16:07:51.795 -08:00 [INF] Request finished HTTP/2 POST https://localhost:44393/_blazor/disconnect - 200 null null 427.6518ms
+2024-03-06 16:08:00.356 -08:00 [ERR] Couldn't find card in scryfall matching null
+Org.OpenAPITools.Client.ApiException: Missing required parameter 'q' when calling CardsApi->CardsAutocomplete
+   at Org.OpenAPITools.Api.CardsApi.CardsAutocompleteWithHttpInfoAsync(String q, Int32 operationIndex, CancellationToken cancellationToken) in C:\Users\deliot\Source\Repos\EdhTracker\EdhTracker\OpenAPIs\ScryfallClient\src\Org.OpenAPITools\Api\CardsApi.cs:line 704
+   at Org.OpenAPITools.Api.CardsApi.CardsAutocompleteAsync(String q, Int32 operationIndex, CancellationToken cancellationToken) in C:\Users\deliot\Source\Repos\EdhTracker\EdhTracker\OpenAPIs\ScryfallClient\src\Org.OpenAPITools\Api\CardsApi.cs:line 687
+   at EdhTracker.Components.AddDeckDialog.ScryfallSearch(String value) in C:\Users\deliot\Source\Repos\EdhTracker\EdhTracker\Components\AddDeckDialog.razor:line 114
+2024-03-06 16:08:41.244 -08:00 [INF] Request starting HTTP/2 GET https://localhost:44393/Group/da65fcf4-4b9c-4f0f-ae08-a5e25ddc42bd/Decks? - null null
+2024-03-06 16:08:41.255 -08:00 [INF] Executing endpoint '/_Host'
+2024-03-06 16:08:41.255 -08:00 [INF] Route matched with {page = "/_Host"}. Executing page /_Host
+2024-03-06 16:08:41.256 -08:00 [INF] Executing an implicit handler method - ModelState is "Valid"
+2024-03-06 16:08:41.256 -08:00 [INF] Executed an implicit handler method, returned result Microsoft.AspNetCore.Mvc.RazorPages.PageResult.
+2024-03-06 16:08:43.540 -08:00 [INF] Executed page /_Host in 2284.9636ms
+2024-03-06 16:08:43.540 -08:00 [INF] Executed endpoint '/_Host'
+2024-03-06 16:08:43.565 -08:00 [INF] Request starting HTTP/2 POST https://localhost:44393/_blazor/disconnect - multipart/form-data; boundary=----WebKitFormBoundary1hnYlRNAX0ziCMgO 359
+2024-03-06 16:08:43.574 -08:00 [INF] Request starting HTTP/2 GET https://localhost:44393/_framework/blazor.server.js - null null
+2024-03-06 16:08:43.583 -08:00 [INF] Request starting HTTP/2 GET https://localhost:44393/_vs/browserLink - null null
+2024-03-06 16:08:43.583 -08:00 [INF] Executing endpoint 'Blazor disconnect'
+2024-03-06 16:08:43.583 -08:00 [INF] Request starting HTTP/2 GET https://localhost:44393/_framework/aspnetcore-browser-refresh.js - null null
+2024-03-06 16:08:43.584 -08:00 [INF] Executing endpoint 'Blazor static files'
+2024-03-06 16:08:43.591 -08:00 [INF] The file /_framework/blazor.server.js was not modified
+2024-03-06 16:08:43.591 -08:00 [INF] Executed endpoint 'Blazor static files'
+2024-03-06 16:08:43.591 -08:00 [INF] Request finished HTTP/2 GET https://localhost:44393/_framework/blazor.server.js - 304 null text/javascript 17.2066ms
+2024-03-06 16:08:43.600 -08:00 [INF] Request finished HTTP/2 GET https://localhost:44393/_framework/aspnetcore-browser-refresh.js - 200 13756 application/javascript; charset=utf-8 17.7946ms
+2024-03-06 16:08:43.615 -08:00 [INF] Request starting HTTP/2 GET https://localhost:44393/_blazor/initializers - null null
+2024-03-06 16:08:43.616 -08:00 [INF] Executing endpoint 'Blazor initializers'
+2024-03-06 16:08:43.618 -08:00 [INF] Executed endpoint 'Blazor initializers'
+2024-03-06 16:08:43.618 -08:00 [INF] Request finished HTTP/2 GET https://localhost:44393/_blazor/initializers - 200 null application/json; charset=utf-8 2.8278ms
+2024-03-06 16:08:43.619 -08:00 [INF] Executed endpoint '/_blazor'
+2024-03-06 16:08:43.620 -08:00 [INF] Request finished HTTP/1.1 GET https://localhost:44393/_blazor?id=DmEefeBqG8W3FQhY8vnLfQ - 101 null null 52170.798ms
+2024-03-06 16:08:43.645 -08:00 [INF] Request finished HTTP/2 GET https://localhost:44393/Group/da65fcf4-4b9c-4f0f-ae08-a5e25ddc42bd/Decks? - 200 null text/html; charset=utf-8 2377.1121ms
+2024-03-06 16:08:43.645 -08:00 [INF] Request starting HTTP/2 POST https://localhost:44393/_blazor/negotiate?negotiateVersion=1 - null 0
+2024-03-06 16:08:43.658 -08:00 [INF] Executing endpoint '/_blazor/negotiate'
+2024-03-06 16:08:43.659 -08:00 [INF] Request finished HTTP/2 GET https://localhost:44393/_vs/browserLink - 200 null text/javascript; charset=UTF-8 75.4669ms
+2024-03-06 16:08:43.683 -08:00 [INF] Executed endpoint '/_blazor/negotiate'
+2024-03-06 16:08:43.695 -08:00 [INF] Request finished HTTP/2 POST https://localhost:44393/_blazor/negotiate?negotiateVersion=1 - 200 316 application/json 48.8977ms
+2024-03-06 16:08:43.695 -08:00 [INF] Request starting HTTP/1.1 GET https://localhost:44393/_blazor?id=i0nMgqdjWtFb0Z3rSIJl7A - null null
+2024-03-06 16:08:43.695 -08:00 [INF] Executing endpoint '/_blazor'
+2024-03-06 16:08:43.905 -08:00 [INF] Executed endpoint 'Blazor disconnect'
+2024-03-06 16:08:43.906 -08:00 [INF] Request finished HTTP/2 POST https://localhost:44393/_blazor/disconnect - 200 null null 350.5962ms
+2024-03-06 16:09:49.544 -08:00 [INF] Request starting HTTP/2 GET https://localhost:44393/Group/da65fcf4-4b9c-4f0f-ae08-a5e25ddc42bd? - null null
+2024-03-06 16:09:49.557 -08:00 [INF] Executing endpoint '/_Host'
+2024-03-06 16:09:49.557 -08:00 [INF] Route matched with {page = "/_Host"}. Executing page /_Host
+2024-03-06 16:09:49.558 -08:00 [INF] Executing an implicit handler method - ModelState is "Valid"
+2024-03-06 16:09:49.558 -08:00 [INF] Executed an implicit handler method, returned result Microsoft.AspNetCore.Mvc.RazorPages.PageResult.
+2024-03-06 16:09:49.564 -08:00 [INF] Executed page /_Host in 6.6943ms
+2024-03-06 16:09:49.564 -08:00 [INF] Executed endpoint '/_Host'
+2024-03-06 16:09:49.587 -08:00 [INF] Request starting HTTP/2 POST https://localhost:44393/_blazor/disconnect - multipart/form-data; boundary=----WebKitFormBoundaryMRDv5LiQU428HgIs 359
+2024-03-06 16:09:49.587 -08:00 [INF] Executing endpoint 'Blazor disconnect'
+2024-03-06 16:09:49.600 -08:00 [INF] Request starting HTTP/2 GET https://localhost:44393/_framework/blazor.server.js - null null
+2024-03-06 16:09:49.612 -08:00 [INF] Request starting HTTP/2 GET https://localhost:44393/_framework/aspnetcore-browser-refresh.js - null null
+2024-03-06 16:09:49.612 -08:00 [INF] Request starting HTTP/2 GET https://localhost:44393/_vs/browserLink - null null
+2024-03-06 16:09:49.625 -08:00 [INF] Executing endpoint 'Blazor static files'
+2024-03-06 16:09:49.625 -08:00 [INF] The file /_framework/blazor.server.js was not modified
+2024-03-06 16:09:49.625 -08:00 [INF] Request finished HTTP/2 GET https://localhost:44393/_framework/aspnetcore-browser-refresh.js - 200 13756 application/javascript; charset=utf-8 13.8579ms
+2024-03-06 16:09:49.636 -08:00 [INF] Executed endpoint 'Blazor static files'
+2024-03-06 16:09:49.637 -08:00 [INF] Request finished HTTP/2 GET https://localhost:44393/_framework/blazor.server.js - 304 null text/javascript 37.8626ms
+2024-03-06 16:09:49.647 -08:00 [INF] Request starting HTTP/2 GET https://localhost:44393/_blazor/initializers - null null
+2024-03-06 16:09:49.648 -08:00 [INF] Executing endpoint 'Blazor initializers'
+2024-03-06 16:09:49.659 -08:00 [INF] Executed endpoint 'Blazor initializers'
+2024-03-06 16:09:49.659 -08:00 [INF] Request finished HTTP/2 GET https://localhost:44393/_blazor/initializers - 200 null application/json; charset=utf-8 11.9734ms
+2024-03-06 16:09:49.660 -08:00 [INF] Executed endpoint '/_blazor'
+2024-03-06 16:09:49.660 -08:00 [INF] Request finished HTTP/1.1 GET https://localhost:44393/_blazor?id=i0nMgqdjWtFb0Z3rSIJl7A - 101 null null 65965.7574ms
+2024-03-06 16:09:49.672 -08:00 [INF] Request starting HTTP/2 POST https://localhost:44393/_blazor/negotiate?negotiateVersion=1 - null 0
+2024-03-06 16:09:49.673 -08:00 [INF] Executing endpoint '/_blazor/negotiate'
+2024-03-06 16:09:49.674 -08:00 [INF] Request finished HTTP/2 GET https://localhost:44393/Group/da65fcf4-4b9c-4f0f-ae08-a5e25ddc42bd? - 200 null text/html; charset=utf-8 129.2627ms
+2024-03-06 16:09:49.688 -08:00 [INF] Executed endpoint '/_blazor/negotiate'
+2024-03-06 16:09:49.688 -08:00 [INF] Request finished HTTP/2 POST https://localhost:44393/_blazor/negotiate?negotiateVersion=1 - 200 316 application/json 16.0747ms
+2024-03-06 16:09:49.701 -08:00 [INF] Request starting HTTP/1.1 GET https://localhost:44393/_blazor?id=qBENgJMKxI0IaJavM5TptA - null null
+2024-03-06 16:09:49.701 -08:00 [INF] Executing endpoint '/_blazor'
+2024-03-06 16:09:49.713 -08:00 [INF] Request finished HTTP/2 GET https://localhost:44393/_vs/browserLink - 200 null text/javascript; charset=UTF-8 100.396ms
+2024-03-06 16:09:49.950 -08:00 [INF] Executed endpoint 'Blazor disconnect'
+2024-03-06 16:09:49.950 -08:00 [INF] Request finished HTTP/2 POST https://localhost:44393/_blazor/disconnect - 200 null null 363.654ms
+2024-03-06 16:10:31.263 -08:00 [INF] Executed endpoint '/_blazor'
+2024-03-06 16:10:31.263 -08:00 [INF] Request finished HTTP/1.1 GET https://localhost:44393/_blazor?id=qBENgJMKxI0IaJavM5TptA - 101 null null 41563.9238ms
+2024-03-06 16:10:31.289 -08:00 [INF] Request starting HTTP/2 POST https://localhost:44393/_blazor/disconnect - multipart/form-data; boundary=----WebKitFormBoundaryvRJ8MtukPaoNBpPM 359
+2024-03-06 16:10:31.289 -08:00 [INF] Executing endpoint 'Blazor disconnect'
+2024-03-06 16:10:31.566 -08:00 [INF] Executed endpoint 'Blazor disconnect'
+2024-03-06 16:10:31.566 -08:00 [INF] Request finished HTTP/2 POST https://localhost:44393/_blazor/disconnect - 499 null null 276.9229ms

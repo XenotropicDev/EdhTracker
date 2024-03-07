@@ -1,0 +1,100 @@
+﻿@using EdhTracker.Data
+@using System.Collections.ObjectModel
+@using Microsoft.EntityFrameworkCore
+<MudDialog>
+    <DialogContent>
+        <MudForm>
+            <MudGrid>
+                <MudItem xs="12">
+                    <MudNumericField T="int" Label="Number of Players" Value="numberOfPlayers" ValueChanged="SetupGame"></MudNumericField>
+                </MudItem>
+
+                @foreach (var seat in Game.Seats)
+                {
+                    <MudItem xs="3">
+                        <MudCheckBox T="GameResult?" Value="seat.Result" ValueChanged="r => WinnerChanged(r, seat)" Converter="@(new GameResultToBoolConverter())">Winner</MudCheckBox>
+                    </MudItem>
+                    <MudItem xs="9">
+                        <MudSelect @bind-Value="seat.Deck">
+                            @foreach (var deck in PlayGroup.Decks)
+                            {
+                                <MudSelectItem Value="deck">@deck.Commander.Name</MudSelectItem>
+                            }
+                        </MudSelect>
+                    </MudItem>
+                }
+
+                <MudButton ButtonType="ButtonType.Submit" Color="Color.Primary" Variant="Variant.Filled" OnClick="AddGame">Add</MudButton>
+            </MudGrid>
+        </MudForm>
+    </DialogContent>
+    <DialogActions>
+        <MudButton OnClick="Cancel">Cancel</MudButton>
+    </DialogActions>
+</MudDialog>
+
+@code {
+    protected override void OnInitialized()
+    {
+        DataContext = DataContextFactory.CreateDbContext();
+        PlayGroup = DataContext.PlayGroups.Find(GroupId)!;
+
+        SetupGame(numberOfPlayers);
+
+        base.OnInitialized();
+    }
+
+    void WinnerChanged(GameResult? Result, PlayerSeat changedSeat)
+    {
+        foreach (var seat in Game.Seats)
+        {
+            if (seat.Result == GameResult.Win && seat != changedSeat) seat.Result = GameResult.Loss;
+
+            if (changedSeat == seat) seat.Result = Result;
+        }
+    }
+
+    [CascadingParameter] 
+    MudDialogInstance MudDialog { get; set; }
+
+    [Inject]
+    public IDbContextFactory<DataContext> DataContextFactory { get; set; } = null!;
+    private DataContext DataContext = null!;
+
+    public Data.Game Game { get; set; } = new();
+
+    [Parameter, EditorRequired]
+    public Guid GroupId { get; set; }
+
+    private PlayGroup PlayGroup = null!;
+
+    int numberOfPlayers = 4;
+
+    private void SetupGame(int newPlayerCount)
+    {
+        numberOfPlayers = newPlayerCount;
+
+        for (int i = Game.Seats.Count; i < newPlayerCount; i++)
+            Game.Seats.Add(new() { Result = GameResult.Loss });
+
+        if (Game.Seats.Count > newPlayerCount)
+            Game.Seats.RemoveRange(newPlayerCount, Game.Seats.Count - newPlayerCount);
+    }
+
+    private async Task AddGame()
+    {
+        try
+        {
+            await DataContext.Entry(PlayGroup).ReloadAsync();
+            PlayGroup.GameHistory.Add(Game);
+            await DataContext.SaveChangesAsync();
+            MudDialog.Close();
+        }
+        catch (Exception ex)
+        {
+            throw;
+        }
+    }
+
+    void Cancel() => MudDialog.Cancel();
+}

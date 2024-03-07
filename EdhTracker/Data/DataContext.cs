@@ -1,4 +1,7 @@
+using Microsoft.AspNetCore.Rewrite;
 using Microsoft.EntityFrameworkCore;
+using MudBlazor;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace EdhTracker.Data;
 
@@ -28,6 +31,7 @@ public record Game
     public Guid Id { get; set; }
     public virtual List<PlayerSeat> Seats { get; set; } = new List<PlayerSeat>();
     public DateTime PlayTime { get; set; } = DateTime.Now;
+    public virtual PlayGroup PlayGroup { get; set; }
 }
 
 public record Deck
@@ -44,6 +48,7 @@ public record Deck
     public string? ColorIdentity { get; set; }
     public Uri? Decklist { get; set; }
     public Uri? Icon { get; set; }
+    public virtual List<PlayerSeat> GamesPlayed { get; set; }
 }
 
 public record Commander
@@ -67,7 +72,11 @@ public record PlayerSeat
     public Guid Id { get; set; }
     public GameResult? Result { get; set; }
     public virtual Deck Deck { get; set; }
-    public virtual Player Pilot { get; set; }
+    public virtual Player? Pilot { get; set; }
+    public virtual Game Game { get; set; }
+
+    [NotMapped]
+    public readonly Guid temporaryId = Guid.NewGuid();
 }
 
 public record PlayGroup
@@ -89,4 +98,26 @@ public enum GameResult
     Win,
     Loss,
     Draw
+}
+
+public class GameResultToBoolConverter : BoolConverter<GameResult?>
+{
+    public GameResultToBoolConverter()
+    {
+        SetFunc = OnSet;
+        GetFunc = OnGet;
+    }
+
+    private GameResult? OnGet(bool? nullable)
+    {
+        if (nullable == null) return GameResult.Draw;
+        return (nullable == true) ? GameResult.Win : GameResult.Loss;
+    }
+
+    private bool? OnSet(GameResult? result)
+    {
+        if (result == null || result == GameResult.Draw) return null;
+
+        return result == GameResult.Win;
+    }
 }

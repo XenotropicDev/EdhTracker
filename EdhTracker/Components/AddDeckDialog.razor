@@ -1,0 +1,144 @@
+﻿@using EdhTracker.Components
+@using EdhTracker.Data
+@using Microsoft.EntityFrameworkCore
+@using Org.OpenAPITools.Api
+@using System.ComponentModel.DataAnnotations
+@using Serilog
+
+<MudDialog>
+    <DialogContent>
+        <MudGrid>
+            <MudItem xs="2" Class="ma-2">
+                @if (DeckToAdd?.Icon != null)
+                {
+                    <MudImage Fluid="true" ObjectFit="ObjectFit.Cover" Src="@DeckToAdd.Icon.ToString()" Class="rounded-lg" Alt="@DeckToAdd.Commander.Name"></MudImage>
+                }
+                else
+                {
+                    <MudSkeleton Width="100px" Height="100px" SkeletonType="SkeletonType.Rectangle" Class="rounded-lg" Animation="Animation.False"/>
+                }
+            </MudItem>
+        
+            <MudItem xs="10">
+                <MudPaper Class="pa-4">
+                    <MudForm>
+                        <MudGrid>
+                            <MudItem xs="9">
+                                <MudAutocomplete T="string" @bind-Value=DeckToAdd.Commander.Name
+                                                 Label="Commander Name"
+                                                 SearchFunc="@ScryfallSearch"
+                                                 ShowProgressIndicator="true"
+                                                 AdornmentIcon="@Icons.Material.Filled.Search" />
+                            </MudItem>
+                            <MudItem xs="2">
+                                <MudButton OnClick="LoadFromScryfall" Color="Color.Info" Variant="Variant.Outlined" Size="Size.Small">Load Scryfall</MudButton>
+                            </MudItem>
+                        </MudGrid>
+        
+                        @* <MudSwitch @bind-Value="hasPartner">Has Partner</MudSwitch> *@
+                        @if (hasPartner)
+                        {
+                            <MudText>Sorry, not supported yet. Someone actually needing this will prompt me to add it, so bug me please.</MudText>
+                        }
+        
+                        <MudSelect T="Player" @bind-Value=DeckToAdd.Player Label="Select a Player" Required="true" RequiredError="The deck must have a player">
+                            @foreach (var player in Pod.Players)
+                            {
+                                <MudSelectItem Value="player">@player.Name</MudSelectItem>
+                            }
+                        </MudSelect>
+        
+                        <MudTextField T="Uri" @bind-Value=DeckToAdd.Icon Label="Deck Icon URL (optional)"></MudTextField>
+                        <MudTextField T="string" @bind-Text=DeckToAdd.ColorIdentity Label="Color Identity (optional)"
+                                      Validation="@(new RegularExpressionAttribute("[WUBRG]{0,5}|C") { ErrorMessage = "Must only use the letters W U B R and G or a single C"})">
+                        </MudTextField>
+        
+                        <MudTextField T="string" @bind-Value=DeckToAdd.Archetype Label="Archetype (optional)"></MudTextField>
+                        <MudTextField T="Uri" @bind-Value=DeckToAdd.Decklist Label="Deck list URL (optional)"></MudTextField>
+        
+                        <MudButton Class="mt-4" ButtonType="ButtonType.Submit" Variant="Variant.Filled" Color="Color.Primary" OnClick="AddDeck">Submit</MudButton>
+                    </MudForm>
+                </MudPaper>
+            </MudItem>
+        </MudGrid>
+    </DialogContent>
+    <DialogActions>
+        <MudButton OnClick="Cancel">Cancel</MudButton>
+    </DialogActions>
+</MudDialog>
+
+@code {
+    [CascadingParameter]
+    MudDialogInstance MudDialog { get; set; }
+
+    void Cancel() => MudDialog.Cancel();
+
+    private bool hasPartner = false;
+    private Deck DeckToAdd = new();
+
+    private string Archetype = string.Empty;
+
+    private CardsApi _cardsApi = new();
+
+    private async Task LoadFromScryfall()
+    {
+        try
+        {
+            var card = await _cardsApi.GetNamedAsync(fuzzy: DeckToAdd.Commander.Name);
+            if (card != null)
+            {
+                DeckToAdd.Commander.Name = card.Name;
+
+                DeckToAdd.ColorIdentity = string.Join("", card.ColorIdentity.Select(c => c.ToString()));
+
+                var commander = new Commander();
+                commander.Name = card.Name;
+
+                commander.Commanders.Add(new() { Name = card.Name, Scryfall = new Uri(card.ScryfallUri) });
+
+                DeckToAdd.Commander = commander;
+
+                DeckToAdd.Icon = new Uri(card.ImageUris.ArtCrop ?? card.ImageUris.Png);
+            }
+        }
+        catch (Exception ex)
+        {
+            Log.Error(ex, "Couldn't find card in scryfall matching {0}", DeckToAdd.Commander.Name);
+        }
+    }
+
+    private async Task<IEnumerable<string>> ScryfallSearch(string value)
+    {
+        try
+        {
+            var results = await _cardsApi.CardsAutocompleteAsync(value);
+            return results.Data;
+        }
+        catch (Exception ex)
+        {
+            Log.Error(ex, "Couldn't find card in scryfall matching {0}", value);
+            return new List<string>();
+        }
+    }
+
+    [Parameter, EditorRequired]
+    public PlayGroup Pod { get; set; } = null!;
+
+    [Parameter, EditorRequired]
+    public DataContext DataContext { get; set; } = null!;
+
+    private async Task AddDeck()
+    {
+        try
+        {
+            Pod.Decks.Add(DeckToAdd);
+            await DataContext.SaveChangesAsync();
+
+            MudDialog.Close();
+        }
+        catch (Exception ex)
+        {
+            throw;
+        }
+    }
+}

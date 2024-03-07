@@ -1,0 +1,18 @@
+﻿@* <MudAvatar Variant="Variant.Filled"> *@
+    <MudIcon Icon="@icons[ManaColorString]" Size="Size.Small"></MudIcon>
+@* </MudAvatar> *@
+
+@code {
+    [Parameter, EditorRequired()]
+    public char ManaColorString { get; set; }
+
+    public Color color
+    {
+        get
+        {
+            return Color.Primary;
+        }
+    }
+}
+
+
