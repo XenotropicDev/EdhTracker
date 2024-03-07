@@ -29,15 +29,6 @@
 
 @code 
 {
-    bool isAddDeckShown = false;
-
-    string Deck1 = string.Empty;
-    string Deck2 = string.Empty;
-    string Deck3 = string.Empty;
-    string Deck4 = string.Empty;
-
-    private Game game = new Game();
-
     protected override async Task OnInitializedAsync()
     {
         DataContext = await DataContextFactory.CreateDbContextAsync();
@@ -53,11 +44,17 @@
 
     public PlayGroup PlayGroup { get => DataContext.PlayGroups.Find(GroupId)!; }
 
-    private void OpenAddGameDialog()
+    private async Task OpenAddGameDialog()
     {
         var dialogParams = new DialogParameters<AddGameDialog>();
         dialogParams.Add(x => x.GroupId, GroupId);
 
-        DialogService.Show<AddGameDialog>("Add Game", dialogParams);
+        var dialog = DialogService.Show<AddGameDialog>("Add Game", dialogParams);
+        var result = await dialog.Result;
+
+        if (!result.Canceled)
+        {
+            StateHasChanged();
+        }
     }
 }
