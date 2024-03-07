@@ -15,10 +15,17 @@
                         <MudCheckBox T="GameResult?" Value="seat.Result" ValueChanged="r => WinnerChanged(r, seat)" Converter="@(new GameResultToBoolConverter())">Winner</MudCheckBox>
                     </MudItem>
                     <MudItem xs="9">
-                        <MudSelect @bind-Value="seat.Deck">
+                        <MudSelect T="Deck" Label="Deck" Value="seat.Deck" ValueChanged="d => DeckChanged(d, seat)">
                             @foreach (var deck in PlayGroup.Decks)
                             {
                                 <MudSelectItem Value="deck">@deck.Commander.Name</MudSelectItem>
+                            }
+                        </MudSelect>
+                        <MudDivider />
+                        <MudSelect Label="Pilot" @bind-Value="seat.Pilot">  @* SelectedValues="@(new List<Player>{seat.Deck.Player})" *@
+                            @foreach (var pilot in PlayGroup.Players)
+                            {
+                                <MudSelectItem Value="pilot">@pilot.Name</MudSelectItem>
                             }
                         </MudSelect>
                     </MudItem>
@@ -52,6 +59,12 @@
 
             if (changedSeat == seat) seat.Result = Result;
         }
+    }
+
+    void DeckChanged(Deck deck, PlayerSeat seat)
+    {
+        seat.Deck = deck;
+        seat.Pilot = deck.Player;
     }
 
     [CascadingParameter] 

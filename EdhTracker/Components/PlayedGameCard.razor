@@ -4,6 +4,12 @@
         <MudText Typo="Typo.h6">Winner: @(Winner?.Deck.Commander.Name ?? "None")</MudText>
         <MudText>Played on: @Game.PlayTime</MudText>
         <MudText>Players: @Game.Seats.Count()</MudText>
+        <MudAvatarGroup Max="5">
+            @foreach (var player in Game.Seats)
+            {
+                <MudChip>@(player.Pilot?.Name ?? player.Deck.Player.Name)</MudChip>
+            }
+        </MudAvatarGroup>
     </MudCardContent>
 </MudCard>
 
