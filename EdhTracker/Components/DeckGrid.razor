@@ -1,0 +1,150 @@
+﻿@using EdhTracker.Data
+@using Microsoft.EntityFrameworkCore
+@inject IDialogService DialogService
+@inject IDbContextFactory<DataContext> dbContextFactory
+@inject UserSessionService UserSession
+
+<MudDataGrid Items="Decks"
+             Dense="true" Hover="true"
+             SortMode="SortMode.Single"
+             Filterable="true"
+             FilterCaseSensitivity="DataGridFilterCaseSensitivity.CaseInsensitive"
+             FilterMode="@DataGridFilterMode.ColumnFilterRow">
+    <Columns>
+        <TemplateColumn Filterable="false">
+            <CellTemplate>
+                <MudImage Src="@context.Item.Icon?.AbsoluteUri" Width="80" Height="80" ObjectFit="ObjectFit.Contain" Class="rounded-lg"></MudImage>
+            </CellTemplate>
+        </TemplateColumn>
+        <PropertyColumn Property="x => x.Commander.Name" Title="Commander" />
+        <PropertyColumn Property="x => x.Player.Name" Title="Player" />
+        <TemplateColumn Sortable="false">
+            <HeaderTemplate>
+                Color Identity
+            </HeaderTemplate>
+            <CellTemplate>
+                @foreach (var c in context.Item.ColorIdentity ?? "")
+                {
+                    <ManaIcon ManaColorString="c"/>
+                }
+            </CellTemplate>
+            <FilterTemplate>
+                <MudIconButton OnClick="@OpenFilter" Icon="@_icon" Size="@Size.Small" />
+                <MudOverlay Visible="@_filterOpen" OnClick="@(() => _filterOpen = false)" />
+                <MudPopover Open="@_filterOpen" AnchorOrigin="Origin.BottomCenter" TransformOrigin="Origin.TopCenter"
+                            Style="width:150px">
+                    <MudStack Spacing="0">
+                        <MudCheckBox T="bool" Label="Select All" Size="@Size.Small" Checked="@_selectAll" CheckedChanged="@SelectAll" />
+                        <MudStack Spacing="0" Style="overflow-y:auto;max-height:250px">
+                            @foreach (var item in AllowedColors)
+                            {
+                                <MudCheckBox T="bool" Label="@item.ToString()" Size="@Size.Small" Checked="@(_selectedItems.Contains(item))"
+                                             CheckedChanged="@((value) => SelectedChanged(value, item))" />
+                            }
+                        </MudStack>
+                        <MudStack Row="true">
+                            <MudButton OnClick="@(() => ClearFilterAsync(context))">Clear</MudButton>
+                            <MudButton Color="@Color.Primary" OnClick="@(() => ApplyFilterAsync(context))">Filter</MudButton>
+                        </MudStack>
+                    </MudStack>
+                </MudPopover>
+            </FilterTemplate>
+        </TemplateColumn>
+        <PropertyColumn Property="x => x.GetPlayCount()" Title="Games Played"></PropertyColumn>
+        <PropertyColumn Property="x => x.GetWinRate().ToString(percentFormater)" Title="Win %"></PropertyColumn>
+        <TemplateColumn>
+            <CellTemplate>
+                <MudIconButton OnClick="() => EditDeck(context.Item)" Icon="@Icons.Material.Outlined.Edit"/>
+            </CellTemplate>
+        </TemplateColumn>
+    </Columns>
+</MudDataGrid>
+
+@code {
+    private const string percentFormater = "P";
+    private const string AllowedColors = "WUBRGC";
+
+    async Task EditDeck(Deck deck)
+    {
+        using var context = dbContextFactory.CreateDbContext();
+
+        var dialogParams = new DialogParameters<AddDeckDialog>();
+        dialogParams.Add(x => x.DeckId, deck.Id);
+        dialogParams.Add(x => x.Pod, UserSession.SelectedPlayGroup);
+        dialogParams.Add(x => x.DataContext, context);
+
+        var dialog = DialogService.Show<AddDeckDialog>("Edit Deck", dialogParams);
+        var dialogResult = await dialog.Result;
+    }
+
+    [Parameter, EditorRequired]
+    public IEnumerable<Deck> Decks { get; set; } = null!;
+
+    string _icon = Icons.Material.Outlined.FilterAlt;
+
+    bool _filterOpen = false;
+    FilterDefinition<Deck> _filterDefinition;
+    HashSet<char> _selectedItems = new();
+    HashSet<char> _filterItems = new();
+    bool _selectAll = true;
+
+    void OpenFilter()
+    {
+        _filterOpen = true;
+    }
+
+    protected override async Task OnInitializedAsync()
+    {
+        _selectedItems = AllowedColors.ToHashSet();
+        _filterItems = AllowedColors.ToHashSet();
+
+        _filterDefinition = new FilterDefinition<Deck>
+        {
+            FilterFunction = x => x.ColorIdentity?.Any(c => _selectedItems.Contains(c)) == true
+        };
+    }
+
+    private void SelectedChanged(bool value, char item)
+    {
+        if (value)
+            _selectedItems.Add(item);
+        else
+            _selectedItems.Remove(item);
+
+        if (_selectedItems.Count == AllowedColors.Length)
+            _selectAll = true;
+        else
+            _selectAll = false;
+    }
+
+    private async Task ClearFilterAsync(FilterContext<Deck> context)
+    {
+        _selectedItems = AllowedColors.ToHashSet();
+        _filterItems = AllowedColors.ToHashSet();
+        _icon = Icons.Material.Outlined.FilterAlt;
+        await context.Actions.ClearFilterAsync(_filterDefinition);
+        _filterOpen = false;
+    }
+
+    private async Task ApplyFilterAsync(FilterContext<Deck> context)
+    {
+        _filterItems = _selectedItems.ToHashSet();
+        _icon = _filterItems.Count == AllowedColors.Count() ? Icons.Material.Outlined.FilterAlt : Icons.Material.Filled.FilterAlt;
+        await context.Actions.ApplyFilterAsync(_filterDefinition);
+        _filterOpen = false;
+    }
+
+    private void SelectAll(bool value)
+    {
+        _selectAll = value;
+
+        if (value)
+        {
+            _selectedItems = AllowedColors.ToHashSet();
+        }
+        else
+        {
+            _selectedItems.Clear();
+        }
+    }
+}

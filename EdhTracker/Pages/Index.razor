@@ -6,6 +6,7 @@
 @inject IDbContextFactory<DataContext> ContextFactory
 @inject IDialogService DialogService
 @inject NavigationManager Navigation
+@inject UserSessionService UserSession
 
 <PageTitle>Index</PageTitle>
 <MudText>Select a Pod</MudText>
@@ -42,6 +43,7 @@
 
         playGroups = new ObservableCollection<PlayGroup>(Context.PlayGroups);
         pod = playGroups.First();
+        UserSession.SelectedPlayGroup = pod;
 
         return base.OnInitializedAsync();
     }
@@ -63,6 +65,7 @@
 
     public void ShowPod()
     {
+        UserSession.SelectedPlayGroup = pod;
         Navigation.NavigateTo($"/Group/{pod.Id}");
     }
 }

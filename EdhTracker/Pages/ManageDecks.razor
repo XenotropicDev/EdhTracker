@@ -11,21 +11,35 @@
 
 <MudText Typo="Typo.h3" GutterBottom="true">@Pod.Name Decks</MudText>
 
-<MudButton Color="Color.Primary" OnClick="OpenAddDeckDialog">Add Deck</MudButton>
+<MudStack Row="true">
+    <MudButton Color="Color.Primary" OnClick="OpenAddDeckDialog">Add Deck</MudButton>
+    <MudSwitch Class="object-right" Color="Color.Primary" @bind-Value="showGrid">Grid display</MudSwitch>
+</MudStack>
 
-<MudPaper Class="pa-4">
-    <MudGrid>
-        @foreach (var deck in Pod.Decks)
-        {
-            <MudItem xs="3">
-                <DeckCard Deck="deck"></DeckCard>
-            </MudItem>
-        }
-    </MudGrid>
-</MudPaper>
+@if (!showGrid)
+{
+    <MudPaper Class="pa-lg-4 pa-md-2">
+        <MudGrid>
+            @foreach (var deck in Pod.Decks)
+            {
+                <MudItem xs="12" md="6" lg="4" xl="3">
+                    <DeckCard Deck="deck"></DeckCard>
+                </MudItem>
+            }
+        </MudGrid>
+    </MudPaper>
+}
+
+@if (showGrid)
+{
+    <DeckGrid Decks="Pod.Decks"></DeckGrid>
+}
+
 
 @code
 {
+    private bool showGrid = true;
+
     protected override async Task OnInitializedAsync()
     {
         DataContext = await DataContextFactory.CreateDbContextAsync();
@@ -42,7 +56,7 @@
 
     private async Task OpenAddDeckDialog()
     {
-        var options = new DialogOptions { CloseOnEscapeKey = true, MaxWidth = MaxWidth.Small, FullWidth = true };
+        var options = new DialogOptions { CloseOnEscapeKey = true, FullWidth = true };
         var dialogParams = new DialogParameters<AddDeckDialog>();
         dialogParams.Add(x => x.DataContext, DataContext);
         dialogParams.Add(x => x.Pod, Pod);

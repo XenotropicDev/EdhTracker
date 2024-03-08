@@ -1,3 +1,12 @@
-﻿<MudNavMenu>
-    <MudNavLink Href="" Match="NavLinkMatch.All" Icon="@Icons.Material.Filled.Home">Home</MudNavLink>
+﻿@using EdhTracker.Data
+@inject UserSessionService userSession
+
+<MudNavMenu>
+    @if (userSession.SelectedPlayGroup != null)
+    {
+        <MudNavLink Href="@($"Group/{userSession.SelectedPlayGroup.Id}")" Match="NavLinkMatch.All" Icon="@Icons.Material.Filled.Games">@userSession.SelectedPlayGroup.Name</MudNavLink>
+    }
+
+    <MudNavLink Href="" Match="NavLinkMatch.All" Icon="@Icons.Material.Filled.Groups">Manage Playgroups</MudNavLink>
+
 </MudNavMenu>

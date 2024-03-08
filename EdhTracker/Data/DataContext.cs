@@ -24,6 +24,7 @@ public record Player
     public Guid Id { get; set; }
     public string Name { get; set; }
     public virtual PlayGroup PlayGroup { get; set; }
+    public override string ToString() => Name;
 }
 
 public record Game
@@ -49,6 +50,18 @@ public record Deck
     public Uri? Decklist { get; set; }
     public Uri? Icon { get; set; }
     public virtual List<PlayerSeat> GamesPlayed { get; set; }
+    public bool IsActive { get; set; } = true;
+
+    public int GetPlayCount() => GamesPlayed?.Count ?? 0;
+    public double GetWinRate()
+    {
+        if (GamesPlayed?.Count > 0)
+        {
+            return GamesPlayed.Count(g => g.Result == GameResult.Win) / GamesPlayed.Count;
+        }
+        
+        return 0;
+    }
 }
 
 public record Commander
@@ -57,6 +70,7 @@ public record Commander
     public string Name { get; set; }
     public virtual List<Card> Commanders { get; set; } = new();
     public virtual List<Deck> Decks { get; set; } = new();
+    public override string ToString() => Name;
 }
 
 public record Card
@@ -65,6 +79,7 @@ public record Card
     public string? Name { get; set; }
     public Uri? Scryfall { get; set; }
     public Uri? ImageUri { get; set; }
+    public override string ToString() => Name ?? string.Empty;
 }
 
 public record PlayerSeat
@@ -86,11 +101,7 @@ public record PlayGroup
     public virtual List<Game> GameHistory { get; set; } = new();
     public virtual List<Deck> Decks { get; set; } = new();
     public virtual List<Player> Players { get; set; } = new();
-
-    public override string ToString()
-    {
-        return Name;
-    }
+    public override string ToString() => Name;
 }
 
 public enum GameResult

@@ -16,6 +16,7 @@ builder.Services.AddServerSideBlazor();
 builder.Services.AddMudServices();
 builder.Services.AddDbContextFactory<DataContext>();
 builder.Services.AddControllersWithViews();
+builder.Services.AddScoped<UserSessionService>();
 
 Log.Logger = new LoggerConfiguration()
     .MinimumLevel.Information()

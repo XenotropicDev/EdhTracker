@@ -1,6 +1,7 @@
-﻿@* <MudAvatar Variant="Variant.Filled"> *@
+﻿@if (isValidColorString())
+{
     <MudIcon Icon="@icons[ManaColorString]" Size="Size.Small"></MudIcon>
-@* </MudAvatar> *@
+}
 
 @code {
     [Parameter, EditorRequired()]
@@ -11,6 +12,20 @@
         get
         {
             return Color.Primary;
+        }
+    }
+
+    private bool isValidColorString()
+    {
+        switch (ManaColorString)
+        {
+            case 'W': return true;
+            case 'U': return true;
+            case 'B': return true;
+            case 'R': return true;
+            case 'G': return true;
+            case 'C': return true;
+            default: return false;
         }
     }
 }

@@ -16,11 +16,11 @@
 
 <MudButton Color="Color.Primary" Variant="Variant.Filled" Href=@($"/Group/{GroupId}/Decks")>Manage Decks</MudButton>
 
-<MudPaper Class="pa-4">
+<MudPaper Class="pa-lg-4 pa-md-2">
     <MudGrid>
         @foreach (var game in PlayGroup.GameHistory.TakeLast(12))
         {
-            <MudItem xs="12" sm="4">
+            <MudItem sm="12" md="6" lg="4">
                 <PlayedGameCard Game="game"></PlayedGameCard>
             </MudItem>
         }
