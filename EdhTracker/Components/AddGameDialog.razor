@@ -9,6 +9,9 @@
                     <MudNumericField T="int" Label="Number of Players" Value="numberOfPlayers" ValueChanged="SetupGame"></MudNumericField>
                 </MudItem>
 
+                <MudDatePicker Label="Date" @bind-Date="playDate" />
+                <MudTimePicker Label="Time" AmPm="true" @bind-Time="playTime" />
+
                 @foreach (var seat in Game.Seats)
                 {
                     <MudItem xs="3">
@@ -31,11 +34,11 @@
                     </MudItem>
                 }
 
-                <MudButton ButtonType="ButtonType.Submit" Color="Color.Primary" Variant="Variant.Filled" OnClick="AddGame">Add</MudButton>
             </MudGrid>
         </MudForm>
     </DialogContent>
     <DialogActions>
+        <MudButton Color="Color.Primary" Variant="Variant.Filled" OnClick="AddGame">Add</MudButton>
         <MudButton OnClick="Cancel">Cancel</MudButton>
     </DialogActions>
 </MudDialog>
@@ -50,6 +53,9 @@
 
         base.OnInitialized();
     }
+
+    private TimeSpan? playTime = DateTime.Now.TimeOfDay;
+    private DateTime? playDate = DateTime.Today;
 
     void WinnerChanged(GameResult? Result, PlayerSeat changedSeat)
     {
@@ -99,6 +105,9 @@
         try
         {
             await DataContext.Entry(PlayGroup).ReloadAsync();
+
+            if (playDate.HasValue && playTime.HasValue) Game.PlayTime = playDate.Value.Add(playTime.Value);
+
             PlayGroup.GameHistory.Add(Game);
             await DataContext.SaveChangesAsync();
             MudDialog.Close();
