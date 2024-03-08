@@ -20,7 +20,7 @@ builder.Services.AddScoped<UserSessionService>();
 
 Log.Logger = new LoggerConfiguration()
     .MinimumLevel.Information()
-    .WriteTo.File("log.txt", rollingInterval: RollingInterval.Day)
+    .WriteTo.File(Path.Combine("logs", "log.txt"), rollingInterval: RollingInterval.Day)
     .CreateLogger();
 
 builder.Services.AddLogging(lb => lb.AddSerilog(dispose: true));

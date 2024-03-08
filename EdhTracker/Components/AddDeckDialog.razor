@@ -158,7 +158,7 @@
         }
         catch (Exception ex)
         {
-            throw;
+            Log.Error(ex, "Couldn't save changes for deck {0} ({1})", Deck.Commander.Name, Deck.Id);
         }
     }
 }

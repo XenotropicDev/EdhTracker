@@ -23,10 +23,12 @@
                 Color Identity
             </HeaderTemplate>
             <CellTemplate>
-                @foreach (var c in context.Item.ColorIdentity ?? "")
-                {
-                    <ManaIcon ManaColorString="c"/>
-                }
+                <MudStack Row="true" Spacing="1">
+                    @foreach (var c in context.Item.ColorIdentity ?? "")
+                    {
+                        <ManaIcon ManaColorString="c" />
+                    }
+                </MudStack>
             </CellTemplate>
             <FilterTemplate>
                 <MudIconButton OnClick="@OpenFilter" Icon="@_icon" Size="@Size.Small" />
@@ -75,6 +77,11 @@
 
         var dialog = DialogService.Show<AddDeckDialog>("Edit Deck", dialogParams);
         var dialogResult = await dialog.Result;
+
+        if (!dialogResult.Canceled)
+        {
+            StateHasChanged();
+        }
     }
 
     [Parameter, EditorRequired]

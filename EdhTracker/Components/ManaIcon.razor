@@ -1,11 +1,14 @@
 ﻿@if (isValidColorString())
 {
-    <MudIcon Icon="@icons[ManaColorString]" Size="Size.Small"></MudIcon>
+    <MudIcon Class="@Class" Icon="@icons[ManaColorString]" Size="Size.Small"></MudIcon>
 }
 
 @code {
     [Parameter, EditorRequired()]
     public char ManaColorString { get; set; }
+
+    [Parameter]
+    public string Class { get; set; }
 
     public Color color
     {

@@ -1,0 +1,46 @@
+﻿@using EdhTracker.Data
+@using System.Collections.ObjectModel
+@using Microsoft.EntityFrameworkCore
+<MudDialog @ref="Dialog">
+    <DialogContent>
+        <MudTextField T="string" @bind-Text="@playerNameToAdd" Label="Player Name" Required="true" />
+    </DialogContent>
+    <DialogActions>
+        <MudButton OnClick="AddPlayer" Color="Color.Primary">Save</MudButton>
+        <MudButton OnClick="Cancel">Cancel</MudButton>
+    </DialogActions>
+</MudDialog>
+
+@code {
+    [CascadingParameter]
+    MudDialogInstance MudDialog { get; set; }
+
+    MudDialog Dialog;
+
+    protected override void OnInitialized()
+    {
+        MudDialog.Options.FullWidth ??= true;
+        MudDialog.SetOptions(MudDialog.Options);
+    }
+
+    private string playerNameToAdd = string.Empty;
+
+    [Inject]
+    public IDbContextFactory<DataContext> DataContextFactory { get; set; } = null!;
+
+    [Parameter, EditorRequired]
+    public Guid GroupId { get; set; }
+
+    void Cancel() => MudDialog.Cancel();
+
+    async Task AddPlayer()
+    {
+        using var context = DataContextFactory.CreateDbContext();
+
+        var player = new Player { Name = playerNameToAdd };
+        context.PlayGroups.Find(GroupId)?.Players.Add(player);
+
+        await context.SaveChangesAsync();
+        MudDialog.Close();
+    }
+}
