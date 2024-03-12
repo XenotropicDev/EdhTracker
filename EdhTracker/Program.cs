@@ -20,10 +20,14 @@ builder.Services.AddScoped<UserSessionService>();
 
 Log.Logger = new LoggerConfiguration()
     .MinimumLevel.Information()
+    .MinimumLevel.Override("Microsoft", Serilog.Events.LogEventLevel.Error)
     .WriteTo.File(Path.Combine("logs", "log.txt"), rollingInterval: RollingInterval.Day)
+    
     .CreateLogger();
 
 builder.Services.AddLogging(lb => lb.AddSerilog(dispose: true));
+
+//builder.WebHost.UseWebRoot("edhtracker").UseStaticWebAssets();
 
 var app = builder.Build();
 
@@ -50,38 +54,6 @@ app.Run();
 
 static void SetupDb()
 {
-    var tempContext = new DataContext();
-    //tempContext.Database.EnsureDeleted();
+    using var tempContext = new DataContext();
     tempContext.Database.EnsureCreated();
-
-    if (!tempContext.PlayGroups.Any())
-    {
-        var group = new PlayGroup() { Name = "Test Group", Id = Guid.Parse("da65fcf4-4b9c-4f0f-ae08-a5e25ddc42bd") };
-
-        var p1 = new Player() { Name = "Dom" };
-        var p2 = new Player() { Name = "Matt" };
-        var p3 = new Player() { Name = "Griffin" };
-        var p4 = new Player() { Name = "Reti" };
-
-        group.Players.Add(p1);
-        group.Players.Add(p2);
-        group.Players.Add(p3);
-        group.Players.Add(p4);
-
-        //group.Decks.Add(new Deck() { Player = p1, Commander = new Commander { Name = "Wrexial" } });
-        //group.Decks.Add(new Deck() { Player = p2, Commander = new Commander { Name = "Magada" } });
-        //group.Decks.Add(new Deck() { Player = p3, Commander = new Commander { Name = "Sharuum" } });
-        //group.Decks.Add(new Deck() { Player = p4, Commander = new Commander { Name = "Korvold" } });
-
-        //var game = new Game { Seats = [
-        //    new() { Deck = group.Decks[0], Result = GameResult.Win }, 
-        //    new() { Deck = group.Decks[1], Result = GameResult.Loss },
-        //    new() { Deck = group.Decks[2], Result = GameResult.Loss },
-        //    new() { Deck = group.Decks[3], Result = GameResult.Loss }
-        //]};
-        //group.GameHistory.Add(game);
-
-        tempContext.PlayGroups.Add(group);
-        tempContext.SaveChanges();
-    }
 }

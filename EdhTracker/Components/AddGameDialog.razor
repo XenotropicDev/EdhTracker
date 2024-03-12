@@ -19,7 +19,7 @@
                     </MudItem>
                     <MudItem xs="9">
                         <MudSelect T="Deck" Label="Deck" Value="seat.Deck" ValueChanged="d => DeckChanged(d, seat)">
-                            @foreach (var deck in PlayGroup.Decks.Where(d => d.IsActive))
+                            @foreach (var deck in PlayGroup.Decks.Where(d => d.IsActive && (seat.Pilot == null || d.Player.Id == seat.Pilot.Id)).OrderBy(d => d.Commander.Name))
                             {
                                 <MudSelectItem Value="deck">@deck.Commander.Name</MudSelectItem>
                             }
