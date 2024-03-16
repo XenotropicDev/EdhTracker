@@ -50,7 +50,7 @@
         
                         <MudTextField T="Uri" @bind-Value=Deck.Icon Label="Deck Icon URL (optional)"></MudTextField>
                         <MudTextField T="string" @bind-Text=Deck.ColorIdentity Label="Color Identity (optional)"
-                                      Validation="@(new RegularExpressionAttribute("[WUBRG]{0,5}|C") { ErrorMessage = "Must only use the letters W U B R and G or a single C"})">
+                                      Validation="@(new RegularExpressionAttribute("([WUBRG]{0,5})|C") { ErrorMessage = "Must only use the letters W U B R and G or a single C"})">
                         </MudTextField>
         
                         <MudTextField T="string" @bind-Value=Deck.Archetype Label="Archetype (optional)"></MudTextField>
