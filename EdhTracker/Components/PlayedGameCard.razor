@@ -1,13 +1,22 @@
-﻿<MudCard>
-    <MudCardMedia Image="@Winner?.Deck.Icon?.ToString()"></MudCardMedia>
+﻿@inject IDialogService DialogService
+
+<MudCard>
+    <MudCardHeader>
+        <CardHeaderContent>
+            <MudText Typo="Typo.h6">Winner: @(Winner?.Deck.Commander.Name ?? "None")</MudText>
+        </CardHeaderContent>
+        <CardHeaderActions>
+            <MudIconButton Icon="@Icons.Material.Filled.Edit" Color="Color.Default" OnClick="EditGame"/>
+        </CardHeaderActions>
+    </MudCardHeader>
+    <MudCardMedia Image="@Winner?.Deck.Icon?.ToString()" Class="pa-4"></MudCardMedia>
     <MudCardContent>
-        <MudText Typo="Typo.h6">Winner: @(Winner?.Deck.Commander.Name ?? "None")</MudText>
         <MudText>Played on: @Game.PlayTime</MudText>
         <MudText>Players: @Game.Seats.Count()</MudText>
         <MudAvatarGroup Max="5">
             @foreach (var player in Game.Seats)
             {
-                <MudChip>@(player.Pilot?.Name ?? player.Deck.Player.Name)</MudChip>
+                <MudChip>@(player.Pilot?.Name ?? player.Deck?.Player?.Name ?? "")</MudChip>
             }
         </MudAvatarGroup>
     </MudCardContent>
@@ -19,4 +28,23 @@
     public Data.Game Game { get; set; }
 
     public Data.PlayerSeat? Winner { get => Game.Seats.FirstOrDefault(seat => seat.Result == Data.GameResult.Win); }
+
+    async Task EditGame()
+    {
+        var options = new DialogOptions();
+        var parameters = new DialogParameters();
+
+        parameters.Add(nameof(AddGameDialog.Game), Game);
+        parameters.Add(nameof(AddGameDialog.GroupId), Game.PlayGroup.Id);
+
+        var dialog = DialogService.Show<AddGameDialog>("Edit Game", parameters, options);
+
+        var result = await dialog.Result;
+
+        if (!result.Canceled) 
+        {
+            if (result.Data is Data.Game game) Game = game;
+            StateHasChanged(); 
+        }
+    }
 }
