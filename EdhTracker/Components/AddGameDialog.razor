@@ -38,7 +38,7 @@
         </MudForm>
     </DialogContent>
     <DialogActions>
-        <MudButton Color="Color.Primary" Variant="Variant.Filled" OnClick="AddGame">Add</MudButton>
+        <MudButton Color="Color.Primary" Variant="Variant.Filled" OnClick="AddGame">Save</MudButton>
         <MudButton OnClick="Cancel">Cancel</MudButton>
     </DialogActions>
 </MudDialog>
@@ -49,7 +49,15 @@
         DataContext = DataContextFactory.CreateDbContext();
         PlayGroup = DataContext.PlayGroups.Find(GroupId)!;
 
-        SetupGame(numberOfPlayers);
+        if (Game == default)
+        {
+            SetupGame(numberOfPlayers);
+        }
+        else
+        {
+            numberOfPlayers = Game.Seats.Count();
+            Game = DataContext.Games.Find(Game.Id)!;
+        }
 
         base.OnInitialized();
     }
@@ -80,6 +88,7 @@
     public IDbContextFactory<DataContext> DataContextFactory { get; set; } = null!;
     private DataContext DataContext = null!;
 
+    [Parameter]
     public Data.Game Game { get; set; } = new();
 
     [Parameter, EditorRequired]
@@ -106,11 +115,14 @@
         {
             await DataContext.Entry(PlayGroup).ReloadAsync();
 
-            if (playDate.HasValue && playTime.HasValue) Game.PlayTime = playDate.Value.Add(playTime.Value);
+            if (playDate.HasValue && playTime.HasValue) 
+                Game.PlayTime = playDate.Value.Add(playTime.Value);
 
-            PlayGroup.GameHistory.Add(Game);
+            if (DataContext.Entry(Game).State == EntityState.Added) 
+                PlayGroup.GameHistory.Add(Game);
+            
             await DataContext.SaveChangesAsync();
-            MudDialog.Close();
+            MudDialog.Close(DialogResult.Ok(Game));
         }
         catch (Exception ex)
         {

@@ -23,14 +23,16 @@
             <MudItem xs="10">
                     <MudForm @ref="form">
                         <MudStack Row="true">
-                            <MudAutocomplete T="string" @bind-Value=Deck.Commander.Name
+                        <MudAutocomplete T="Org.OpenAPITools.Model.Card"
                                              Label="Commander Name"
                                              SearchFunc="@ScryfallSearch"
                                              ShowProgressIndicator="true"
                                              AdornmentIcon="@Icons.Material.Filled.Search"
+                                             DebounceInterval="200"
+                                             ValueChanged="LoadCardData"
                                              Class="object-fill"/>
                         <MudStack Class="pa-0 ma-0">
-                            <MudButton OnClick="LoadFromScryfall" Color="Color.Info" Variant="Variant.Outlined" Size="Size.Small">Load Scryfall</MudButton>
+                            @* <MudButton OnClick="LoadFromScryfall" Color="Color.Info" Variant="Variant.Outlined" Size="Size.Small">Load Scryfall</MudButton> *@
                             <MudCheckBox Class="mt-n3" Size="Size.Small" @bind-Value="showOnlyLegendaries">Legendary</MudCheckBox>
                         </MudStack>
                     </MudStack>
@@ -38,6 +40,7 @@
                         @* <MudSwitch Color="Color.Primary" @bind-Value="hasPartner">Has Partner</MudSwitch> *@
                         @if (hasPartner)
                         {
+                            //TODO
                             <MudText>Sorry, not supported yet. Someone actually needing this will prompt me to add it, so bug me please.</MudText>
                         }
         
@@ -87,6 +90,20 @@
         if (DeckId != null) Deck = DataContext.Decks.Find(DeckId) ?? new();
     }
 
+    void LoadCardData(Org.OpenAPITools.Model.Card card)
+    {
+        Deck.ColorIdentity = string.Join("", card.ColorIdentity.Select(c => c.ToString()));
+
+        var commander = new Commander();
+        commander.Name = card.Name;
+
+        commander.Commanders.Add(new() { Name = card.Name, Scryfall = new Uri(card.ScryfallUri) });
+
+        Deck.Commander = commander;
+
+        Deck.Icon = new Uri(card.ImageUris.ArtCrop);
+    }
+
     public Deck Deck { get; set; } = new();
 
     private CardsApi _cardsApi = new();
@@ -98,8 +115,6 @@
             var card = await _cardsApi.GetNamedAsync(fuzzy: Deck.Commander.Name);
             if (card != null)
             {
-                Deck.Commander.Name = card.Name;
-
                 Deck.ColorIdentity = string.Join("", card.ColorIdentity.Select(c => c.ToString()));
 
                 var commander = new Commander();
@@ -118,22 +133,22 @@
         }
     }
 
-    private async Task<IEnumerable<string>> ScryfallSearch(string value)
+    private async Task<IEnumerable<Org.OpenAPITools.Model.Card>> ScryfallSearch(string value)
     {
         try
         {
-            if (value == null || value.Length < 3) return new List<string>();
+            if (value == null || value.Length < 3) return new List<Org.OpenAPITools.Model.Card>();
 
             if (!Regex.IsMatch(value, @"[:><={}]")) value = $"name:/\\b{value}/";
 
             if (showOnlyLegendaries) value += " t:legendary";
             var results = await _cardsApi.CardsSearchAsync(value);
-            return results?.Data?.Select(c => c.Name) ?? new List<string>();
+            return results?.Data ?? new();
         }
         catch (Exception ex)
         {
             Log.Error(ex, "Couldn't find card in scryfall matching {0}", value);
-            return new List<string>();
+            return new List<Org.OpenAPITools.Model.Card>();
         }
     }
 

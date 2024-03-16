@@ -52,6 +52,11 @@ public record Deck
     public virtual List<PlayerSeat> GamesPlayed { get; set; }
     public bool IsActive { get; set; } = true;
 
+    public override string ToString()
+    {
+        return Commander.Name ?? "Unknown Commander";
+    }
+
     public int GetPlayCount() => GamesPlayed?.Count ?? 0;
     public double GetWinRate()
     {
