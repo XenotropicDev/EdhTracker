@@ -22,6 +22,7 @@ using Newtonsoft.Json.Converters;
 using Newtonsoft.Json.Linq;
 using System.ComponentModel.DataAnnotations;
 using OpenAPIDateConverter = Org.OpenAPITools.Client.OpenAPIDateConverter;
+using System.ComponentModel;
 
 namespace Org.OpenAPITools.Model
 {
@@ -29,8 +30,11 @@ namespace Org.OpenAPITools.Model
     /// Card
     /// </summary>
     [DataContract(Name = "card")]
-    public partial class Card : IValidatableObject
+    public partial class Card : IValidatableObject, INotifyPropertyChanged
     {
+        private ImageUri imageUris;
+        private string name;
+
         /// <summary>
         /// Defines Layout
         /// </summary>
@@ -391,7 +395,15 @@ namespace Org.OpenAPITools.Model
         /// Gets or Sets Name
         /// </summary>
         [DataMember(Name = "name", EmitDefaultValue = false)]
-        public string Name { get; set; }
+        public string Name
+        {
+            get => name; 
+            set
+            {
+                name = value;
+                OnPropertyChanged(nameof(Name));
+            }
+        }
 
         /// <summary>
         /// Gets or Sets Cmc
@@ -529,7 +541,15 @@ namespace Org.OpenAPITools.Model
         /// Gets or Sets ImageUris
         /// </summary>
         [DataMember(Name = "image_uris", EmitDefaultValue = false)]
-        public ImageUri ImageUris { get; set; }
+        public ImageUri ImageUris
+        {
+            get => imageUris; 
+            set
+            {
+                imageUris = value;
+                OnPropertyChanged(nameof(ImageUris));
+            }
+        }
 
         /// <summary>
         /// Gets or Sets HighresImage
@@ -627,69 +647,25 @@ namespace Org.OpenAPITools.Model
         [DataMember(Name = "related_uris", EmitDefaultValue = false)]
         public Dictionary<string, string> RelatedUris { get; set; }
 
+        public event PropertyChangedEventHandler? PropertyChanged;
+
+        protected void OnPropertyChanged(PropertyChangedEventArgs e)
+        {
+            PropertyChanged?.Invoke(this, e);
+        }
+
+        protected void OnPropertyChanged(string propertyName)
+        {
+            OnPropertyChanged(new PropertyChangedEventArgs(propertyName));
+        }
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
         public override string ToString()
         {
-            StringBuilder sb = new StringBuilder();
-            sb.Append("class Card {\n");
-            sb.Append("  Id: ").Append(Id).Append("\n");
-            sb.Append("  OracleId: ").Append(OracleId).Append("\n");
-            sb.Append("  MultiverseIds: ").Append(MultiverseIds).Append("\n");
-            sb.Append("  MtgoId: ").Append(MtgoId).Append("\n");
-            sb.Append("  ArenaId: ").Append(ArenaId).Append("\n");
-            sb.Append("  MtgoFoilId: ").Append(MtgoFoilId).Append("\n");
-            sb.Append("  Uri: ").Append(Uri).Append("\n");
-            sb.Append("  ScryfallUri: ").Append(ScryfallUri).Append("\n");
-            sb.Append("  PrintsSearchUri: ").Append(PrintsSearchUri).Append("\n");
-            sb.Append("  RulingsUri: ").Append(RulingsUri).Append("\n");
-            sb.Append("  Name: ").Append(Name).Append("\n");
-            sb.Append("  Layout: ").Append(Layout).Append("\n");
-            sb.Append("  Cmc: ").Append(Cmc).Append("\n");
-            sb.Append("  TypeLine: ").Append(TypeLine).Append("\n");
-            sb.Append("  OracleText: ").Append(OracleText).Append("\n");
-            sb.Append("  ManaCost: ").Append(ManaCost).Append("\n");
-            sb.Append("  Power: ").Append(Power).Append("\n");
-            sb.Append("  Toughness: ").Append(Toughness).Append("\n");
-            sb.Append("  Loyalty: ").Append(Loyalty).Append("\n");
-            sb.Append("  LifeModifier: ").Append(LifeModifier).Append("\n");
-            sb.Append("  HandModifier: ").Append(HandModifier).Append("\n");
-            sb.Append("  Colors: ").Append(Colors).Append("\n");
-            sb.Append("  ColorIndicator: ").Append(ColorIndicator).Append("\n");
-            sb.Append("  ColorIdentity: ").Append(ColorIdentity).Append("\n");
-            sb.Append("  AllParts: ").Append(AllParts).Append("\n");
-            sb.Append("  CardFaces: ").Append(CardFaces).Append("\n");
-            sb.Append("  Legalities: ").Append(Legalities).Append("\n");
-            sb.Append("  Reserved: ").Append(Reserved).Append("\n");
-            sb.Append("  EdhrecRank: ").Append(EdhrecRank).Append("\n");
-            sb.Append("  Set: ").Append(Set).Append("\n");
-            sb.Append("  SetName: ").Append(SetName).Append("\n");
-            sb.Append("  CollectorNumber: ").Append(CollectorNumber).Append("\n");
-            sb.Append("  SetSearchUri: ").Append(SetSearchUri).Append("\n");
-            sb.Append("  ScryfallSetUri: ").Append(ScryfallSetUri).Append("\n");
-            sb.Append("  ImageUris: ").Append(ImageUris).Append("\n");
-            sb.Append("  HighresImage: ").Append(HighresImage).Append("\n");
-            sb.Append("  Reprint: ").Append(Reprint).Append("\n");
-            sb.Append("  Digital: ").Append(Digital).Append("\n");
-            sb.Append("  Rarity: ").Append(Rarity).Append("\n");
-            sb.Append("  FlavorText: ").Append(FlavorText).Append("\n");
-            sb.Append("  Artist: ").Append(Artist).Append("\n");
-            sb.Append("  IllustrationId: ").Append(IllustrationId).Append("\n");
-            sb.Append("  Frame: ").Append(Frame).Append("\n");
-            sb.Append("  FullArt: ").Append(FullArt).Append("\n");
-            sb.Append("  Watermark: ").Append(Watermark).Append("\n");
-            sb.Append("  BorderColor: ").Append(BorderColor).Append("\n");
-            sb.Append("  StorySpotlightNumber: ").Append(StorySpotlightNumber).Append("\n");
-            sb.Append("  StorySpotlightUri: ").Append(StorySpotlightUri).Append("\n");
-            sb.Append("  Timeshifted: ").Append(Timeshifted).Append("\n");
-            sb.Append("  Colorshifted: ").Append(Colorshifted).Append("\n");
-            sb.Append("  Futureshifted: ").Append(Futureshifted).Append("\n");
-            sb.Append("  PurchaseUris: ").Append(PurchaseUris).Append("\n");
-            sb.Append("  RelatedUris: ").Append(RelatedUris).Append("\n");
-            sb.Append("}\n");
-            return sb.ToString();
+            return Name;
         }
 
         /// <summary>
