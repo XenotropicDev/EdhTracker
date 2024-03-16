@@ -49,7 +49,7 @@
         DataContext = DataContextFactory.CreateDbContext();
         PlayGroup = DataContext.PlayGroups.Find(GroupId)!;
 
-        if (Game == default)
+        if (!Game.Seats.Any())
         {
             SetupGame(numberOfPlayers);
         }
@@ -118,7 +118,8 @@
             if (playDate.HasValue && playTime.HasValue) 
                 Game.PlayTime = playDate.Value.Add(playTime.Value);
 
-            if (DataContext.Entry(Game).State == EntityState.Added) 
+            var trackingState = DataContext.Entry(Game).State;
+            if (trackingState == EntityState.Added || trackingState == EntityState.Detached)
                 PlayGroup.GameHistory.Add(Game);
             
             await DataContext.SaveChangesAsync();
