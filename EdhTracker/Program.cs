@@ -27,8 +27,6 @@ Log.Logger = new LoggerConfiguration()
 
 builder.Services.AddLogging(lb => lb.AddSerilog(dispose: true));
 
-//builder.WebHost.UseWebRoot("edhtracker").UseStaticWebAssets();
-
 var app = builder.Build();
 
 SetupDb();
