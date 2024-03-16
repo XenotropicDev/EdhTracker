@@ -11,7 +11,7 @@
     </MudCardHeader>
     <MudCardMedia Image="@Winner?.Deck.Icon?.ToString()" Class="pa-4"></MudCardMedia>
     <MudCardContent>
-        <MudText>Played on: @Game.PlayTime</MudText>
+        <MudText>Played on: @Game.PlayTime.ToString("g")</MudText>
         <MudText>Players: @Game.Seats.Count()</MudText>
         <MudAvatarGroup Max="5">
             @foreach (var player in Game.Seats)

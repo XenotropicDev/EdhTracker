@@ -21,7 +21,7 @@
 
 <MudPaper Class="pa-lg-4 pa-md-2">
     <MudGrid>
-        @foreach (var game in PlayGroup.GameHistory.TakeLast(12))
+        @foreach (var game in PlayGroup.GameHistory.OrderByDescending(g => g.PlayTime).Take(12))
         {
             <MudItem sm="12" md="6" lg="4">
                 <PlayedGameCard Game="game"></PlayedGameCard>
