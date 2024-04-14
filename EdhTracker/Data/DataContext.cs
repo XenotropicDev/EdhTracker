@@ -62,10 +62,10 @@ public record Deck
     {
         if (GamesPlayed?.Count > 0)
         {
-            return GamesPlayed.Count(g => g.Result == GameResult.Win) / GamesPlayed.Count;
+            return Convert.ToDouble(GamesPlayed.Count(g => g.Result == GameResult.Win)) / GamesPlayed.Count;
         }
         
-        return 0;
+        return 0d;
     }
 }
 
