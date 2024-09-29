@@ -11,21 +11,24 @@
 
                 <MudDatePicker Label="Date" @bind-Date="playDate" />
                 <MudTimePicker Label="Time" AmPm="true" @bind-Time="playTime" />
+            </MudGrid>
+            <MudGrid>
 
                 @foreach (var seat in Game.Seats)
                 {
+                    
                     <MudItem xs="3">
                         <MudCheckBox T="GameResult?" Value="seat.Result" ValueChanged="r => WinnerChanged(r, seat)" Converter="@(new GameResultToBoolConverter())">Winner</MudCheckBox>
                     </MudItem>
                     <MudItem xs="9">
-                        <MudSelect T="Deck" Label="Deck" Value="seat.Deck" ValueChanged="d => DeckChanged(d, seat)">
-                            @foreach (var deck in PlayGroup.Decks.Where(d => d.IsActive && (seat.Pilot == null || d.Player.Id == seat.Pilot.Id)).OrderBy(d => d.Commander.Name))
+                        <MudAutocomplete SearchFunc="@(v => SearchForMatchingDeck(v, seat))" CoerceText=true T="Deck" Label="Deck" Value="seat.Deck" ValueChanged="d => DeckChanged(d, seat)">
+@*                             @foreach (var deck in PlayGroup.Decks.Where(d => d.IsActive && (seat.Pilot == null || d.Player.Id == seat.Pilot.Id)).OrderBy(d => d.Commander.Name))
                             {
                                 <MudSelectItem Value="deck">@deck.Commander.Name</MudSelectItem>
-                            }
-                        </MudSelect>
+                            } *@
+                        </MudAutocomplete>
                         <MudDivider />
-                        <MudSelect Label="Pilot" @bind-Value="seat.Pilot">  @* SelectedValues="@(new List<Player>{seat.Deck.Player})" *@
+                        <MudSelect Label="Pilot" @bind-Value="seat.Pilot">
                             @foreach (var pilot in PlayGroup.Players)
                             {
                                 <MudSelectItem Value="pilot">@pilot.Name</MudSelectItem>
@@ -49,13 +52,19 @@
         DataContext = DataContextFactory.CreateDbContext();
         PlayGroup = DataContext.PlayGroups.Find(GroupId)!;
 
-        if (!Game.Seats.Any())
+        if (GameToCopy != null)
+        {
+            Game.Seats = GameToCopy.Seats.Select(s => new PlayerSeat() { Pilot = s.Pilot, Result = GameResult.Loss }).ToList();
+            Game.PlayTime = GameToCopy.PlayTime.AddMinutes(30);
+            numberOfPlayers = Game.Seats.Count;
+        }
+        else if (!Game.Seats.Any())
         {
             SetupGame(numberOfPlayers);
         }
         else
         {
-            numberOfPlayers = Game.Seats.Count();
+            numberOfPlayers = Game.Seats.Count;
             Game = DataContext.Games.Find(Game.Id)!;
         }
 
@@ -64,6 +73,18 @@
 
     private TimeSpan? playTime = DateTime.Now.TimeOfDay;
     private DateTime? playDate = DateTime.Today;
+
+    private async Task<IEnumerable<Deck>> SearchForMatchingDeck(string value, PlayerSeat seat)
+    {
+        if (string.IsNullOrEmpty(value))
+            return PlayGroup.Decks.Where(d => d.IsActive && (seat.Pilot == null || d.Player == seat.Pilot)).OrderBy(d => d.Commander.Name);
+
+        if (value.Length <= 3)
+            return PlayGroup.Decks.Where(d => d.IsActive && d.Commander.Name.Contains(value, StringComparison.OrdinalIgnoreCase)).OrderBy(d => d.Commander.Name);
+
+        return PlayGroup.Decks.Where(d => d.Commander.Name.Contains(value, StringComparison.OrdinalIgnoreCase)).OrderBy(d => d.Commander.Name);
+
+    }
 
     void WinnerChanged(GameResult? Result, PlayerSeat changedSeat)
     {
@@ -81,12 +102,15 @@
         seat.Pilot = deck.Player;
     }
 
-    [CascadingParameter] 
+    [CascadingParameter]
     MudDialogInstance MudDialog { get; set; }
 
     [Inject]
     public IDbContextFactory<DataContext> DataContextFactory { get; set; } = null!;
     private DataContext DataContext = null!;
+
+    [Parameter]
+    public Data.Game? GameToCopy { get; set; }
 
     [Parameter]
     public Data.Game Game { get; set; } = new();
@@ -115,13 +139,13 @@
         {
             await DataContext.Entry(PlayGroup).ReloadAsync();
 
-            if (playDate.HasValue && playTime.HasValue) 
+            if (playDate.HasValue && playTime.HasValue)
                 Game.PlayTime = playDate.Value.Add(playTime.Value);
 
             var trackingState = DataContext.Entry(Game).State;
             if (trackingState == EntityState.Added || trackingState == EntityState.Detached)
                 PlayGroup.GameHistory.Add(Game);
-            
+
             await DataContext.SaveChangesAsync();
             MudDialog.Close(DialogResult.Ok(Game));
         }

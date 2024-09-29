@@ -13,6 +13,9 @@
     <MudButton FullWidth="false" @onclick="OpenAddGameDialog" Variant="Variant.Filled" Color="Color.Primary">
         Add Game
     </MudButton>
+    <MudButton FullWidth="false" @onclick="OpenAddGameDialogWithCopyLast" Variant="Variant.Filled" Color="Color.Primary">
+        Add With Last
+    </MudButton>
 
     <MudButton FullWidth="false" Color="Color.Primary" Variant="Variant.Filled" Href=@($"/Group/{GroupId}/Players")>Manage Players</MudButton>
 
@@ -50,6 +53,25 @@
     public IDbContextFactory<DataContext> DataContextFactory { get; set; }
 
     public PlayGroup PlayGroup { get; private set; } = null!;
+
+
+    private async Task OpenAddGameDialogWithCopyLast()
+    {
+        var lastGame = PlayGroup.GameHistory.OrderByDescending(g => g.PlayTime).FirstOrDefault();
+
+        var dialogParams = new DialogParameters<AddGameDialog>();
+        dialogParams.Add(x => x.GroupId, GroupId);
+        dialogParams.Add(x => x.GameToCopy, lastGame);
+
+        var dialog = DialogService.Show<AddGameDialog>("Add Game", dialogParams);
+        var result = await dialog.Result;
+
+        if (!result.Canceled)
+        {
+            PlayGroup = DataContext.PlayGroups.Include(pg => pg.GameHistory).First(pg => pg.Id == GroupId);
+            StateHasChanged();
+        }
+    }
 
     private async Task OpenAddGameDialog()
     {

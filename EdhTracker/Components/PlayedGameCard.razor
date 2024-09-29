@@ -1,4 +1,5 @@
-﻿@inject IDialogService DialogService
+﻿@using EdhTracker.Data
+@inject IDialogService DialogService
 
 <MudCard>
     <MudCardHeader>
@@ -16,7 +17,7 @@
         <MudAvatarGroup Max="5">
             @foreach (var player in Game.Seats)
             {
-                <MudChip>@(player.Pilot?.Name ?? player.Deck?.Player?.Name ?? "")</MudChip>
+                <MudChip Color="GetColor(player)">@(player.Pilot?.Name ?? player.Deck?.Player?.Name ?? "")</MudChip>
             }
         </MudAvatarGroup>
     </MudCardContent>
@@ -46,5 +47,12 @@
             if (result.Data is Data.Game game) Game = game;
             StateHasChanged(); 
         }
+    }
+
+    public Color GetColor(PlayerSeat playerSeat)
+    {
+        if (playerSeat?.Result == GameResult.Win) return Color.Success;
+
+        return Color.Default;
     }
 }
